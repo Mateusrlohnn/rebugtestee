@@ -1,0 +1,7209 @@
+
+hh_human_shirt.png
+size: 4096,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+hh_human_shirt_h_crr_lc_1800_2_0.png
+  rotate: false
+  xy: 2977, 3
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_1800_3_0.png
+  rotate: false
+  xy: 3496, 27
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_1801_0_0.png
+  rotate: false
+  xy: 3445, 55
+  size: 3, 15
+  orig: 3, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_1801_1_0.png
+  rotate: false
+  xy: 3259, 33
+  size: 10, 15
+  orig: 10, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_1801_2_0.png
+  rotate: false
+  xy: 3535, 63
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_1801_3_0.png
+  rotate: false
+  xy: 3321, 30
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_1801_7_0.png
+  rotate: false
+  xy: 3248, 12
+  size: 6, 18
+  orig: 6, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_800_0_0.png
+  rotate: false
+  xy: 3575, 43
+  size: 4, 17
+  orig: 4, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_800_1_0.png
+  rotate: false
+  xy: 2391, 2
+  size: 14, 16
+  orig: 14, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_800_2_0.png
+  rotate: false
+  xy: 3157, 70
+  size: 10, 22
+  orig: 10, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_800_3_0.png
+  rotate: false
+  xy: 3115, 67
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_800_7_0.png
+  rotate: false
+  xy: 3198, 31
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_801_0_0.png
+  rotate: false
+  xy: 3569, 43
+  size: 4, 17
+  orig: 4, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_801_1_0.png
+  rotate: false
+  xy: 2407, 2
+  size: 14, 16
+  orig: 14, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_801_2_0.png
+  rotate: false
+  xy: 3195, 70
+  size: 10, 22
+  orig: 10, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_801_3_0.png
+  rotate: false
+  xy: 2210, 41
+  size: 11, 27
+  orig: 11, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_801_7_0.png
+  rotate: false
+  xy: 3214, 33
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_802_0_0.png
+  rotate: false
+  xy: 3579, 68
+  size: 4, 17
+  orig: 4, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_802_1_0.png
+  rotate: false
+  xy: 2647, 2
+  size: 13, 16
+  orig: 13, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_802_2_0.png
+  rotate: false
+  xy: 3251, 70
+  size: 9, 22
+  orig: 9, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_802_3_0.png
+  rotate: false
+  xy: 3105, 42
+  size: 8, 23
+  orig: 8, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_lc_802_7_0.png
+  rotate: false
+  xy: 3214, 11
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_17_0_0.png
+  rotate: false
+  xy: 3234, 12
+  size: 4, 17
+  orig: 4, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_17_1_0.png
+  rotate: false
+  xy: 2662, 2
+  size: 13, 16
+  orig: 13, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_17_2_0.png
+  rotate: false
+  xy: 3182, 71
+  size: 11, 21
+  orig: 11, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_17_3_0.png
+  rotate: false
+  xy: 3125, 67
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_17_7_0.png
+  rotate: false
+  xy: 3368, 51
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_1_0_0.png
+  rotate: false
+  xy: 3466, 29
+  size: 4, 17
+  orig: 4, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_1_1_0.png
+  rotate: false
+  xy: 1712, 23
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_1_2_0.png
+  rotate: false
+  xy: 3169, 71
+  size: 11, 21
+  orig: 11, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_1_3_0.png
+  rotate: false
+  xy: 3095, 67
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_1_7_0.png
+  rotate: false
+  xy: 3377, 51
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_2_0_0.png
+  rotate: false
+  xy: 3591, 72
+  size: 4, 13
+  orig: 4, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_2_1_0.png
+  rotate: false
+  xy: 3441, 18
+  size: 7, 13
+  orig: 7, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_2_2_0.png
+  rotate: false
+  xy: 3547, 31
+  size: 5, 12
+  orig: 5, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_2_3_0.png
+  rotate: false
+  xy: 3328, 14
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_ls_2_7_0.png
+  rotate: false
+  xy: 3017, 2
+  size: 7, 12
+  orig: 7, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1800_0_0.png
+  rotate: false
+  xy: 3222, 2
+  size: 4, 7
+  orig: 4, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1800_1_0.png
+  rotate: false
+  xy: 1430, 7
+  size: 3, 6
+  orig: 3, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1800_2_0.png
+  rotate: false
+  xy: 2500, 2
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1800_3_0.png
+  rotate: false
+  xy: 3361, 7
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1800_4_0.png
+  rotate: false
+  xy: 3215, 2
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1800_5_0.png
+  rotate: false
+  xy: 144, 2
+  size: 3, 6
+  orig: 3, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_0_0.png
+  rotate: false
+  xy: 2719, 33
+  size: 11, 24
+  orig: 11, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_1_0.png
+  rotate: false
+  xy: 2413, 49
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_2_0.png
+  rotate: false
+  xy: 2568, 40
+  size: 14, 20
+  orig: 14, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_3_0.png
+  rotate: false
+  xy: 1458, 78
+  size: 8, 20
+  orig: 8, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_4_0.png
+  rotate: false
+  xy: 3397, 73
+  size: 9, 19
+  orig: 9, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_5_0.png
+  rotate: false
+  xy: 1572, 52
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_6_0.png
+  rotate: false
+  xy: 3521, 47
+  size: 4, 15
+  orig: 4, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1801_7_0.png
+  rotate: false
+  xy: 3527, 46
+  size: 5, 15
+  orig: 5, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1802_1_0.png
+  rotate: false
+  xy: 3585, 66
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1802_3_0.png
+  rotate: false
+  xy: 3579, 63
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_1802_7_0.png
+  rotate: false
+  xy: 2824, 65
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_0_0.png
+  rotate: false
+  xy: 1693, 48
+  size: 17, 21
+  orig: 17, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_1_0.png
+  rotate: false
+  xy: 2148, 2
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_2_0.png
+  rotate: false
+  xy: 1921, 2
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_3_0.png
+  rotate: false
+  xy: 2981, 39
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_4_0.png
+  rotate: false
+  xy: 1709, 2
+  size: 12, 19
+  orig: 12, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_5_0.png
+  rotate: false
+  xy: 2484, 40
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_6_0.png
+  rotate: false
+  xy: 3347, 13
+  size: 5, 19
+  orig: 5, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_800_7_0.png
+  rotate: false
+  xy: 3386, 51
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_0_0.png
+  rotate: false
+  xy: 125, 2
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_1_0.png
+  rotate: false
+  xy: 2317, 71
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_2_0.png
+  rotate: false
+  xy: 1402, 45
+  size: 19, 28
+  orig: 19, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_3_0.png
+  rotate: false
+  xy: 2398, 20
+  size: 10, 27
+  orig: 10, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_4_0.png
+  rotate: false
+  xy: 2584, 15
+  size: 13, 21
+  orig: 13, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_5_0.png
+  rotate: false
+  xy: 2376, 72
+  size: 18, 20
+  orig: 18, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_6_0.png
+  rotate: false
+  xy: 3339, 30
+  size: 6, 20
+  orig: 6, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_801_7_0.png
+  rotate: false
+  xy: 3039, 15
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_0_0.png
+  rotate: false
+  xy: 2195, 70
+  size: 15, 21
+  orig: 15, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_1_0.png
+  rotate: false
+  xy: 2212, 2
+  size: 13, 18
+  orig: 13, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_2_0.png
+  rotate: false
+  xy: 2628, 35
+  size: 12, 25
+  orig: 12, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_3_0.png
+  rotate: false
+  xy: 3095, 42
+  size: 8, 23
+  orig: 8, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_4_0.png
+  rotate: false
+  xy: 3363, 73
+  size: 10, 19
+  orig: 10, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_5_0.png
+  rotate: false
+  xy: 2379, 48
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_6_0.png
+  rotate: false
+  xy: 3398, 12
+  size: 5, 19
+  orig: 5, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rc_802_7_0.png
+  rotate: false
+  xy: 3395, 51
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_0_0.png
+  rotate: false
+  xy: 2357, 71
+  size: 17, 21
+  orig: 17, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_1_0.png
+  rotate: false
+  xy: 2131, 2
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_2_0.png
+  rotate: false
+  xy: 1979, 51
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_3_0.png
+  rotate: false
+  xy: 3058, 39
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_4_0.png
+  rotate: false
+  xy: 1978, 30
+  size: 12, 19
+  orig: 12, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_5_0.png
+  rotate: false
+  xy: 1948, 30
+  size: 14, 17
+  orig: 14, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_6_0.png
+  rotate: false
+  xy: 3262, 12
+  size: 5, 19
+  orig: 5, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_17_7_0.png
+  rotate: false
+  xy: 3312, 30
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_0_0.png
+  rotate: false
+  xy: 2045, 55
+  size: 17, 21
+  orig: 17, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_1_0.png
+  rotate: false
+  xy: 2114, 2
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_2_0.png
+  rotate: false
+  xy: 1953, 2
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_3_0.png
+  rotate: false
+  xy: 2991, 39
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_4_0.png
+  rotate: false
+  xy: 1964, 30
+  size: 12, 19
+  orig: 12, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_5_0.png
+  rotate: false
+  xy: 2500, 40
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_6_0.png
+  rotate: false
+  xy: 3207, 8
+  size: 5, 19
+  orig: 5, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_1_7_0.png
+  rotate: false
+  xy: 3223, 31
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_0_0.png
+  rotate: false
+  xy: 3347, 34
+  size: 9, 16
+  orig: 9, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_1_0.png
+  rotate: false
+  xy: 3479, 36
+  size: 7, 12
+  orig: 7, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_2_0.png
+  rotate: false
+  xy: 3308, 13
+  size: 8, 15
+  orig: 8, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_3_0.png
+  rotate: false
+  xy: 3388, 17
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_4_0.png
+  rotate: false
+  xy: 3499, 48
+  size: 6, 14
+  orig: 6, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_5_0.png
+  rotate: false
+  xy: 3338, 13
+  size: 7, 15
+  orig: 7, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_6_0.png
+  rotate: false
+  xy: 3512, 32
+  size: 5, 13
+  orig: 5, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_crr_rs_2_7_0.png
+  rotate: false
+  xy: 3490, 49
+  size: 7, 13
+  orig: 7, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1800_0_0.png
+  rotate: false
+  xy: 849, 2
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1800_1_0.png
+  rotate: false
+  xy: 1059, 2
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1800_2_0.png
+  rotate: false
+  xy: 1200, 2
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1800_3_0.png
+  rotate: false
+  xy: 885, 2
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1800_4_0.png
+  rotate: false
+  xy: 1039, 2
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1800_5_0.png
+  rotate: false
+  xy: 1210, 2
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1800_6_0.png
+  rotate: false
+  xy: 976, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_0_0.png
+  rotate: false
+  xy: 2374, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_1_0.png
+  rotate: false
+  xy: 2571, 2
+  size: 18, 11
+  orig: 18, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_2_0.png
+  rotate: false
+  xy: 2801, 59
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_3_0.png
+  rotate: false
+  xy: 1723, 2
+  size: 12, 19
+  orig: 12, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_4_0.png
+  rotate: false
+  xy: 2651, 20
+  size: 15, 13
+  orig: 15, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_5_0.png
+  rotate: false
+  xy: 2175, 80
+  size: 18, 11
+  orig: 18, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_6_0.png
+  rotate: false
+  xy: 1791, 78
+  size: 26, 10
+  orig: 26, 10
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1801_7_0.png
+  rotate: false
+  xy: 3400, 34
+  size: 9, 14
+  orig: 9, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1802_1_0.png
+  rotate: false
+  xy: 983, 2
+  size: 3, 4
+  orig: 3, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_1802_3_0.png
+  rotate: false
+  xy: 1399, 5
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_0_0.png
+  rotate: false
+  xy: 1607, 23
+  size: 17, 19
+  orig: 17, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_1_0.png
+  rotate: false
+  xy: 2801, 75
+  size: 25, 12
+  orig: 25, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_2_0.png
+  rotate: false
+  xy: 1614, 70
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_3_0.png
+  rotate: false
+  xy: 2165, 2
+  size: 14, 18
+  orig: 14, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_4_0.png
+  rotate: false
+  xy: 2152, 22
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_5_0.png
+  rotate: false
+  xy: 1937, 78
+  size: 24, 12
+  orig: 24, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_6_0.png
+  rotate: false
+  xy: 3481, 86
+  size: 29, 14
+  orig: 29, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_800_7_0.png
+  rotate: false
+  xy: 2702, 2
+  size: 10, 16
+  orig: 10, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_0_0.png
+  rotate: false
+  xy: 2276, 71
+  size: 19, 21
+  orig: 19, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_1_0.png
+  rotate: false
+  xy: 1519, 2
+  size: 25, 15
+  orig: 25, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_2_0.png
+  rotate: false
+  xy: 1544, 52
+  size: 26, 17
+  orig: 26, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_3_0.png
+  rotate: false
+  xy: 2064, 2
+  size: 15, 20
+  orig: 15, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_4_0.png
+  rotate: false
+  xy: 2356, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_5_0.png
+  rotate: false
+  xy: 1492, 2
+  size: 25, 15
+  orig: 25, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_6_0.png
+  rotate: false
+  xy: 3450, 86
+  size: 29, 14
+  orig: 29, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_801_7_0.png
+  rotate: false
+  xy: 2677, 2
+  size: 11, 16
+  orig: 11, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_0_0.png
+  rotate: false
+  xy: 2095, 2
+  size: 17, 18
+  orig: 17, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_1_0.png
+  rotate: false
+  xy: 2039, 78
+  size: 23, 11
+  orig: 23, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_2_0.png
+  rotate: false
+  xy: 1791, 59
+  size: 25, 17
+  orig: 25, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_3_0.png
+  rotate: false
+  xy: 2197, 2
+  size: 13, 18
+  orig: 13, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_4_0.png
+  rotate: false
+  xy: 3075, 2
+  size: 15, 13
+  orig: 15, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_5_0.png
+  rotate: false
+  xy: 2014, 78
+  size: 23, 11
+  orig: 23, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_6_0.png
+  rotate: false
+  xy: 3450, 71
+  size: 29, 13
+  orig: 29, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rc_802_7_0.png
+  rotate: false
+  xy: 3239, 52
+  size: 10, 16
+  orig: 10, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_0_0.png
+  rotate: false
+  xy: 1624, 2
+  size: 17, 19
+  orig: 17, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_1_0.png
+  rotate: false
+  xy: 2828, 76
+  size: 25, 12
+  orig: 25, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_2_0.png
+  rotate: false
+  xy: 1871, 57
+  size: 24, 17
+  orig: 24, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_3_0.png
+  rotate: false
+  xy: 2181, 2
+  size: 14, 18
+  orig: 14, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_4_0.png
+  rotate: false
+  xy: 2184, 22
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_5_0.png
+  rotate: false
+  xy: 1963, 79
+  size: 24, 11
+  orig: 24, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_6_0.png
+  rotate: false
+  xy: 1435, 2
+  size: 27, 14
+  orig: 27, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_17_7_0.png
+  rotate: false
+  xy: 2690, 2
+  size: 10, 16
+  orig: 10, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_0_0.png
+  rotate: false
+  xy: 1643, 2
+  size: 17, 19
+  orig: 17, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_1_0.png
+  rotate: false
+  xy: 2907, 76
+  size: 24, 12
+  orig: 24, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_2_0.png
+  rotate: false
+  xy: 1818, 59
+  size: 25, 16
+  orig: 25, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_3_0.png
+  rotate: false
+  xy: 2012, 31
+  size: 15, 18
+  orig: 15, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_4_0.png
+  rotate: false
+  xy: 3123, 2
+  size: 12, 14
+  orig: 12, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_5_0.png
+  rotate: false
+  xy: 2881, 76
+  size: 24, 12
+  orig: 24, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_6_0.png
+  rotate: false
+  xy: 1697, 72
+  size: 26, 12
+  orig: 26, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_1_7_0.png
+  rotate: false
+  xy: 3251, 52
+  size: 9, 16
+  orig: 9, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_0_0.png
+  rotate: false
+  xy: 2828, 64
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_1_0.png
+  rotate: false
+  xy: 1010, 2
+  size: 13, 7
+  orig: 13, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_2_0.png
+  rotate: false
+  xy: 2591, 2
+  size: 14, 11
+  orig: 14, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_3_0.png
+  rotate: false
+  xy: 2984, 2
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_4_0.png
+  rotate: false
+  xy: 3481, 50
+  size: 7, 12
+  orig: 7, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_5_0.png
+  rotate: false
+  xy: 1025, 2
+  size: 12, 7
+  orig: 12, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_6_0.png
+  rotate: false
+  xy: 2269, 2
+  size: 15, 9
+  orig: 15, 9
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_drk_rs_2_7_0.png
+  rotate: false
+  xy: 2259, 2
+  size: 8, 12
+  orig: 8, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_cc_1800_2_0.png
+  rotate: false
+  xy: 3092, 2
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_cc_1801_2_0.png
+  rotate: false
+  xy: 1577, 98
+  size: 35, 28
+  orig: 35, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_cc_1802_2_0.png
+  rotate: false
+  xy: 1464, 2
+  size: 26, 14
+  orig: 26, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_cc_800_2_0.png
+  rotate: false
+  xy: 1025, 99
+  size: 39, 27
+  orig: 39, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_cc_801_2_0.png
+  rotate: false
+  xy: 984, 98
+  size: 39, 28
+  orig: 39, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_cc_802_2_0.png
+  rotate: false
+  xy: 1107, 99
+  size: 39, 27
+  orig: 39, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_cc_803_2_0.png
+  rotate: false
+  xy: 1066, 99
+  size: 39, 27
+  orig: 39, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_100_2_0.png
+  rotate: false
+  xy: 816, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_101_2_0.png
+  rotate: false
+  xy: 480, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1020_2_0.png
+  rotate: false
+  xy: 2170, 69
+  size: 17, 9
+  orig: 17, 9
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1021_2_0.png
+  rotate: false
+  xy: 2855, 76
+  size: 24, 12
+  orig: 24, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1023_2_0.png
+  rotate: false
+  xy: 1167, 2
+  size: 10, 4
+  orig: 10, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_105_2_0.png
+  rotate: false
+  xy: 690, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_106_2_0.png
+  rotate: false
+  xy: 648, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_10_2_0.png
+  rotate: false
+  xy: 1269, 101
+  size: 39, 25
+  orig: 39, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1100_2_0.png
+  rotate: false
+  xy: 1520, 46
+  size: 22, 23
+  orig: 22, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1101_2_0.png
+  rotate: false
+  xy: 338, 2
+  size: 23, 26
+  orig: 23, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1200_2_0.png
+  rotate: false
+  xy: 3481, 64
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1202_2_0.png
+  rotate: false
+  xy: 1540, 100
+  size: 35, 26
+  orig: 35, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1204_2_0.png
+  rotate: false
+  xy: 2064, 57
+  size: 21, 12
+  orig: 21, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1205_2_0.png
+  rotate: false
+  xy: 2454, 2
+  size: 9, 6
+  orig: 9, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1207_2_0.png
+  rotate: false
+  xy: 2478, 2
+  size: 12, 7
+  orig: 12, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1208_2_0.png
+  rotate: false
+  xy: 3520, 103
+  size: 33, 23
+  orig: 33, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1210_2_0.png
+  rotate: false
+  xy: 52, 65
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1507_2_0.png
+  rotate: false
+  xy: 1845, 58
+  size: 24, 16
+  orig: 24, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_15_2_0.png
+  rotate: false
+  xy: 3486, 102
+  size: 32, 24
+  orig: 32, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_16_2_0.png
+  rotate: false
+  xy: 270, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_17_2_0.png
+  rotate: false
+  xy: 2, 95
+  size: 48, 31
+  orig: 48, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_18_2_0.png
+  rotate: false
+  xy: 1189, 100
+  size: 38, 26
+  orig: 38, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_1_2_0.png
+  rotate: false
+  xy: 942, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_200_2_0.png
+  rotate: false
+  xy: 774, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_201_2_0.png
+  rotate: false
+  xy: 1463, 101
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_202_2_0.png
+  rotate: false
+  xy: 1148, 100
+  size: 39, 26
+  orig: 39, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_203_2_0.png
+  rotate: false
+  xy: 1349, 100
+  size: 36, 26
+  orig: 36, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_204_2_0.png
+  rotate: false
+  xy: 2, 62
+  size: 48, 31
+  orig: 48, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_205_2_0.png
+  rotate: false
+  xy: 1425, 100
+  size: 36, 26
+  orig: 36, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_206_2_0.png
+  rotate: false
+  xy: 1387, 100
+  size: 36, 26
+  orig: 36, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_207_2_0.png
+  rotate: false
+  xy: 1310, 99
+  size: 37, 27
+  orig: 37, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_208_2_0.png
+  rotate: false
+  xy: 1502, 101
+  size: 36, 25
+  orig: 36, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_209_2_0.png
+  rotate: false
+  xy: 3421, 72
+  size: 27, 21
+  orig: 27, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_20_2_0.png
+  rotate: false
+  xy: 2, 2
+  size: 42, 26
+  orig: 42, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_210_2_0.png
+  rotate: false
+  xy: 2, 30
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_21_2_0.png
+  rotate: false
+  xy: 100, 100
+  size: 42, 26
+  orig: 42, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_22_2_0.png
+  rotate: false
+  xy: 858, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_23_2_0.png
+  rotate: false
+  xy: 900, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_2_2_0.png
+  rotate: false
+  xy: 522, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_3_2_0.png
+  rotate: false
+  xy: 564, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_4_2_0.png
+  rotate: false
+  xy: 186, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_501_2_0.png
+  rotate: false
+  xy: 1229, 100
+  size: 38, 26
+  orig: 38, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_502_2_0.png
+  rotate: false
+  xy: 606, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_503_2_0.png
+  rotate: false
+  xy: 228, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_504_2_0.png
+  rotate: false
+  xy: 312, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_505_2_0.png
+  rotate: false
+  xy: 438, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_506_2_0.png
+  rotate: false
+  xy: 396, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_507_2_0.png
+  rotate: false
+  xy: 354, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_5_2_0.png
+  rotate: false
+  xy: 144, 99
+  size: 40, 27
+  orig: 40, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_6_2_0.png
+  rotate: false
+  xy: 3450, 102
+  size: 34, 24
+  orig: 34, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_8_2_0.png
+  rotate: false
+  xy: 732, 100
+  size: 40, 26
+  orig: 40, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ch_9_2_0.png
+  rotate: false
+  xy: 52, 97
+  size: 46, 29
+  orig: 46, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_lc_1800_2_0.png
+  rotate: false
+  xy: 2876, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_lc_1801_2_0.png
+  rotate: false
+  xy: 988, 2
+  size: 20, 8
+  orig: 20, 8
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_lc_800_2_0.png
+  rotate: false
+  xy: 1403, 2
+  size: 25, 11
+  orig: 25, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_lc_801_2_0.png
+  rotate: false
+  xy: 1819, 77
+  size: 25, 11
+  orig: 25, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_lc_802_2_0.png
+  rotate: false
+  xy: 1989, 79
+  size: 23, 10
+  orig: 23, 10
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ls_17_2_0.png
+  rotate: false
+  xy: 1846, 76
+  size: 25, 11
+  orig: 25, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ls_1_2_0.png
+  rotate: false
+  xy: 1873, 76
+  size: 25, 11
+  orig: 25, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_ls_2_2_0.png
+  rotate: false
+  xy: 1383, 2
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rc_1800_2_0.png
+  rotate: false
+  xy: 2286, 2
+  size: 8, 9
+  orig: 8, 9
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rc_1801_2_0.png
+  rotate: false
+  xy: 2614, 19
+  size: 17, 14
+  orig: 17, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rc_1802_2_0.png
+  rotate: false
+  xy: 2910, 2
+  size: 3, 4
+  orig: 3, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rc_800_2_0.png
+  rotate: false
+  xy: 1547, 2
+  size: 24, 19
+  orig: 24, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rc_801_2_0.png
+  rotate: false
+  xy: 1599, 2
+  size: 23, 19
+  orig: 23, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rc_802_2_0.png
+  rotate: false
+  xy: 2064, 71
+  size: 22, 18
+  orig: 22, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rs_17_2_0.png
+  rotate: false
+  xy: 46, 2
+  size: 24, 19
+  orig: 24, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rs_1_2_0.png
+  rotate: false
+  xy: 1573, 2
+  size: 24, 19
+  orig: 24, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_lay_rs_2_2_0.png
+  rotate: false
+  xy: 2614, 2
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_lc_1800_0_0.png
+  rotate: false
+  xy: 2897, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_lc_1800_2_0.png
+  rotate: false
+  xy: 2876, 69
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_lc_800_0_0.png
+  rotate: false
+  xy: 3192, 2
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_lc_800_2_0.png
+  rotate: false
+  xy: 3068, 38
+  size: 5, 25
+  orig: 5, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_lc_801_2_0.png
+  rotate: false
+  xy: 3001, 16
+  size: 6, 22
+  orig: 6, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_lc_802_0_0.png
+  rotate: false
+  xy: 2111, 69
+  size: 5, 20
+  orig: 5, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_lc_802_2_0.png
+  rotate: false
+  xy: 2977, 12
+  size: 5, 23
+  orig: 5, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_ls_17_0_0.png
+  rotate: false
+  xy: 3068, 14
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_ls_17_2_0.png
+  rotate: false
+  xy: 2668, 34
+  size: 5, 25
+  orig: 5, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_ls_1_0_0.png
+  rotate: false
+  xy: 3148, 21
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_ls_1_2_0.png
+  rotate: false
+  xy: 2974, 37
+  size: 5, 25
+  orig: 5, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_ls_2_0_0.png
+  rotate: false
+  xy: 3540, 31
+  size: 5, 12
+  orig: 5, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_ls_2_2_0.png
+  rotate: false
+  xy: 3561, 31
+  size: 5, 12
+  orig: 5, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_1800_0_0.png
+  rotate: false
+  xy: 918, 2
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_1800_2_0.png
+  rotate: false
+  xy: 2227, 2
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_800_0_0.png
+  rotate: false
+  xy: 2466, 10
+  size: 10, 28
+  orig: 10, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_800_2_0.png
+  rotate: false
+  xy: 1423, 43
+  size: 10, 30
+  orig: 10, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_801_0_0.png
+  rotate: false
+  xy: 1934, 47
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_801_2_0.png
+  rotate: false
+  xy: 2138, 38
+  size: 11, 28
+  orig: 11, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_802_0_0.png
+  rotate: false
+  xy: 2454, 10
+  size: 10, 28
+  orig: 10, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rc_802_2_0.png
+  rotate: false
+  xy: 2934, 36
+  size: 9, 26
+  orig: 9, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rs_17_0_0.png
+  rotate: false
+  xy: 2151, 38
+  size: 10, 28
+  orig: 10, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rs_17_2_0.png
+  rotate: false
+  xy: 1371, 2
+  size: 10, 30
+  orig: 10, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rs_1_0_0.png
+  rotate: false
+  xy: 2293, 41
+  size: 10, 28
+  orig: 10, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rs_1_2_0.png
+  rotate: false
+  xy: 1346, 67
+  size: 10, 30
+  orig: 10, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rs_2_0_0.png
+  rotate: false
+  xy: 3149, 2
+  size: 10, 17
+  orig: 10, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_sit_rs_2_2_0.png
+  rotate: false
+  xy: 1992, 30
+  size: 10, 19
+  orig: 10, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1800_0_0.png
+  rotate: false
+  xy: 901, 2
+  size: 15, 6
+  orig: 15, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1800_1_0.png
+  rotate: false
+  xy: 2337, 2
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1800_2_0.png
+  rotate: false
+  xy: 2396, 72
+  size: 18, 20
+  orig: 18, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1800_3_0.png
+  rotate: false
+  xy: 2132, 22
+  size: 18, 14
+  orig: 18, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1800_7_0.png
+  rotate: false
+  xy: 778, 2
+  size: 18, 5
+  orig: 18, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1801_0_0.png
+  rotate: false
+  xy: 2610, 90
+  size: 26, 36
+  orig: 26, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1801_1_0.png
+  rotate: false
+  xy: 742, 34
+  size: 22, 33
+  orig: 22, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1801_2_0.png
+  rotate: false
+  xy: 2581, 92
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1801_3_0.png
+  rotate: false
+  xy: 717, 34
+  size: 23, 33
+  orig: 23, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1801_7_0.png
+  rotate: false
+  xy: 198, 26
+  size: 23, 35
+  orig: 23, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1802_2_0.png
+  rotate: false
+  xy: 3182, 23
+  size: 7, 22
+  orig: 7, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_1802_3_0.png
+  rotate: false
+  xy: 1963, 51
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_800_0_0.png
+  rotate: false
+  xy: 2990, 91
+  size: 25, 35
+  orig: 25, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_800_1_0.png
+  rotate: false
+  xy: 686, 2
+  size: 19, 31
+  orig: 19, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_800_2_0.png
+  rotate: false
+  xy: 1851, 89
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_800_3_0.png
+  rotate: false
+  xy: 144, 64
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_800_7_0.png
+  rotate: false
+  xy: 901, 39
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_801_0_0.png
+  rotate: false
+  xy: 1821, 90
+  size: 28, 36
+  orig: 28, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_801_1_0.png
+  rotate: false
+  xy: 123, 29
+  size: 24, 33
+  orig: 24, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_801_2_0.png
+  rotate: false
+  xy: 1967, 92
+  size: 28, 34
+  orig: 28, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_801_3_0.png
+  rotate: false
+  xy: 3073, 93
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_801_7_0.png
+  rotate: false
+  xy: 2084, 91
+  size: 27, 35
+  orig: 27, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_802_1_0.png
+  rotate: false
+  xy: 627, 35
+  size: 20, 31
+  orig: 20, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_802_2_0.png
+  rotate: false
+  xy: 2026, 91
+  size: 27, 35
+  orig: 27, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_802_3_0.png
+  rotate: false
+  xy: 3925, 94
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_803_0_0.png
+  rotate: false
+  xy: 2936, 91
+  size: 25, 35
+  orig: 25, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_803_1_0.png
+  rotate: false
+  xy: 665, 2
+  size: 19, 31
+  orig: 19, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_803_2_0.png
+  rotate: false
+  xy: 1997, 91
+  size: 27, 35
+  orig: 27, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_803_3_0.png
+  rotate: false
+  xy: 3897, 94
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_cc_803_7_0.png
+  rotate: false
+  xy: 490, 2
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_100_0_0.png
+  rotate: false
+  xy: 572, 66
+  size: 25, 32
+  orig: 25, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_100_1_0.png
+  rotate: false
+  xy: 1358, 34
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_100_2_0.png
+  rotate: false
+  xy: 3671, 95
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_100_3_0.png
+  rotate: false
+  xy: 149, 31
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_101_0_0.png
+  rotate: false
+  xy: 2436, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_101_1_0.png
+  rotate: false
+  xy: 1219, 5
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_101_2_0.png
+  rotate: false
+  xy: 3642, 95
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_101_3_0.png
+  rotate: false
+  xy: 3729, 95
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_101_7_0.png
+  rotate: false
+  xy: 833, 9
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1020_1_0.png
+  rotate: false
+  xy: 3551, 85
+  size: 2, 16
+  orig: 2, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1020_2_0.png
+  rotate: false
+  xy: 3412, 14
+  size: 5, 18
+  orig: 5, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1020_3_0.png
+  rotate: false
+  xy: 3472, 35
+  size: 5, 16
+  orig: 5, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1021_1_0.png
+  rotate: false
+  xy: 2687, 36
+  size: 4, 25
+  orig: 4, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1021_2_0.png
+  rotate: false
+  xy: 2538, 12
+  size: 10, 25
+  orig: 10, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1021_3_0.png
+  rotate: false
+  xy: 1600, 72
+  size: 12, 24
+  orig: 12, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1023_1_0.png
+  rotate: false
+  xy: 2492, 2
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1023_2_0.png
+  rotate: false
+  xy: 2842, 64
+  size: 7, 10
+  orig: 7, 10
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1023_3_0.png
+  rotate: false
+  xy: 3566, 85
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_105_0_0.png
+  rotate: false
+  xy: 496, 64
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_105_1_0.png
+  rotate: false
+  xy: 1325, 67
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_105_2_0.png
+  rotate: false
+  xy: 3334, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_105_3_0.png
+  rotate: false
+  xy: 3841, 94
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_105_7_0.png
+  rotate: false
+  xy: 1202, 37
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_106_0_0.png
+  rotate: false
+  xy: 3102, 93
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_106_1_0.png
+  rotate: false
+  xy: 1279, 69
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_106_2_0.png
+  rotate: false
+  xy: 3363, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_106_3_0.png
+  rotate: false
+  xy: 3869, 94
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_106_7_0.png
+  rotate: false
+  xy: 988, 12
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_10_0_0.png
+  rotate: false
+  xy: 1908, 90
+  size: 27, 36
+  orig: 27, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_10_1_0.png
+  rotate: false
+  xy: 1937, 92
+  size: 28, 34
+  orig: 28, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_10_2_0.png
+  rotate: false
+  xy: 1614, 89
+  size: 31, 37
+  orig: 31, 37
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_10_3_0.png
+  rotate: false
+  xy: 3785, 94
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_10_7_0.png
+  rotate: false
+  xy: 2378, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1100_1_0.png
+  rotate: false
+  xy: 1350, 2
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1100_2_0.png
+  rotate: false
+  xy: 3613, 95
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1101_0_0.png
+  rotate: false
+  xy: 544, 2
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1101_1_0.png
+  rotate: false
+  xy: 1146, 2
+  size: 19, 4
+  orig: 19, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1101_2_0.png
+  rotate: false
+  xy: 1060, 66
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1101_3_0.png
+  rotate: false
+  xy: 778, 9
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1101_7_0.png
+  rotate: false
+  xy: 860, 9
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1200_0_0.png
+  rotate: false
+  xy: 177, 2
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1200_1_0.png
+  rotate: false
+  xy: 2087, 53
+  size: 19, 14
+  orig: 19, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1200_2_0.png
+  rotate: false
+  xy: 1429, 78
+  size: 27, 20
+  orig: 27, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1200_3_0.png
+  rotate: false
+  xy: 1669, 71
+  size: 26, 14
+  orig: 26, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1200_7_0.png
+  rotate: false
+  xy: 1642, 70
+  size: 25, 16
+  orig: 25, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1202_0_0.png
+  rotate: false
+  xy: 4035, 92
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1202_1_0.png
+  rotate: false
+  xy: 1247, 35
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1202_2_0.png
+  rotate: false
+  xy: 2465, 93
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1202_3_0.png
+  rotate: false
+  xy: 149, 2
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1202_7_0.png
+  rotate: false
+  xy: 96, 29
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1204_1_0.png
+  rotate: false
+  xy: 3095, 17
+  size: 5, 23
+  orig: 5, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1204_2_0.png
+  rotate: false
+  xy: 3405, 14
+  size: 5, 18
+  orig: 5, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1204_3_0.png
+  rotate: false
+  xy: 3009, 39
+  size: 7, 23
+  orig: 7, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1205_1_0.png
+  rotate: false
+  xy: 3595, 87
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1205_2_0.png
+  rotate: false
+  xy: 3555, 85
+  size: 9, 8
+  orig: 9, 8
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1205_3_0.png
+  rotate: false
+  xy: 952, 2
+  size: 11, 5
+  orig: 11, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1206_0_0.png
+  rotate: false
+  xy: 3488, 35
+  size: 6, 12
+  orig: 6, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1206_7_0.png
+  rotate: false
+  xy: 3057, 2
+  size: 7, 11
+  orig: 7, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1207_0_0.png
+  rotate: false
+  xy: 3504, 33
+  size: 6, 12
+  orig: 6, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1207_2_0.png
+  rotate: false
+  xy: 3496, 34
+  size: 6, 12
+  orig: 6, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1207_3_0.png
+  rotate: false
+  xy: 3369, 2
+  size: 7, 11
+  orig: 7, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1208_0_0.png
+  rotate: false
+  xy: 1114, 66
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1208_1_0.png
+  rotate: false
+  xy: 695, 35
+  size: 20, 32
+  orig: 20, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1208_2_0.png
+  rotate: false
+  xy: 358, 30
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1208_3_0.png
+  rotate: false
+  xy: 517, 32
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1208_7_0.png
+  rotate: false
+  xy: 1121, 7
+  size: 23, 28
+  orig: 23, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1210_0_0.png
+  rotate: false
+  xy: 2747, 86
+  size: 25, 40
+  orig: 25, 40
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1210_1_0.png
+  rotate: false
+  xy: 96, 59
+  size: 20, 36
+  orig: 20, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1210_2_0.png
+  rotate: false
+  xy: 1763, 87
+  size: 26, 39
+  orig: 26, 39
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1210_3_0.png
+  rotate: false
+  xy: 2666, 90
+  size: 25, 36
+  orig: 25, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1210_7_0.png
+  rotate: false
+  xy: 2882, 90
+  size: 25, 36
+  orig: 25, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1507_0_0.png
+  rotate: false
+  xy: 1897, 69
+  size: 1, 5
+  orig: 1, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1507_1_0.png
+  rotate: false
+  xy: 2245, 47
+  size: 6, 24
+  orig: 6, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1507_2_0.png
+  rotate: false
+  xy: 2337, 20
+  size: 12, 26
+  orig: 12, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1507_3_0.png
+  rotate: false
+  xy: 1815, 31
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1507_7_0.png
+  rotate: false
+  xy: 1379, 35
+  size: 2, 4
+  orig: 2, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_15_0_0.png
+  rotate: false
+  xy: 312, 2
+  size: 24, 26
+  orig: 24, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_15_1_0.png
+  rotate: false
+  xy: 2230, 73
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_15_2_0.png
+  rotate: false
+  xy: 983, 41
+  size: 27, 24
+  orig: 27, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_15_3_0.png
+  rotate: false
+  xy: 1402, 75
+  size: 25, 23
+  orig: 25, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_15_7_0.png
+  rotate: false
+  xy: 231, 2
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_16_0_0.png
+  rotate: false
+  xy: 3953, 92
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_16_1_0.png
+  rotate: false
+  xy: 707, 2
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_16_2_0.png
+  rotate: false
+  xy: 2171, 93
+  size: 28, 33
+  orig: 28, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_16_3_0.png
+  rotate: false
+  xy: 984, 67
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_16_7_0.png
+  rotate: false
+  xy: 1040, 8
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_17_0_0.png
+  rotate: false
+  xy: 2774, 86
+  size: 25, 40
+  orig: 25, 40
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_17_1_0.png
+  rotate: false
+  xy: 223, 26
+  size: 21, 35
+  orig: 21, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_17_2_0.png
+  rotate: false
+  xy: 1735, 87
+  size: 26, 39
+  orig: 26, 39
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_17_3_0.png
+  rotate: false
+  xy: 2638, 90
+  size: 26, 36
+  orig: 26, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_17_7_0.png
+  rotate: false
+  xy: 2801, 89
+  size: 25, 37
+  orig: 25, 37
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_18_0_0.png
+  rotate: false
+  xy: 1162, 66
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_18_1_0.png
+  rotate: false
+  xy: 1466, 49
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_18_2_0.png
+  rotate: false
+  xy: 274, 30
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_18_3_0.png
+  rotate: false
+  xy: 793, 38
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_18_7_0.png
+  rotate: false
+  xy: 1094, 8
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1_0_0.png
+  rotate: false
+  xy: 226, 63
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1_1_0.png
+  rotate: false
+  xy: 1012, 66
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1_2_0.png
+  rotate: false
+  xy: 3218, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1_3_0.png
+  rotate: false
+  xy: 737, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_1_7_0.png
+  rotate: false
+  xy: 1121, 37
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_200_0_0.png
+  rotate: false
+  xy: 69, 29
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_200_1_0.png
+  rotate: false
+  xy: 1358, 66
+  size: 19, 32
+  orig: 19, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_200_2_0.png
+  rotate: false
+  xy: 2113, 92
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_200_3_0.png
+  rotate: false
+  xy: 330, 30
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_200_7_0.png
+  rotate: false
+  xy: 874, 38
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_201_0_0.png
+  rotate: false
+  xy: 2349, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_201_1_0.png
+  rotate: false
+  xy: 101, 2
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_201_2_0.png
+  rotate: false
+  xy: 2230, 95
+  size: 29, 31
+  orig: 29, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_201_3_0.png
+  rotate: false
+  xy: 928, 40
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_201_7_0.png
+  rotate: false
+  xy: 258, 2
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_202_0_0.png
+  rotate: false
+  xy: 4008, 92
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_202_1_0.png
+  rotate: false
+  xy: 1308, 3
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_202_2_0.png
+  rotate: false
+  xy: 2201, 93
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_202_3_0.png
+  rotate: false
+  xy: 544, 33
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_202_7_0.png
+  rotate: false
+  xy: 517, 2
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_203_0_0.png
+  rotate: false
+  xy: 1214, 66
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_203_1_0.png
+  rotate: false
+  xy: 1606, 44
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_203_2_0.png
+  rotate: false
+  xy: 3584, 95
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_203_3_0.png
+  rotate: false
+  xy: 847, 38
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_203_7_0.png
+  rotate: false
+  xy: 463, 2
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_204_0_0.png
+  rotate: false
+  xy: 2720, 86
+  size: 25, 40
+  orig: 25, 40
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_204_1_0.png
+  rotate: false
+  xy: 46, 23
+  size: 21, 37
+  orig: 21, 37
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_204_2_0.png
+  rotate: false
+  xy: 1647, 88
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_204_3_0.png
+  rotate: false
+  xy: 1880, 89
+  size: 26, 37
+  orig: 26, 37
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_204_7_0.png
+  rotate: false
+  xy: 2828, 90
+  size: 25, 36
+  orig: 25, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_205_0_0.png
+  rotate: false
+  xy: 1188, 66
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_205_1_0.png
+  rotate: false
+  xy: 1577, 72
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_205_2_0.png
+  rotate: false
+  xy: 3421, 95
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_205_3_0.png
+  rotate: false
+  xy: 820, 38
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_205_7_0.png
+  rotate: false
+  xy: 436, 2
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_206_0_0.png
+  rotate: false
+  xy: 599, 66
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_206_1_0.png
+  rotate: false
+  xy: 1379, 41
+  size: 21, 27
+  orig: 21, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_206_2_0.png
+  rotate: false
+  xy: 3555, 95
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_206_3_0.png
+  rotate: false
+  xy: 571, 2
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_206_7_0.png
+  rotate: false
+  xy: 409, 2
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_207_0_0.png
+  rotate: false
+  xy: 118, 64
+  size: 24, 34
+  orig: 24, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_207_1_0.png
+  rotate: false
+  xy: 1383, 10
+  size: 18, 29
+  orig: 18, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_207_2_0.png
+  rotate: false
+  xy: 523, 64
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_207_3_0.png
+  rotate: false
+  xy: 1087, 66
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_207_7_0.png
+  rotate: false
+  xy: 463, 32
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_208_0_0.png
+  rotate: false
+  xy: 1240, 67
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_208_1_0.png
+  rotate: false
+  xy: 670, 35
+  size: 23, 32
+  orig: 23, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_208_2_0.png
+  rotate: false
+  xy: 3700, 95
+  size: 27, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_208_3_0.png
+  rotate: false
+  xy: 409, 32
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_208_7_0.png
+  rotate: false
+  xy: 1015, 11
+  size: 23, 28
+  orig: 23, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_209_0_0.png
+  rotate: false
+  xy: 1468, 78
+  size: 25, 21
+  orig: 25, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_209_1_0.png
+  rotate: false
+  xy: 2088, 69
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_209_2_0.png
+  rotate: false
+  xy: 1495, 77
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_209_3_0.png
+  rotate: false
+  xy: 1629, 48
+  size: 23, 20
+  orig: 23, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_209_7_0.png
+  rotate: false
+  xy: 1586, 23
+  size: 19, 17
+  orig: 19, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_20_0_0.png
+  rotate: false
+  xy: 2963, 91
+  size: 25, 35
+  orig: 25, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_20_1_0.png
+  rotate: false
+  xy: 550, 64
+  size: 20, 33
+  orig: 20, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_20_2_0.png
+  rotate: false
+  xy: 2055, 91
+  size: 27, 35
+  orig: 27, 35
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_20_3_0.png
+  rotate: false
+  xy: 3757, 94
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_20_7_0.png
+  rotate: false
+  xy: 1033, 66
+  size: 25, 31
+  orig: 25, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_210_0_0.png
+  rotate: false
+  xy: 1706, 86
+  size: 27, 40
+  orig: 27, 40
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_210_1_0.png
+  rotate: false
+  xy: 928, 2
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_210_2_0.png
+  rotate: false
+  xy: 1677, 87
+  size: 27, 39
+  orig: 27, 39
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_210_3_0.png
+  rotate: false
+  xy: 2855, 90
+  size: 25, 36
+  orig: 25, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_210_7_0.png
+  rotate: false
+  xy: 2909, 90
+  size: 25, 36
+  orig: 25, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_21_0_0.png
+  rotate: false
+  xy: 388, 64
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_21_1_0.png
+  rotate: false
+  xy: 1141, 66
+  size: 19, 31
+  orig: 19, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_21_2_0.png
+  rotate: false
+  xy: 2142, 92
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_21_3_0.png
+  rotate: false
+  xy: 3813, 94
+  size: 26, 32
+  orig: 26, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_21_7_0.png
+  rotate: false
+  xy: 600, 35
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_22_0_0.png
+  rotate: false
+  xy: 415, 64
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_22_1_0.png
+  rotate: false
+  xy: 386, 30
+  size: 21, 31
+  orig: 21, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_22_2_0.png
+  rotate: false
+  xy: 2494, 93
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_22_3_0.png
+  rotate: false
+  xy: 246, 30
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_22_7_0.png
+  rotate: false
+  xy: 436, 32
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_23_0_0.png
+  rotate: false
+  xy: 442, 64
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_23_1_0.png
+  rotate: false
+  xy: 621, 2
+  size: 21, 31
+  orig: 21, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_23_2_0.png
+  rotate: false
+  xy: 2523, 93
+  size: 27, 33
+  orig: 27, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_23_3_0.png
+  rotate: false
+  xy: 302, 30
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_23_7_0.png
+  rotate: false
+  xy: 490, 32
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_2_1_0.png
+  rotate: false
+  xy: 1275, 3
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_2_2_0.png
+  rotate: false
+  xy: 3160, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_2_3_0.png
+  rotate: false
+  xy: 709, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_2_7_0.png
+  rotate: false
+  xy: 1094, 37
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_3_0_0.png
+  rotate: false
+  xy: 280, 63
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_3_1_0.png
+  rotate: false
+  xy: 644, 2
+  size: 19, 31
+  orig: 19, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_3_2_0.png
+  rotate: false
+  xy: 3305, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_3_3_0.png
+  rotate: false
+  xy: 849, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_3_7_0.png
+  rotate: false
+  xy: 766, 38
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_4_0_0.png
+  rotate: false
+  xy: 3045, 92
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_4_1_0.png
+  rotate: false
+  xy: 731, 2
+  size: 22, 30
+  orig: 22, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_4_2_0.png
+  rotate: false
+  xy: 2261, 94
+  size: 28, 32
+  orig: 28, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_4_3_0.png
+  rotate: false
+  xy: 793, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_501_0_0.png
+  rotate: false
+  xy: 172, 64
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_501_1_0.png
+  rotate: false
+  xy: 1327, 35
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_501_2_0.png
+  rotate: false
+  xy: 2320, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_501_3_0.png
+  rotate: false
+  xy: 572, 35
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_501_7_0.png
+  rotate: false
+  xy: 1040, 37
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_502_0_0.png
+  rotate: false
+  xy: 4062, 92
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_502_1_0.png
+  rotate: false
+  xy: 1329, 3
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_502_2_0.png
+  rotate: false
+  xy: 3131, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_502_3_0.png
+  rotate: false
+  xy: 681, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_502_7_0.png
+  rotate: false
+  xy: 956, 39
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_503_0_0.png
+  rotate: false
+  xy: 253, 63
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_503_1_0.png
+  rotate: false
+  xy: 755, 2
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_503_2_0.png
+  rotate: false
+  xy: 2407, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_503_3_0.png
+  rotate: false
+  xy: 653, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_503_7_0.png
+  rotate: false
+  xy: 806, 9
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_504_0_0.png
+  rotate: false
+  xy: 199, 63
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_504_1_0.png
+  rotate: false
+  xy: 961, 68
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_504_2_0.png
+  rotate: false
+  xy: 3247, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_504_3_0.png
+  rotate: false
+  xy: 765, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_504_7_0.png
+  rotate: false
+  xy: 1148, 37
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_505_0_0.png
+  rotate: false
+  xy: 334, 63
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_505_1_0.png
+  rotate: false
+  xy: 1242, 3
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_505_2_0.png
+  rotate: false
+  xy: 3189, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_505_3_0.png
+  rotate: false
+  xy: 625, 68
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_505_7_0.png
+  rotate: false
+  xy: 1067, 37
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_506_0_0.png
+  rotate: false
+  xy: 307, 63
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_506_1_0.png
+  rotate: false
+  xy: 598, 2
+  size: 21, 31
+  orig: 21, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_506_2_0.png
+  rotate: false
+  xy: 2552, 92
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_506_3_0.png
+  rotate: false
+  xy: 877, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_506_7_0.png
+  rotate: false
+  xy: 901, 10
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_507_0_0.png
+  rotate: false
+  xy: 361, 63
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_507_1_0.png
+  rotate: false
+  xy: 1302, 67
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_507_2_0.png
+  rotate: false
+  xy: 3276, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_507_3_0.png
+  rotate: false
+  xy: 821, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_507_7_0.png
+  rotate: false
+  xy: 1175, 37
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_5_1_0.png
+  rotate: false
+  xy: 649, 35
+  size: 19, 31
+  orig: 19, 31
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_5_2_0.png
+  rotate: false
+  xy: 3392, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_5_3_0.png
+  rotate: false
+  xy: 905, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_6_0_0.png
+  rotate: false
+  xy: 285, 2
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_6_1_0.png
+  rotate: false
+  xy: 2253, 70
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_6_2_0.png
+  rotate: false
+  xy: 72, 2
+  size: 27, 25
+  orig: 27, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_6_3_0.png
+  rotate: false
+  xy: 1012, 41
+  size: 26, 23
+  orig: 26, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_6_7_0.png
+  rotate: false
+  xy: 204, 2
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_8_0_0.png
+  rotate: false
+  xy: 3981, 92
+  size: 25, 34
+  orig: 25, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_8_1_0.png
+  rotate: false
+  xy: 1306, 35
+  size: 19, 30
+  orig: 19, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_8_2_0.png
+  rotate: false
+  xy: 2291, 94
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_8_3_0.png
+  rotate: false
+  xy: 933, 69
+  size: 26, 29
+  orig: 26, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_8_7_0.png
+  rotate: false
+  xy: 1067, 8
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_9_0_0.png
+  rotate: false
+  xy: 2693, 88
+  size: 25, 38
+  orig: 25, 38
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_9_1_0.png
+  rotate: false
+  xy: 177, 26
+  size: 19, 36
+  orig: 19, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_9_2_0.png
+  rotate: false
+  xy: 1791, 90
+  size: 28, 36
+  orig: 28, 36
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_9_3_0.png
+  rotate: false
+  xy: 3017, 92
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ch_9_7_0.png
+  rotate: false
+  xy: 469, 64
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1800_0_0.png
+  rotate: false
+  xy: 2825, 29
+  size: 5, 3
+  orig: 5, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1800_1_0.png
+  rotate: false
+  xy: 3602, 90
+  size: 7, 3
+  orig: 7, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1800_2_0.png
+  rotate: false
+  xy: 3591, 67
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1800_7_0.png
+  rotate: false
+  xy: 2870, 64
+  size: 6, 3
+  orig: 6, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1801_0_0.png
+  rotate: false
+  xy: 144, 10
+  size: 3, 17
+  orig: 3, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1801_2_0.png
+  rotate: false
+  xy: 3585, 71
+  size: 4, 14
+  orig: 4, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1801_3_0.png
+  rotate: false
+  xy: 3240, 12
+  size: 6, 18
+  orig: 6, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1801_7_0.png
+  rotate: false
+  xy: 3419, 34
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_1802_7_0.png
+  rotate: false
+  xy: 118, 59
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_800_0_0.png
+  rotate: false
+  xy: 2994, 15
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_800_1_0.png
+  rotate: false
+  xy: 3155, 21
+  size: 7, 22
+  orig: 7, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_800_2_0.png
+  rotate: false
+  xy: 3132, 18
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_800_3_0.png
+  rotate: false
+  xy: 1725, 54
+  size: 8, 30
+  orig: 8, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_800_7_0.png
+  rotate: false
+  xy: 2945, 36
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_801_0_0.png
+  rotate: false
+  xy: 3068, 65
+  size: 5, 25
+  orig: 5, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_801_3_0.png
+  rotate: false
+  xy: 2281, 40
+  size: 10, 29
+  orig: 10, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_801_7_0.png
+  rotate: false
+  xy: 2714, 2
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_802_0_0.png
+  rotate: false
+  xy: 3232, 31
+  size: 5, 20
+  orig: 5, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_802_1_0.png
+  rotate: false
+  xy: 3330, 30
+  size: 7, 20
+  orig: 7, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_802_2_0.png
+  rotate: false
+  xy: 3404, 50
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_802_3_0.png
+  rotate: false
+  xy: 2842, 4
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_lc_802_7_0.png
+  rotate: false
+  xy: 3085, 67
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_17_0_0.png
+  rotate: false
+  xy: 3450, 47
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_17_1_0.png
+  rotate: false
+  xy: 3139, 20
+  size: 7, 22
+  orig: 7, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_17_2_0.png
+  rotate: false
+  xy: 3457, 47
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_17_3_0.png
+  rotate: false
+  xy: 2271, 39
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_17_7_0.png
+  rotate: false
+  xy: 2924, 36
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_1_0_0.png
+  rotate: false
+  xy: 3207, 29
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_1_1_0.png
+  rotate: false
+  xy: 3059, 15
+  size: 7, 22
+  orig: 7, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_1_2_0.png
+  rotate: false
+  xy: 3191, 26
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_1_3_0.png
+  rotate: false
+  xy: 2108, 38
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_1_7_0.png
+  rotate: false
+  xy: 2862, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_2_0_0.png
+  rotate: false
+  xy: 3597, 72
+  size: 4, 13
+  orig: 4, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_2_2_0.png
+  rotate: false
+  xy: 3519, 32
+  size: 5, 13
+  orig: 5, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_2_3_0.png
+  rotate: false
+  xy: 3273, 50
+  size: 8, 18
+  orig: 8, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_ls_2_7_0.png
+  rotate: false
+  xy: 3358, 33
+  size: 8, 15
+  orig: 8, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1800_0_0.png
+  rotate: false
+  xy: 819, 2
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1800_2_0.png
+  rotate: false
+  xy: 2851, 68
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1801_0_0.png
+  rotate: false
+  xy: 3411, 55
+  size: 8, 18
+  orig: 8, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1801_1_0.png
+  rotate: false
+  xy: 3471, 53
+  size: 8, 16
+  orig: 8, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1801_2_0.png
+  rotate: false
+  xy: 3262, 50
+  size: 9, 18
+  orig: 9, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1801_3_0.png
+  rotate: false
+  xy: 3435, 34
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1801_7_0.png
+  rotate: false
+  xy: 3283, 11
+  size: 6, 18
+  orig: 6, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_1802_2_0.png
+  rotate: false
+  xy: 3228, 7
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_800_0_0.png
+  rotate: false
+  xy: 2233, 42
+  size: 10, 29
+  orig: 10, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_800_1_0.png
+  rotate: false
+  xy: 2271, 14
+  size: 8, 23
+  orig: 8, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_800_2_0.png
+  rotate: false
+  xy: 2316, 13
+  size: 9, 29
+  orig: 9, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_800_3_0.png
+  rotate: false
+  xy: 2118, 38
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_800_7_0.png
+  rotate: false
+  xy: 2967, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_801_0_0.png
+  rotate: false
+  xy: 2538, 63
+  size: 12, 28
+  orig: 12, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_801_1_0.png
+  rotate: false
+  xy: 2767, 31
+  size: 10, 24
+  orig: 10, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_801_2_0.png
+  rotate: false
+  xy: 1908, 31
+  size: 11, 28
+  orig: 11, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_801_3_0.png
+  rotate: false
+  xy: 2259, 16
+  size: 10, 29
+  orig: 10, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_801_7_0.png
+  rotate: false
+  xy: 2327, 14
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_802_0_0.png
+  rotate: false
+  xy: 2675, 34
+  size: 10, 27
+  orig: 10, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_802_1_0.png
+  rotate: false
+  xy: 3169, 47
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_802_2_0.png
+  rotate: false
+  xy: 2902, 8
+  size: 9, 26
+  orig: 9, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_802_3_0.png
+  rotate: false
+  xy: 2957, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rc_802_7_0.png
+  rotate: false
+  xy: 3058, 65
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_17_0_0.png
+  rotate: false
+  xy: 2163, 38
+  size: 10, 29
+  orig: 10, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_17_1_0.png
+  rotate: false
+  xy: 3115, 42
+  size: 8, 23
+  orig: 8, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_17_2_0.png
+  rotate: false
+  xy: 1509, 46
+  size: 9, 29
+  orig: 9, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_17_3_0.png
+  rotate: false
+  xy: 2832, 4
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_17_7_0.png
+  rotate: false
+  xy: 2913, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_1_0_0.png
+  rotate: false
+  xy: 1480, 18
+  size: 10, 29
+  orig: 10, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_1_1_0.png
+  rotate: false
+  xy: 3125, 42
+  size: 8, 23
+  orig: 8, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_1_2_0.png
+  rotate: false
+  xy: 2305, 13
+  size: 9, 29
+  orig: 9, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_1_3_0.png
+  rotate: false
+  xy: 2128, 38
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_1_7_0.png
+  rotate: false
+  xy: 2875, 36
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_2_0_0.png
+  rotate: false
+  xy: 3351, 74
+  size: 10, 18
+  orig: 10, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_2_1_0.png
+  rotate: false
+  xy: 3450, 31
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_2_2_0.png
+  rotate: false
+  xy: 3386, 73
+  size: 9, 19
+  orig: 9, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_2_3_0.png
+  rotate: false
+  xy: 3283, 31
+  size: 8, 17
+  orig: 8, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_std_rs_2_7_0.png
+  rotate: false
+  xy: 3318, 13
+  size: 8, 15
+  orig: 8, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_0_0.png
+  rotate: false
+  xy: 2861, 69
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_0_1.png
+  rotate: false
+  xy: 839, 2
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_1_0.png
+  rotate: false
+  xy: 894, 3
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_1_1.png
+  rotate: false
+  xy: 3208, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_2_0.png
+  rotate: false
+  xy: 3586, 87
+  size: 7, 6
+  orig: 7, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_2_1.png
+  rotate: false
+  xy: 1078, 2
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_3_0.png
+  rotate: false
+  xy: 2306, 8
+  size: 7, 3
+  orig: 7, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_3_1.png
+  rotate: false
+  xy: 1069, 2
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_4_0.png
+  rotate: false
+  xy: 2296, 5
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_4_1.png
+  rotate: false
+  xy: 2465, 2
+  size: 9, 6
+  orig: 9, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_5_0.png
+  rotate: false
+  xy: 1096, 2
+  size: 6, 4
+  orig: 6, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_5_1.png
+  rotate: false
+  xy: 1104, 2
+  size: 6, 4
+  orig: 6, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_6_0.png
+  rotate: false
+  xy: 829, 2
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_6_1.png
+  rotate: false
+  xy: 876, 2
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_7_0.png
+  rotate: false
+  xy: 1119, 2
+  size: 8, 3
+  orig: 8, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1800_7_1.png
+  rotate: false
+  xy: 1190, 2
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_0_0.png
+  rotate: false
+  xy: 3338, 74
+  size: 11, 18
+  orig: 11, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_0_1.png
+  rotate: false
+  xy: 2423, 2
+  size: 14, 16
+  orig: 14, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_1_0.png
+  rotate: false
+  xy: 3303, 51
+  size: 7, 21
+  orig: 7, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_1_1.png
+  rotate: false
+  xy: 3338, 52
+  size: 8, 20
+  orig: 8, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_2_0.png
+  rotate: false
+  xy: 2427, 45
+  size: 15, 21
+  orig: 15, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_2_1.png
+  rotate: false
+  xy: 2045, 2
+  size: 17, 20
+  orig: 17, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_3_0.png
+  rotate: false
+  xy: 1662, 2
+  size: 14, 19
+  orig: 14, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_3_1.png
+  rotate: false
+  xy: 1626, 23
+  size: 16, 19
+  orig: 16, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_4_0.png
+  rotate: false
+  xy: 1678, 2
+  size: 14, 19
+  orig: 14, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_4_1.png
+  rotate: false
+  xy: 1694, 2
+  size: 13, 19
+  orig: 13, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_5_0.png
+  rotate: false
+  xy: 2136, 68
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_5_1.png
+  rotate: false
+  xy: 2538, 39
+  size: 13, 22
+  orig: 13, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_6_0.png
+  rotate: false
+  xy: 2337, 71
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_6_1.png
+  rotate: false
+  xy: 1670, 48
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_7_0.png
+  rotate: false
+  xy: 2215, 22
+  size: 10, 17
+  orig: 10, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1801_7_1.png
+  rotate: false
+  xy: 2201, 22
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1802_6_0.png
+  rotate: false
+  xy: 2920, 2
+  size: 3, 4
+  orig: 3, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_1802_6_1.png
+  rotate: false
+  xy: 2915, 2
+  size: 3, 4
+  orig: 3, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_0_0.png
+  rotate: false
+  xy: 1985, 2
+  size: 13, 26
+  orig: 13, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_0_1.png
+  rotate: false
+  xy: 2604, 62
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_1_0.png
+  rotate: false
+  xy: 2293, 13
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_1_1.png
+  rotate: false
+  xy: 2755, 31
+  size: 10, 25
+  orig: 10, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_2_0.png
+  rotate: false
+  xy: 2755, 58
+  size: 15, 26
+  orig: 15, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_2_1.png
+  rotate: false
+  xy: 2435, 68
+  size: 17, 24
+  orig: 17, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_3_0.png
+  rotate: false
+  xy: 1229, 37
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_3_1.png
+  rotate: false
+  xy: 1268, 35
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_4_0.png
+  rotate: false
+  xy: 2675, 63
+  size: 16, 25
+  orig: 16, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_4_1.png
+  rotate: false
+  xy: 1900, 61
+  size: 15, 26
+  orig: 15, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_5_0.png
+  rotate: false
+  xy: 1850, 2
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_5_1.png
+  rotate: false
+  xy: 2570, 62
+  size: 15, 28
+  orig: 15, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_6_0.png
+  rotate: false
+  xy: 1435, 48
+  size: 19, 28
+  orig: 19, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_6_1.png
+  rotate: false
+  xy: 1195, 8
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_7_0.png
+  rotate: false
+  xy: 1759, 29
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_800_7_1.png
+  rotate: false
+  xy: 1403, 15
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_0_0.png
+  rotate: false
+  xy: 2029, 50
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_0_1.png
+  rotate: false
+  xy: 2465, 67
+  size: 17, 24
+  orig: 17, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_1_0.png
+  rotate: false
+  xy: 1423, 15
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_1_1.png
+  rotate: false
+  xy: 2281, 13
+  size: 10, 25
+  orig: 10, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_2_0.png
+  rotate: false
+  xy: 2720, 59
+  size: 16, 25
+  orig: 16, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_2_1.png
+  rotate: false
+  xy: 1863, 31
+  size: 18, 24
+  orig: 18, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_3_0.png
+  rotate: false
+  xy: 1796, 30
+  size: 17, 27
+  orig: 17, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_3_1.png
+  rotate: false
+  xy: 1540, 71
+  size: 19, 27
+  orig: 19, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_4_0.png
+  rotate: false
+  xy: 1758, 2
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_4_1.png
+  rotate: false
+  xy: 1845, 31
+  size: 16, 25
+  orig: 16, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_5_0.png
+  rotate: false
+  xy: 1777, 30
+  size: 17, 27
+  orig: 17, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_5_1.png
+  rotate: false
+  xy: 1832, 2
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_6_0.png
+  rotate: false
+  xy: 1379, 70
+  size: 21, 28
+  orig: 21, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_6_1.png
+  rotate: false
+  xy: 952, 9
+  size: 24, 28
+  orig: 24, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_7_0.png
+  rotate: false
+  xy: 1777, 2
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_801_7_1.png
+  rotate: false
+  xy: 1488, 49
+  size: 19, 26
+  orig: 19, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_0_0.png
+  rotate: false
+  xy: 2469, 40
+  size: 13, 25
+  orig: 13, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_0_1.png
+  rotate: false
+  xy: 2693, 61
+  size: 16, 25
+  orig: 16, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_1_0.png
+  rotate: false
+  xy: 2789, 29
+  size: 10, 25
+  orig: 10, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_1_1.png
+  rotate: false
+  xy: 2933, 64
+  size: 10, 24
+  orig: 10, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_2_0.png
+  rotate: false
+  xy: 2012, 51
+  size: 15, 25
+  orig: 15, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_2_1.png
+  rotate: false
+  xy: 1644, 23
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_3_0.png
+  rotate: false
+  xy: 1775, 59
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_3_1.png
+  rotate: false
+  xy: 1796, 2
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_4_0.png
+  rotate: false
+  xy: 2416, 68
+  size: 17, 24
+  orig: 17, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_4_1.png
+  rotate: false
+  xy: 2738, 59
+  size: 15, 25
+  orig: 15, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_5_0.png
+  rotate: false
+  xy: 2640, 62
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_5_1.png
+  rotate: false
+  xy: 1917, 61
+  size: 15, 27
+  orig: 15, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_6_0.png
+  rotate: false
+  xy: 1547, 23
+  size: 19, 27
+  orig: 19, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_6_1.png
+  rotate: false
+  xy: 363, 2
+  size: 22, 26
+  orig: 22, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_7_0.png
+  rotate: false
+  xy: 2622, 62
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_lc_802_7_1.png
+  rotate: false
+  xy: 1739, 29
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_0_0.png
+  rotate: false
+  xy: 887, 9
+  size: 12, 27
+  orig: 12, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_0_1.png
+  rotate: false
+  xy: 1886, 2
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_1_0.png
+  rotate: false
+  xy: 2526, 12
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_1_1.png
+  rotate: false
+  xy: 2550, 12
+  size: 10, 25
+  orig: 10, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_2_0.png
+  rotate: false
+  xy: 2658, 61
+  size: 15, 27
+  orig: 15, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_2_1.png
+  rotate: false
+  xy: 1509, 19
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_3_0.png
+  rotate: false
+  xy: 2520, 64
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_3_1.png
+  rotate: false
+  xy: 1755, 58
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_4_0.png
+  rotate: false
+  xy: 387, 2
+  size: 19, 26
+  orig: 19, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_4_1.png
+  rotate: false
+  xy: 1814, 2
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_5_0.png
+  rotate: false
+  xy: 2502, 64
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_5_1.png
+  rotate: false
+  xy: 2587, 62
+  size: 15, 28
+  orig: 15, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_6_0.png
+  rotate: false
+  xy: 1735, 58
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_6_1.png
+  rotate: false
+  xy: 1171, 8
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_7_0.png
+  rotate: false
+  xy: 2552, 63
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_17_7_1.png
+  rotate: false
+  xy: 1586, 42
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_0_0.png
+  rotate: false
+  xy: 1948, 49
+  size: 13, 27
+  orig: 13, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_0_1.png
+  rotate: false
+  xy: 2484, 64
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_1_0.png
+  rotate: false
+  xy: 2764, 3
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_1_1.png
+  rotate: false
+  xy: 2788, 2
+  size: 10, 25
+  orig: 10, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_2_0.png
+  rotate: false
+  xy: 2772, 57
+  size: 15, 27
+  orig: 15, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_2_1.png
+  rotate: false
+  xy: 1739, 2
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_3_0.png
+  rotate: false
+  xy: 1561, 71
+  size: 14, 27
+  orig: 14, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_3_1.png
+  rotate: false
+  xy: 1568, 23
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_4_0.png
+  rotate: false
+  xy: 1528, 19
+  size: 17, 25
+  orig: 17, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_4_1.png
+  rotate: false
+  xy: 1995, 52
+  size: 15, 25
+  orig: 15, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_5_0.png
+  rotate: false
+  xy: 1288, 35
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_5_1.png
+  rotate: false
+  xy: 1492, 19
+  size: 15, 28
+  orig: 15, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_6_0.png
+  rotate: false
+  xy: 1435, 18
+  size: 19, 28
+  orig: 19, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_6_1.png
+  rotate: false
+  xy: 1146, 8
+  size: 23, 27
+  orig: 23, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_7_0.png
+  rotate: false
+  xy: 1868, 2
+  size: 16, 27
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_1_7_1.png
+  rotate: false
+  xy: 1520, 71
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_0_0.png
+  rotate: false
+  xy: 2247, 2
+  size: 10, 12
+  orig: 10, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_0_1.png
+  rotate: false
+  xy: 2680, 20
+  size: 10, 12
+  orig: 10, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_1_0.png
+  rotate: false
+  xy: 3008, 2
+  size: 7, 12
+  orig: 7, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_1_1.png
+  rotate: false
+  xy: 3048, 2
+  size: 7, 11
+  orig: 7, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_2_0.png
+  rotate: false
+  xy: 3037, 2
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_2_1.png
+  rotate: false
+  xy: 2996, 2
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_3_0.png
+  rotate: false
+  xy: 2108, 22
+  size: 12, 14
+  orig: 12, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_4_0.png
+  rotate: false
+  xy: 2632, 2
+  size: 13, 15
+  orig: 13, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_4_1.png
+  rotate: false
+  xy: 3108, 2
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_5_1.png
+  rotate: false
+  xy: 2169, 22
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_6_0.png
+  rotate: false
+  xy: 3210, 55
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_6_1.png
+  rotate: false
+  xy: 2633, 20
+  size: 16, 13
+  orig: 16, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wav_ls_2_7_0.png
+  rotate: false
+  xy: 1934, 30
+  size: 12, 15
+  orig: 12, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_0_0.png
+  rotate: false
+  xy: 2904, 2
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_0_2.png
+  rotate: false
+  xy: 3398, 5
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_0_3.png
+  rotate: false
+  xy: 2870, 69
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_1_0.png
+  rotate: false
+  xy: 1279, 64
+  size: 8, 3
+  orig: 8, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_1_1.png
+  rotate: false
+  xy: 798, 2
+  size: 9, 5
+  orig: 9, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_1_2.png
+  rotate: false
+  xy: 1289, 64
+  size: 8, 3
+  orig: 8, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_1_3.png
+  rotate: false
+  xy: 2230, 70
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_2_0.png
+  rotate: false
+  xy: 2862, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_2_1.png
+  rotate: false
+  xy: 1049, 2
+  size: 8, 4
+  orig: 8, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_2_2.png
+  rotate: false
+  xy: 1139, 2
+  size: 5, 3
+  orig: 5, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_3_0.png
+  rotate: false
+  xy: 3504, 28
+  size: 6, 3
+  orig: 6, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_3_1.png
+  rotate: false
+  xy: 2861, 64
+  size: 7, 3
+  orig: 7, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_3_3.png
+  rotate: false
+  xy: 1112, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1800_7_1.png
+  rotate: false
+  xy: 2883, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_0_1.png
+  rotate: false
+  xy: 3548, 45
+  size: 5, 15
+  orig: 5, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_0_2.png
+  rotate: false
+  xy: 3419, 15
+  size: 5, 17
+  orig: 5, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_0_3.png
+  rotate: false
+  xy: 3183, 2
+  size: 7, 19
+  orig: 7, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_1_1.png
+  rotate: false
+  xy: 3283, 74
+  size: 12, 18
+  orig: 12, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_1_2.png
+  rotate: false
+  xy: 3303, 31
+  size: 7, 18
+  orig: 7, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_1_3.png
+  rotate: false
+  xy: 1725, 41
+  size: 2, 11
+  orig: 2, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_2_1.png
+  rotate: false
+  xy: 3361, 14
+  size: 6, 17
+  orig: 6, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_2_2.png
+  rotate: false
+  xy: 3354, 13
+  size: 5, 18
+  orig: 5, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_2_3.png
+  rotate: false
+  xy: 3490, 22
+  size: 4, 11
+  orig: 4, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_3_1.png
+  rotate: false
+  xy: 2004, 30
+  size: 6, 20
+  orig: 6, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_3_2.png
+  rotate: false
+  xy: 3519, 64
+  size: 6, 18
+  orig: 6, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_3_3.png
+  rotate: false
+  xy: 3507, 47
+  size: 5, 15
+  orig: 5, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_7_0.png
+  rotate: false
+  xy: 3543, 63
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_7_1.png
+  rotate: false
+  xy: 3555, 45
+  size: 5, 15
+  orig: 5, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1801_7_3.png
+  rotate: false
+  xy: 3411, 34
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1802_3_1.png
+  rotate: false
+  xy: 2925, 3
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_1802_7_1.png
+  rotate: false
+  xy: 3496, 22
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_0_0.png
+  rotate: false
+  xy: 3276, 11
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_0_1.png
+  rotate: false
+  xy: 3541, 45
+  size: 5, 16
+  orig: 5, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_0_2.png
+  rotate: false
+  xy: 2940, 8
+  size: 5, 26
+  orig: 5, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_0_3.png
+  rotate: false
+  xy: 3122, 18
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_1_0.png
+  rotate: false
+  xy: 2984, 15
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_1_1.png
+  rotate: false
+  xy: 2336, 48
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_1_2.png
+  rotate: false
+  xy: 3029, 15
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_1_3.png
+  rotate: false
+  xy: 3332, 54
+  size: 4, 19
+  orig: 4, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_2_0.png
+  rotate: false
+  xy: 3162, 46
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_2_1.png
+  rotate: false
+  xy: 3240, 70
+  size: 9, 22
+  orig: 9, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_2_2.png
+  rotate: false
+  xy: 3464, 48
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_2_3.png
+  rotate: false
+  xy: 3484, 21
+  size: 4, 12
+  orig: 4, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_3_1.png
+  rotate: false
+  xy: 2175, 38
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_3_2.png
+  rotate: false
+  xy: 2058, 24
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_3_3.png
+  rotate: false
+  xy: 2865, 36
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_7_0.png
+  rotate: false
+  xy: 2388, 20
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_7_1.png
+  rotate: false
+  xy: 2444, 41
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_7_2.png
+  rotate: false
+  xy: 2365, 20
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_800_7_3.png
+  rotate: false
+  xy: 1834, 31
+  size: 9, 26
+  orig: 9, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_0_0.png
+  rotate: false
+  xy: 3199, 8
+  size: 6, 21
+  orig: 6, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_0_1.png
+  rotate: false
+  xy: 3426, 16
+  size: 6, 16
+  orig: 6, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_0_2.png
+  rotate: false
+  xy: 3164, 22
+  size: 6, 22
+  orig: 6, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_0_3.png
+  rotate: false
+  xy: 3112, 18
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_1_0.png
+  rotate: false
+  xy: 3145, 45
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_1_1.png
+  rotate: false
+  xy: 2253, 47
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_1_3.png
+  rotate: false
+  xy: 3189, 50
+  size: 4, 19
+  orig: 4, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_2_0.png
+  rotate: false
+  xy: 3001, 40
+  size: 6, 23
+  orig: 6, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_2_1.png
+  rotate: false
+  xy: 3146, 69
+  size: 9, 23
+  orig: 9, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_2_3.png
+  rotate: false
+  xy: 3554, 31
+  size: 5, 12
+  orig: 5, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_3_1.png
+  rotate: false
+  xy: 1267, 68
+  size: 10, 30
+  orig: 10, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_3_2.png
+  rotate: false
+  xy: 2789, 56
+  size: 10, 28
+  orig: 10, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_3_3.png
+  rotate: false
+  xy: 2454, 67
+  size: 9, 25
+  orig: 9, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_7_1.png
+  rotate: false
+  xy: 2711, 60
+  size: 7, 26
+  orig: 7, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_7_2.png
+  rotate: false
+  xy: 1298, 3
+  size: 8, 30
+  orig: 8, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_801_7_3.png
+  rotate: false
+  xy: 1265, 3
+  size: 8, 30
+  orig: 8, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_0_0.png
+  rotate: false
+  xy: 3269, 11
+  size: 5, 20
+  orig: 5, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_0_1.png
+  rotate: false
+  xy: 3534, 45
+  size: 5, 16
+  orig: 5, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_0_2.png
+  rotate: false
+  xy: 2933, 8
+  size: 5, 26
+  orig: 5, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_0_3.png
+  rotate: false
+  xy: 3312, 52
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_1_0.png
+  rotate: false
+  xy: 3019, 16
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_1_1.png
+  rotate: false
+  xy: 1654, 48
+  size: 14, 20
+  orig: 14, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_1_2.png
+  rotate: false
+  xy: 3009, 16
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_1_3.png
+  rotate: false
+  xy: 3256, 12
+  size: 4, 18
+  orig: 4, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_2_0.png
+  rotate: false
+  xy: 3565, 62
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_2_1.png
+  rotate: false
+  xy: 3293, 51
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_2_2.png
+  rotate: false
+  xy: 3443, 33
+  size: 5, 20
+  orig: 5, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_2_3.png
+  rotate: false
+  xy: 3478, 21
+  size: 4, 12
+  orig: 4, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_3_0.png
+  rotate: false
+  xy: 2223, 41
+  size: 8, 27
+  orig: 8, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_3_1.png
+  rotate: false
+  xy: 2855, 36
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_3_2.png
+  rotate: false
+  xy: 2754, 2
+  size: 8, 27
+  orig: 8, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_3_3.png
+  rotate: false
+  xy: 2822, 2
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_7_0.png
+  rotate: false
+  xy: 3075, 41
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_7_1.png
+  rotate: false
+  xy: 3135, 44
+  size: 8, 23
+  orig: 8, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_7_2.png
+  rotate: false
+  xy: 3085, 41
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_lc_802_7_3.png
+  rotate: false
+  xy: 2811, 2
+  size: 9, 25
+  orig: 9, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_0_0.png
+  rotate: false
+  xy: 3572, 62
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_0_1.png
+  rotate: false
+  xy: 3568, 30
+  size: 5, 11
+  orig: 5, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_0_2.png
+  rotate: false
+  xy: 4089, 72
+  size: 5, 26
+  orig: 5, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_0_3.png
+  rotate: false
+  xy: 3102, 18
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_1_0.png
+  rotate: false
+  xy: 3218, 70
+  size: 9, 22
+  orig: 9, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_1_1.png
+  rotate: false
+  xy: 2152, 69
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_1_3.png
+  rotate: false
+  xy: 2438, 24
+  size: 4, 19
+  orig: 4, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_2_0.png
+  rotate: false
+  xy: 3155, 45
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_2_1.png
+  rotate: false
+  xy: 3229, 70
+  size: 9, 22
+  orig: 9, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_2_2.png
+  rotate: false
+  xy: 3558, 62
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_2_3.png
+  rotate: false
+  xy: 3472, 21
+  size: 4, 12
+  orig: 4, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_3_0.png
+  rotate: false
+  xy: 1729, 23
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_3_1.png
+  rotate: false
+  xy: 1898, 31
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_3_2.png
+  rotate: false
+  xy: 978, 8
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_3_3.png
+  rotate: false
+  xy: 1456, 18
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_7_0.png
+  rotate: false
+  xy: 2896, 36
+  size: 7, 26
+  orig: 7, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_7_1.png
+  rotate: false
+  xy: 2955, 64
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_7_2.png
+  rotate: false
+  xy: 2892, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_17_7_3.png
+  rotate: false
+  xy: 2885, 36
+  size: 9, 26
+  orig: 9, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_0_0.png
+  rotate: false
+  xy: 3551, 62
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_0_2.png
+  rotate: false
+  xy: 4089, 100
+  size: 5, 26
+  orig: 5, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_0_3.png
+  rotate: false
+  xy: 3085, 17
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_1_0.png
+  rotate: false
+  xy: 3283, 50
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_1_1.png
+  rotate: false
+  xy: 2395, 49
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_1_3.png
+  rotate: false
+  xy: 3460, 26
+  size: 4, 19
+  orig: 4, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_2_0.png
+  rotate: false
+  xy: 2531, 40
+  size: 5, 22
+  orig: 5, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_2_1.png
+  rotate: false
+  xy: 3207, 70
+  size: 9, 22
+  orig: 9, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_2_2.png
+  rotate: false
+  xy: 2372, 48
+  size: 5, 21
+  orig: 5, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_2_3.png
+  rotate: false
+  xy: 3460, 12
+  size: 4, 12
+  orig: 4, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_3_0.png
+  rotate: false
+  xy: 2227, 10
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_3_1.png
+  rotate: false
+  xy: 2835, 34
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_3_2.png
+  rotate: false
+  xy: 2237, 11
+  size: 8, 29
+  orig: 8, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_3_3.png
+  rotate: false
+  xy: 2905, 36
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_7_0.png
+  rotate: false
+  xy: 2915, 36
+  size: 7, 26
+  orig: 7, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_7_1.png
+  rotate: false
+  xy: 2965, 64
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_1_7_3.png
+  rotate: false
+  xy: 2923, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_0_0.png
+  rotate: false
+  xy: 2607, 2
+  size: 5, 11
+  orig: 5, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_0_1.png
+  rotate: false
+  xy: 3434, 16
+  size: 5, 16
+  orig: 5, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_0_2.png
+  rotate: false
+  xy: 3575, 29
+  size: 4, 12
+  orig: 4, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_0_3.png
+  rotate: false
+  xy: 2706, 20
+  size: 6, 11
+  orig: 6, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_1_1.png
+  rotate: false
+  xy: 3026, 2
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_1_2.png
+  rotate: false
+  xy: 3450, 16
+  size: 8, 13
+  orig: 8, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_1_3.png
+  rotate: false
+  xy: 2189, 69
+  size: 4, 9
+  orig: 4, 9
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_2_0.png
+  rotate: false
+  xy: 3533, 32
+  size: 5, 11
+  orig: 5, 11
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_2_1.png
+  rotate: false
+  xy: 3526, 32
+  size: 5, 12
+  orig: 5, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_2_3.png
+  rotate: false
+  xy: 3466, 15
+  size: 4, 12
+  orig: 4, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_3_0.png
+  rotate: false
+  xy: 3293, 31
+  size: 8, 18
+  orig: 8, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_3_1.png
+  rotate: false
+  xy: 3348, 52
+  size: 8, 20
+  orig: 8, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_3_2.png
+  rotate: false
+  xy: 3249, 32
+  size: 8, 18
+  orig: 8, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_3_3.png
+  rotate: false
+  xy: 3239, 32
+  size: 8, 18
+  orig: 8, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_7_1.png
+  rotate: false
+  xy: 3378, 17
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_7_2.png
+  rotate: false
+  xy: 3369, 15
+  size: 7, 16
+  orig: 7, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_ls_2_7_3.png
+  rotate: false
+  xy: 3541, 84
+  size: 8, 17
+  orig: 8, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_0_0.png
+  rotate: false
+  xy: 858, 2
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_0_1.png
+  rotate: false
+  xy: 3576, 87
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_0_2.png
+  rotate: false
+  xy: 867, 2
+  size: 7, 5
+  orig: 7, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_0_3.png
+  rotate: false
+  xy: 3066, 6
+  size: 7, 6
+  orig: 7, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_1_1.png
+  rotate: false
+  xy: 1179, 2
+  size: 9, 4
+  orig: 9, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_1_2.png
+  rotate: false
+  xy: 1129, 2
+  size: 8, 3
+  orig: 8, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_1_3.png
+  rotate: false
+  xy: 965, 2
+  size: 9, 5
+  orig: 9, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_2_1.png
+  rotate: false
+  xy: 2327, 6
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_2_2.png
+  rotate: false
+  xy: 2237, 3
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_2_3.png
+  rotate: false
+  xy: 809, 2
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_3_1.png
+  rotate: false
+  xy: 2890, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_3_3.png
+  rotate: false
+  xy: 1087, 2
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_7_1.png
+  rotate: false
+  xy: 3199, 2
+  size: 7, 4
+  orig: 7, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_7_2.png
+  rotate: false
+  xy: 2878, 64
+  size: 6, 3
+  orig: 6, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1800_7_3.png
+  rotate: false
+  xy: 2869, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_0_0.png
+  rotate: false
+  xy: 3223, 12
+  size: 9, 17
+  orig: 9, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_0_1.png
+  rotate: false
+  xy: 3325, 75
+  size: 11, 17
+  orig: 11, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_0_2.png
+  rotate: false
+  xy: 3135, 69
+  size: 9, 23
+  orig: 9, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_0_3.png
+  rotate: false
+  xy: 3390, 33
+  size: 8, 16
+  orig: 8, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_1_0.png
+  rotate: false
+  xy: 3379, 33
+  size: 9, 16
+  orig: 9, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_1_1.png
+  rotate: false
+  xy: 3195, 53
+  size: 13, 15
+  orig: 13, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_1_2.png
+  rotate: false
+  xy: 3368, 33
+  size: 9, 16
+  orig: 9, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_1_3.png
+  rotate: false
+  xy: 2029, 31
+  size: 13, 17
+  orig: 13, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_2_1.png
+  rotate: false
+  xy: 3311, 75
+  size: 12, 17
+  orig: 12, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_2_2.png
+  rotate: false
+  xy: 3375, 73
+  size: 9, 19
+  orig: 9, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_2_3.png
+  rotate: false
+  xy: 3297, 74
+  size: 12, 18
+  orig: 12, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_3_1.png
+  rotate: false
+  xy: 3562, 45
+  size: 5, 15
+  orig: 5, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_3_2.png
+  rotate: false
+  xy: 3291, 11
+  size: 6, 18
+  orig: 6, 18
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_3_3.png
+  rotate: false
+  xy: 3427, 34
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_7_1.png
+  rotate: false
+  xy: 3527, 63
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_7_2.png
+  rotate: false
+  xy: 3511, 64
+  size: 6, 19
+  orig: 6, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1801_7_3.png
+  rotate: false
+  xy: 3514, 47
+  size: 5, 15
+  orig: 5, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1802_0_0.png
+  rotate: false
+  xy: 3472, 16
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1802_0_2.png
+  rotate: false
+  xy: 3228, 2
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1802_3_0.png
+  rotate: false
+  xy: 2171, 88
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1802_3_1.png
+  rotate: false
+  xy: 1430, 2
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_1802_7_1.png
+  rotate: false
+  xy: 2824, 70
+  size: 2, 3
+  orig: 2, 3
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_0_0.png
+  rotate: false
+  xy: 2514, 12
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_0_1.png
+  rotate: false
+  xy: 2706, 33
+  size: 11, 25
+  orig: 11, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_0_2.png
+  rotate: false
+  xy: 2478, 11
+  size: 10, 27
+  orig: 10, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_0_3.png
+  rotate: false
+  xy: 1696, 23
+  size: 14, 23
+  orig: 14, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_1_0.png
+  rotate: false
+  xy: 3273, 70
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_1_1.png
+  rotate: false
+  xy: 2516, 40
+  size: 13, 22
+  orig: 13, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_1_3.png
+  rotate: false
+  xy: 2212, 70
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_2_0.png
+  rotate: false
+  xy: 2045, 24
+  size: 11, 29
+  orig: 11, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_2_1.png
+  rotate: false
+  xy: 2030, 2
+  size: 13, 27
+  orig: 13, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_2_3.png
+  rotate: false
+  xy: 2000, 2
+  size: 13, 26
+  orig: 13, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_3_0.png
+  rotate: false
+  xy: 2724, 2
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_3_1.png
+  rotate: false
+  xy: 2872, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_3_2.png
+  rotate: false
+  xy: 2734, 2
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_3_3.png
+  rotate: false
+  xy: 2185, 38
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_7_0.png
+  rotate: false
+  xy: 3018, 65
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_7_1.png
+  rotate: false
+  xy: 3038, 65
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_7_2.png
+  rotate: false
+  xy: 3028, 65
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_800_7_3.png
+  rotate: false
+  xy: 3018, 39
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_0_0.png
+  rotate: false
+  xy: 2351, 20
+  size: 12, 26
+  orig: 12, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_0_1.png
+  rotate: false
+  xy: 2454, 40
+  size: 13, 25
+  orig: 13, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_0_2.png
+  rotate: false
+  xy: 2081, 23
+  size: 12, 28
+  orig: 12, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_0_3.png
+  rotate: false
+  xy: 2320, 45
+  size: 14, 24
+  orig: 14, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_1_0.png
+  rotate: false
+  xy: 2693, 35
+  size: 11, 24
+  orig: 11, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_1_1.png
+  rotate: false
+  xy: 1663, 23
+  size: 15, 23
+  orig: 15, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_1_2.png
+  rotate: false
+  xy: 2655, 35
+  size: 11, 24
+  orig: 11, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_1_3.png
+  rotate: false
+  xy: 2297, 71
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_2_1.png
+  rotate: false
+  xy: 1937, 2
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_2_2.png
+  rotate: false
+  xy: 1466, 18
+  size: 12, 29
+  orig: 12, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_2_3.png
+  rotate: false
+  xy: 1904, 2
+  size: 15, 27
+  orig: 15, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_3_0.png
+  rotate: false
+  xy: 2801, 29
+  size: 10, 28
+  orig: 10, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_3_1.png
+  rotate: false
+  xy: 2800, 2
+  size: 9, 25
+  orig: 9, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_3_2.png
+  rotate: false
+  xy: 2813, 29
+  size: 10, 28
+  orig: 10, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_3_3.png
+  rotate: false
+  xy: 2247, 16
+  size: 10, 29
+  orig: 10, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_7_0.png
+  rotate: false
+  xy: 1456, 46
+  size: 8, 30
+  orig: 8, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_7_1.png
+  rotate: false
+  xy: 1348, 35
+  size: 8, 30
+  orig: 8, 30
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_801_7_3.png
+  rotate: false
+  xy: 2955, 36
+  size: 7, 26
+  orig: 7, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_0_0.png
+  rotate: false
+  xy: 2975, 65
+  size: 10, 24
+  orig: 10, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_0_1.png
+  rotate: false
+  xy: 2571, 15
+  size: 11, 23
+  orig: 11, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_0_2.png
+  rotate: false
+  xy: 2987, 65
+  size: 10, 24
+  orig: 10, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_0_3.png
+  rotate: false
+  xy: 2584, 38
+  size: 13, 22
+  orig: 13, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_1_0.png
+  rotate: false
+  xy: 3322, 52
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_1_1.png
+  rotate: false
+  xy: 2439, 2
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_1_2.png
+  rotate: false
+  xy: 3358, 50
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_1_3.png
+  rotate: false
+  xy: 2599, 15
+  size: 13, 20
+  orig: 13, 20
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_2_0.png
+  rotate: false
+  xy: 2375, 20
+  size: 11, 26
+  orig: 11, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_2_1.png
+  rotate: false
+  xy: 1883, 31
+  size: 13, 24
+  orig: 13, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_2_2.png
+  rotate: false
+  xy: 2068, 24
+  size: 11, 27
+  orig: 11, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_2_3.png
+  rotate: false
+  xy: 2614, 35
+  size: 12, 25
+  orig: 12, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_3_0.png
+  rotate: false
+  xy: 2947, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_3_1.png
+  rotate: false
+  xy: 3028, 39
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_3_3.png
+  rotate: false
+  xy: 3048, 65
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_7_1.png
+  rotate: false
+  xy: 3048, 39
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_7_2.png
+  rotate: false
+  xy: 3038, 39
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rc_802_7_3.png
+  rotate: false
+  xy: 3172, 23
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_0_0.png
+  rotate: false
+  xy: 2502, 12
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_0_1.png
+  rotate: false
+  xy: 2642, 35
+  size: 11, 25
+  orig: 11, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_0_2.png
+  rotate: false
+  xy: 2410, 20
+  size: 10, 27
+  orig: 10, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_0_3.png
+  rotate: false
+  xy: 1680, 23
+  size: 14, 23
+  orig: 14, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_1_0.png
+  rotate: false
+  xy: 3262, 70
+  size: 9, 22
+  orig: 9, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_1_1.png
+  rotate: false
+  xy: 2599, 37
+  size: 13, 23
+  orig: 13, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_1_2.png
+  rotate: false
+  xy: 3179, 47
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_1_3.png
+  rotate: false
+  xy: 2118, 68
+  size: 16, 22
+  orig: 16, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_2_0.png
+  rotate: false
+  xy: 1921, 30
+  size: 11, 29
+  orig: 11, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_2_1.png
+  rotate: false
+  xy: 2015, 2
+  size: 13, 27
+  orig: 13, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_2_2.png
+  rotate: false
+  xy: 1712, 41
+  size: 11, 29
+  orig: 11, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_2_3.png
+  rotate: false
+  xy: 2305, 44
+  size: 13, 25
+  orig: 13, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_3_1.png
+  rotate: false
+  xy: 2964, 36
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_3_2.png
+  rotate: false
+  xy: 2845, 34
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_3_3.png
+  rotate: false
+  xy: 2852, 4
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_7_0.png
+  rotate: false
+  xy: 2745, 32
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_7_1.png
+  rotate: false
+  xy: 2779, 30
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_7_2.png
+  rotate: false
+  xy: 2562, 12
+  size: 7, 25
+  orig: 7, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_17_7_3.png
+  rotate: false
+  xy: 2999, 65
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_0_0.png
+  rotate: false
+  xy: 2776, 2
+  size: 10, 26
+  orig: 10, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_0_1.png
+  rotate: false
+  xy: 2732, 32
+  size: 11, 25
+  orig: 11, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_0_2.png
+  rotate: false
+  xy: 2490, 11
+  size: 10, 27
+  orig: 10, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_0_3.png
+  rotate: false
+  xy: 2422, 20
+  size: 14, 23
+  orig: 14, 23
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_1_0.png
+  rotate: false
+  xy: 3049, 15
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_1_1.png
+  rotate: false
+  xy: 2553, 39
+  size: 13, 22
+  orig: 13, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_1_2.png
+  rotate: false
+  xy: 3075, 17
+  size: 8, 22
+  orig: 8, 22
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_1_3.png
+  rotate: false
+  xy: 2354, 48
+  size: 16, 21
+  orig: 16, 21
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_2_0.png
+  rotate: false
+  xy: 2095, 22
+  size: 11, 29
+  orig: 11, 29
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_2_1.png
+  rotate: false
+  xy: 2195, 41
+  size: 13, 27
+  orig: 13, 27
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_2_3.png
+  rotate: false
+  xy: 1969, 2
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_3_0.png
+  rotate: false
+  xy: 2744, 2
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_3_1.png
+  rotate: false
+  xy: 3105, 67
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_3_2.png
+  rotate: false
+  xy: 2825, 34
+  size: 8, 28
+  orig: 8, 28
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_3_3.png
+  rotate: false
+  xy: 2882, 8
+  size: 8, 26
+  orig: 8, 26
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_7_1.png
+  rotate: false
+  xy: 2945, 64
+  size: 8, 25
+  orig: 8, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_7_2.png
+  rotate: false
+  xy: 3009, 64
+  size: 7, 25
+  orig: 7, 25
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_1_7_3.png
+  rotate: false
+  xy: 3075, 67
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_0_0.png
+  rotate: false
+  xy: 3433, 55
+  size: 10, 15
+  orig: 10, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_0_1.png
+  rotate: false
+  xy: 3271, 34
+  size: 10, 14
+  orig: 10, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_0_2.png
+  rotate: false
+  xy: 3421, 55
+  size: 10, 15
+  orig: 10, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_0_3.png
+  rotate: false
+  xy: 3137, 2
+  size: 10, 14
+  orig: 10, 14
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_1_0.png
+  rotate: false
+  xy: 3388, 2
+  size: 8, 13
+  orig: 8, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_1_1.png
+  rotate: false
+  xy: 2692, 20
+  size: 12, 13
+  orig: 12, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_1_2.png
+  rotate: false
+  xy: 3378, 2
+  size: 8, 13
+  orig: 8, 13
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_1_3.png
+  rotate: false
+  xy: 2668, 20
+  size: 10, 12
+  orig: 10, 12
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_2_0.png
+  rotate: false
+  xy: 3161, 2
+  size: 10, 17
+  orig: 10, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_2_1.png
+  rotate: false
+  xy: 3226, 53
+  size: 11, 15
+  orig: 11, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_2_2.png
+  rotate: false
+  xy: 3408, 75
+  size: 11, 17
+  orig: 11, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_2_3.png
+  rotate: false
+  xy: 2081, 2
+  size: 12, 19
+  orig: 12, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_3_1.png
+  rotate: false
+  xy: 3521, 84
+  size: 8, 17
+  orig: 8, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_3_2.png
+  rotate: false
+  xy: 3531, 84
+  size: 8, 17
+  orig: 8, 17
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_3_3.png
+  rotate: false
+  xy: 3173, 2
+  size: 8, 19
+  orig: 8, 19
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_7_0.png
+  rotate: false
+  xy: 3512, 85
+  size: 7, 15
+  orig: 7, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_7_1.png
+  rotate: false
+  xy: 2444, 24
+  size: 8, 15
+  orig: 8, 15
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_7_2.png
+  rotate: false
+  xy: 3299, 13
+  size: 7, 16
+  orig: 7, 16
+  offset: 0, 0
+  index: -1
+hh_human_shirt_h_wlk_rs_2_7_3.png
+  rotate: false
+  xy: 2122, 22
+  size: 8, 14
+  orig: 8, 14
+  offset: 0, 0
+  index: -1

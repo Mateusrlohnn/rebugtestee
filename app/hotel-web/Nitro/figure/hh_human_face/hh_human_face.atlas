@@ -1,0 +1,1847 @@
+
+hh_human_face.png
+size: 128,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+hh_human_face_h_agr_ey_10_1_0.png
+  rotate: false
+  xy: 120, 99
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_10_2_0.png
+  rotate: false
+  xy: 30, 75
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_10_3_0.png
+  rotate: false
+  xy: 102, 249
+  size: 18, 5
+  orig: 18, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_11_1_0.png
+  rotate: false
+  xy: 120, 107
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_11_2_0.png
+  rotate: false
+  xy: 16, 64
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_11_3_0.png
+  rotate: false
+  xy: 76, 241
+  size: 18, 5
+  orig: 18, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_1_1_0.png
+  rotate: false
+  xy: 96, 241
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_1_2_0.png
+  rotate: false
+  xy: 41, 119
+  size: 10, 9
+  orig: 10, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_1_3_0.png
+  rotate: false
+  xy: 114, 145
+  size: 12, 6
+  orig: 12, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_2_1_0.png
+  rotate: false
+  xy: 111, 52
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_2_2_0.png
+  rotate: false
+  xy: 16, 31
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_2_3_0.png
+  rotate: false
+  xy: 88, 181
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_3_1_0.png
+  rotate: false
+  xy: 98, 40
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_3_2_0.png
+  rotate: false
+  xy: 16, 143
+  size: 11, 11
+  orig: 11, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_3_3_0.png
+  rotate: false
+  xy: 72, 191
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_4_1_0.png
+  rotate: false
+  xy: 81, 88
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_4_2_0.png
+  rotate: false
+  xy: 44, 49
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_4_3_0.png
+  rotate: false
+  xy: 40, 176
+  size: 16, 4
+  orig: 16, 4
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_5_1_0.png
+  rotate: false
+  xy: 104, 151
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_5_2_0.png
+  rotate: false
+  xy: 58, 210
+  size: 13, 9
+  orig: 13, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_5_3_0.png
+  rotate: false
+  xy: 88, 190
+  size: 16, 5
+  orig: 16, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_6_1_0.png
+  rotate: false
+  xy: 118, 64
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_6_2_0.png
+  rotate: false
+  xy: 88, 146
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_6_3_0.png
+  rotate: false
+  xy: 112, 123
+  size: 12, 5
+  orig: 12, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_7_1_0.png
+  rotate: false
+  xy: 111, 78
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_7_2_0.png
+  rotate: false
+  xy: 53, 145
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_7_3_0.png
+  rotate: false
+  xy: 56, 163
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_8_1_0.png
+  rotate: false
+  xy: 98, 64
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_8_2_0.png
+  rotate: false
+  xy: 42, 221
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_8_3_0.png
+  rotate: false
+  xy: 40, 198
+  size: 16, 6
+  orig: 16, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_9_1_0.png
+  rotate: false
+  xy: 83, 28
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_9_2_0.png
+  rotate: false
+  xy: 58, 177
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_ey_9_3_0.png
+  rotate: false
+  xy: 102, 242
+  size: 18, 5
+  orig: 18, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_fc_1_1_0.png
+  rotate: false
+  xy: 30, 177
+  size: 8, 12
+  orig: 8, 12
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_fc_1_2_0.png
+  rotate: false
+  xy: 81, 119
+  size: 5, 10
+  orig: 5, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_agr_fc_1_3_0.png
+  rotate: false
+  xy: 102, 92
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_blw_fc_1_1_0.png
+  rotate: false
+  xy: 12, 2
+  size: 8, 11
+  orig: 8, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_blw_fc_1_2_0.png
+  rotate: false
+  xy: 120, 228
+  size: 6, 12
+  orig: 6, 12
+  offset: 0, 0
+  index: -1
+hh_human_face_h_blw_fc_1_3_0.png
+  rotate: false
+  xy: 104, 159
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_10_1_0.png
+  rotate: false
+  xy: 112, 115
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_10_2_0.png
+  rotate: false
+  xy: 2, 37
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_10_3_0.png
+  rotate: false
+  xy: 22, 239
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_11_1_0.png
+  rotate: false
+  xy: 83, 36
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_11_2_0.png
+  rotate: false
+  xy: 58, 199
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_11_3_0.png
+  rotate: false
+  xy: 22, 215
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_1_2_0.png
+  rotate: false
+  xy: 115, 217
+  size: 11, 9
+  orig: 11, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_1_3_0.png
+  rotate: false
+  xy: 88, 174
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_2_1_0.png
+  rotate: false
+  xy: 104, 99
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_2_2_0.png
+  rotate: false
+  xy: 16, 97
+  size: 11, 9
+  orig: 11, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_2_3_0.png
+  rotate: false
+  xy: 73, 209
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_3_1_0.png
+  rotate: false
+  xy: 97, 104
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_3_2_0.png
+  rotate: false
+  xy: 16, 108
+  size: 11, 9
+  orig: 11, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_3_3_0.png
+  rotate: false
+  xy: 46, 11
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_4_1_0.png
+  rotate: false
+  xy: 70, 234
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_4_2_0.png
+  rotate: false
+  xy: 70, 28
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_4_3_0.png
+  rotate: false
+  xy: 72, 163
+  size: 14, 3
+  orig: 14, 3
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_5_1_0.png
+  rotate: false
+  xy: 95, 5
+  size: 4, 6
+  orig: 4, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_5_2_0.png
+  rotate: false
+  xy: 16, 20
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_5_3_0.png
+  rotate: false
+  xy: 70, 227
+  size: 16, 5
+  orig: 16, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_6_1_0.png
+  rotate: false
+  xy: 118, 92
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_6_2_0.png
+  rotate: false
+  xy: 74, 217
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_6_3_0.png
+  rotate: false
+  xy: 88, 129
+  size: 12, 5
+  orig: 12, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_7_1_0.png
+  rotate: false
+  xy: 118, 85
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_7_2_0.png
+  rotate: false
+  xy: 39, 151
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_7_3_0.png
+  rotate: false
+  xy: 81, 112
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_8_1_0.png
+  rotate: false
+  xy: 88, 4
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_8_2_0.png
+  rotate: false
+  xy: 2, 107
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_8_3_0.png
+  rotate: false
+  xy: 88, 197
+  size: 16, 6
+  orig: 16, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_9_1_0.png
+  rotate: false
+  xy: 112, 99
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_9_2_0.png
+  rotate: false
+  xy: 30, 86
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_eyb_ey_9_3_0.png
+  rotate: false
+  xy: 42, 248
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_10_2_0.png
+  rotate: false
+  xy: 67, 135
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_11_2_0.png
+  rotate: false
+  xy: 57, 89
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_2_2_0.png
+  rotate: false
+  xy: 58, 188
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_4_2_0.png
+  rotate: false
+  xy: 104, 180
+  size: 9, 8
+  orig: 9, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_5_2_0.png
+  rotate: false
+  xy: 44, 19
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_6_2_0.png
+  rotate: false
+  xy: 115, 195
+  size: 11, 9
+  orig: 11, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_7_2_0.png
+  rotate: false
+  xy: 115, 206
+  size: 11, 9
+  orig: 11, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_ey_8_2_0.png
+  rotate: false
+  xy: 30, 33
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lag_fc_1_2_0.png
+  rotate: false
+  xy: 34, 13
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lay_ey_10_2_0.png
+  rotate: false
+  xy: 70, 58
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lay_ey_11_2_0.png
+  rotate: false
+  xy: 44, 89
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lay_ey_1_2_0.png
+  rotate: false
+  xy: 57, 39
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lay_ey_3_2_0.png
+  rotate: false
+  xy: 34, 3
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lay_ey_8_2_0.png
+  rotate: false
+  xy: 70, 78
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lay_fc_1_2_0.png
+  rotate: false
+  xy: 102, 122
+  size: 8, 7
+  orig: 8, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_10_2_0.png
+  rotate: false
+  xy: 57, 19
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_11_2_0.png
+  rotate: false
+  xy: 70, 48
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_2_2_0.png
+  rotate: false
+  xy: 2, 15
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_4_2_0.png
+  rotate: false
+  xy: 102, 131
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_5_2_0.png
+  rotate: false
+  xy: 44, 59
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_6_2_0.png
+  rotate: false
+  xy: 70, 38
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_7_2_0.png
+  rotate: false
+  xy: 115, 175
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_ley_ey_9_2_0.png
+  rotate: false
+  xy: 115, 185
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsa_ey_10_2_0.png
+  rotate: false
+  xy: 44, 69
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsa_ey_11_2_0.png
+  rotate: false
+  xy: 68, 115
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsa_ey_2_2_0.png
+  rotate: false
+  xy: 67, 145
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsa_ey_6_2_0.png
+  rotate: false
+  xy: 57, 79
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsa_ey_7_2_0.png
+  rotate: false
+  xy: 57, 29
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsa_ey_9_2_0.png
+  rotate: false
+  xy: 41, 109
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsa_fc_1_2_0.png
+  rotate: false
+  xy: 30, 167
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsm_ey_10_2_0.png
+  rotate: false
+  xy: 44, 39
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsm_ey_11_2_0.png
+  rotate: false
+  xy: 57, 49
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsm_ey_1_2_0.png
+  rotate: false
+  xy: 70, 68
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsm_ey_2_2_0.png
+  rotate: false
+  xy: 2, 48
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsm_ey_5_2_0.png
+  rotate: false
+  xy: 102, 141
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsm_ey_9_2_0.png
+  rotate: false
+  xy: 43, 99
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsm_fc_1_2_0.png
+  rotate: false
+  xy: 71, 88
+  size: 8, 7
+  orig: 8, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsp_fc_1_2_0.png
+  rotate: false
+  xy: 70, 19
+  size: 8, 7
+  orig: 8, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsp_fc_1_2_1.png
+  rotate: false
+  xy: 72, 97
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_ey_10_2_0.png
+  rotate: false
+  xy: 88, 119
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_ey_11_2_0.png
+  rotate: false
+  xy: 88, 136
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_ey_2_2_0.png
+  rotate: false
+  xy: 53, 135
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_ey_3_2_0.png
+  rotate: false
+  xy: 44, 29
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_ey_6_2_0.png
+  rotate: false
+  xy: 44, 79
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_ey_7_2_0.png
+  rotate: false
+  xy: 57, 69
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_ey_8_2_0.png
+  rotate: false
+  xy: 54, 115
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_lsr_fc_1_2_0.png
+  rotate: false
+  xy: 72, 106
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_10_1_0.png
+  rotate: false
+  xy: 80, 4
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_10_2_0.png
+  rotate: false
+  xy: 16, 42
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_10_3_0.png
+  rotate: false
+  xy: 2, 214
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_11_1_0.png
+  rotate: false
+  xy: 120, 115
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_11_2_0.png
+  rotate: false
+  xy: 30, 64
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_11_3_0.png
+  rotate: false
+  xy: 22, 223
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_1_1_0.png
+  rotate: false
+  xy: 95, 13
+  size: 4, 6
+  orig: 4, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_1_2_0.png
+  rotate: false
+  xy: 81, 95
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_1_3_0.png
+  rotate: false
+  xy: 40, 168
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_2_1_0.png
+  rotate: false
+  xy: 88, 12
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_2_2_0.png
+  rotate: false
+  xy: 16, 75
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_2_3_0.png
+  rotate: false
+  xy: 40, 182
+  size: 16, 6
+  orig: 16, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_3_1_0.png
+  rotate: false
+  xy: 111, 85
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_3_2_0.png
+  rotate: false
+  xy: 16, 169
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_3_3_0.png
+  rotate: false
+  xy: 72, 174
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_4_1_0.png
+  rotate: false
+  xy: 83, 70
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_4_2_0.png
+  rotate: false
+  xy: 59, 2
+  size: 11, 7
+  orig: 11, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_4_3_0.png
+  rotate: false
+  xy: 72, 168
+  size: 16, 4
+  orig: 16, 4
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_5_1_0.png
+  rotate: false
+  xy: 91, 61
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_5_2_0.png
+  rotate: false
+  xy: 53, 125
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_5_3_0.png
+  rotate: false
+  xy: 97, 213
+  size: 16, 5
+  orig: 16, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_6_1_0.png
+  rotate: false
+  xy: 105, 49
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_6_2_0.png
+  rotate: false
+  xy: 90, 164
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_6_3_0.png
+  rotate: false
+  xy: 114, 130
+  size: 12, 5
+  orig: 12, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_7_1_0.png
+  rotate: false
+  xy: 98, 56
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_7_2_0.png
+  rotate: false
+  xy: 30, 43
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_7_3_0.png
+  rotate: false
+  xy: 58, 170
+  size: 12, 5
+  orig: 12, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_8_1_0.png
+  rotate: false
+  xy: 98, 72
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_8_2_0.png
+  rotate: false
+  xy: 16, 53
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_8_3_0.png
+  rotate: false
+  xy: 97, 220
+  size: 16, 6
+  orig: 16, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_9_1_0.png
+  rotate: false
+  xy: 112, 107
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_9_2_0.png
+  rotate: false
+  xy: 30, 53
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_ey_9_3_0.png
+  rotate: false
+  xy: 2, 206
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_fc_1_1_0.png
+  rotate: false
+  xy: 106, 191
+  size: 7, 12
+  orig: 7, 12
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_fc_1_2_0.png
+  rotate: false
+  xy: 81, 131
+  size: 5, 10
+  orig: 5, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sad_fc_1_3_0.png
+  rotate: false
+  xy: 94, 234
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_10_1_0.png
+  rotate: false
+  xy: 104, 114
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_10_2_0.png
+  rotate: false
+  xy: 2, 143
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_10_3_0.png
+  rotate: false
+  xy: 2, 230
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_11_1_0.png
+  rotate: false
+  xy: 72, 2
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_11_2_0.png
+  rotate: false
+  xy: 2, 71
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_11_3_0.png
+  rotate: false
+  xy: 56, 240
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_1_1_0.png
+  rotate: false
+  xy: 105, 63
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_1_2_0.png
+  rotate: false
+  xy: 29, 119
+  size: 10, 9
+  orig: 10, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_1_3_0.png
+  rotate: false
+  xy: 42, 214
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_2_1_0.png
+  rotate: false
+  xy: 91, 53
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_2_2_0.png
+  rotate: false
+  xy: 41, 130
+  size: 10, 9
+  orig: 10, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_2_3_0.png
+  rotate: false
+  xy: 56, 107
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_3_1_0.png
+  rotate: false
+  xy: 111, 64
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_3_2_0.png
+  rotate: false
+  xy: 16, 131
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_3_3_0.png
+  rotate: false
+  xy: 72, 155
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_4_1_0.png
+  rotate: false
+  xy: 110, 92
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_4_2_0.png
+  rotate: false
+  xy: 39, 141
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_4_3_0.png
+  rotate: false
+  xy: 56, 221
+  size: 16, 4
+  orig: 16, 4
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_5_1_0.png
+  rotate: false
+  xy: 98, 48
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_5_2_0.png
+  rotate: false
+  xy: 16, 181
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_5_3_0.png
+  rotate: false
+  xy: 102, 235
+  size: 16, 5
+  orig: 16, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_6_1_0.png
+  rotate: false
+  xy: 105, 70
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_6_3_0.png
+  rotate: false
+  xy: 112, 153
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_7_1_0.png
+  rotate: false
+  xy: 118, 71
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_7_2_0.png
+  rotate: false
+  xy: 67, 125
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_7_3_0.png
+  rotate: false
+  xy: 81, 105
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_8_1_0.png
+  rotate: false
+  xy: 94, 21
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_8_2_0.png
+  rotate: false
+  xy: 2, 193
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_8_3_0.png
+  rotate: false
+  xy: 40, 206
+  size: 16, 6
+  orig: 16, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_9_1_0.png
+  rotate: false
+  xy: 83, 44
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_9_2_0.png
+  rotate: false
+  xy: 2, 119
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_ey_9_3_0.png
+  rotate: false
+  xy: 2, 222
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_fc_1_1_0.png
+  rotate: false
+  xy: 29, 153
+  size: 8, 12
+  orig: 8, 12
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_fc_1_2_0.png
+  rotate: false
+  xy: 29, 141
+  size: 8, 10
+  orig: 8, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_sml_fc_1_3_0.png
+  rotate: false
+  xy: 62, 11
+  size: 8, 6
+  orig: 8, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_spk_fc_1_1_0.png
+  rotate: false
+  xy: 30, 191
+  size: 8, 13
+  orig: 8, 13
+  offset: 0, 0
+  index: -1
+hh_human_face_h_spk_fc_1_2_0.png
+  rotate: false
+  xy: 89, 205
+  size: 6, 12
+  orig: 6, 12
+  offset: 0, 0
+  index: -1
+hh_human_face_h_spk_fc_1_2_1.png
+  rotate: false
+  xy: 81, 143
+  size: 5, 10
+  orig: 5, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_spk_fc_1_3_0.png
+  rotate: false
+  xy: 72, 10
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_spk_fc_1_3_1.png
+  rotate: false
+  xy: 105, 77
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_10_1_0.png
+  rotate: false
+  xy: 83, 61
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_10_2_0.png
+  rotate: false
+  xy: 56, 227
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_10_3_0.png
+  rotate: false
+  xy: 2, 247
+  size: 18, 7
+  orig: 18, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_11_1_0.png
+  rotate: false
+  xy: 83, 79
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_11_2_0.png
+  rotate: false
+  xy: 2, 167
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_11_3_0.png
+  rotate: false
+  xy: 22, 247
+  size: 18, 7
+  orig: 18, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_1_1_0.png
+  rotate: false
+  xy: 88, 20
+  size: 4, 6
+  orig: 4, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_1_2_0.png
+  rotate: false
+  xy: 22, 3
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_1_3_0.png
+  rotate: false
+  xy: 56, 99
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_2_1_0.png
+  rotate: false
+  xy: 91, 70
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_2_2_0.png
+  rotate: false
+  xy: 2, 59
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_2_3_0.png
+  rotate: false
+  xy: 72, 200
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_3_1_0.png
+  rotate: false
+  xy: 91, 45
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_3_2_0.png
+  rotate: false
+  xy: 16, 156
+  size: 11, 11
+  orig: 11, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_3_3_0.png
+  rotate: false
+  xy: 72, 182
+  size: 14, 7
+  orig: 14, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_4_1_0.png
+  rotate: false
+  xy: 91, 37
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_4_2_0.png
+  rotate: false
+  xy: 57, 59
+  size: 11, 8
+  orig: 11, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_4_3_0.png
+  rotate: false
+  xy: 102, 228
+  size: 16, 5
+  orig: 16, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_5_1_0.png
+  rotate: false
+  xy: 97, 110
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_5_2_0.png
+  rotate: false
+  xy: 2, 83
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_5_3_0.png
+  rotate: false
+  xy: 97, 205
+  size: 16, 6
+  orig: 16, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_6_1_0.png
+  rotate: false
+  xy: 96, 88
+  size: 4, 6
+  orig: 4, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_6_2_0.png
+  rotate: false
+  xy: 2, 26
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_6_3_0.png
+  rotate: false
+  xy: 114, 137
+  size: 12, 6
+  orig: 12, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_7_1_0.png
+  rotate: false
+  xy: 104, 84
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_7_2_0.png
+  rotate: false
+  xy: 29, 97
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_7_3_0.png
+  rotate: false
+  xy: 88, 156
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_8_1_0.png
+  rotate: false
+  xy: 91, 79
+  size: 5, 7
+  orig: 5, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_8_2_0.png
+  rotate: false
+  xy: 42, 234
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_8_3_0.png
+  rotate: false
+  xy: 22, 206
+  size: 16, 7
+  orig: 16, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_9_1_0.png
+  rotate: false
+  xy: 83, 52
+  size: 6, 7
+  orig: 6, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_9_2_0.png
+  rotate: false
+  xy: 2, 180
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_ey_9_3_0.png
+  rotate: false
+  xy: 2, 238
+  size: 18, 7
+  orig: 18, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_fc_1_1_0.png
+  rotate: false
+  xy: 88, 219
+  size: 7, 13
+  orig: 7, 13
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_fc_1_2_0.png
+  rotate: false
+  xy: 122, 244
+  size: 4, 10
+  orig: 4, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_srp_fc_1_3_0.png
+  rotate: false
+  xy: 98, 80
+  size: 4, 6
+  orig: 4, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_10_1_0.png
+  rotate: false
+  xy: 80, 12
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_10_2_0.png
+  rotate: false
+  xy: 2, 131
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_10_3_0.png
+  rotate: false
+  xy: 62, 248
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_11_1_0.png
+  rotate: false
+  xy: 104, 106
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_11_2_0.png
+  rotate: false
+  xy: 2, 95
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_11_3_0.png
+  rotate: false
+  xy: 82, 248
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_1_1_0.png
+  rotate: false
+  xy: 105, 56
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_1_2_0.png
+  rotate: false
+  xy: 29, 108
+  size: 10, 9
+  orig: 10, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_2_2_0.png
+  rotate: false
+  xy: 29, 130
+  size: 10, 9
+  orig: 10, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_2_3_0.png
+  rotate: false
+  xy: 112, 167
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_3_1_0.png
+  rotate: false
+  xy: 111, 71
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_3_2_0.png
+  rotate: false
+  xy: 16, 119
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_3_3_0.png
+  rotate: false
+  xy: 56, 155
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_4_1_0.png
+  rotate: false
+  xy: 111, 58
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_4_2_0.png
+  rotate: false
+  xy: 46, 2
+  size: 11, 7
+  orig: 11, 7
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_4_3_0.png
+  rotate: false
+  xy: 16, 15
+  size: 16, 3
+  orig: 16, 3
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_5_1_0.png
+  rotate: false
+  xy: 91, 29
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_5_2_0.png
+  rotate: false
+  xy: 16, 86
+  size: 12, 9
+  orig: 12, 9
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_5_3_0.png
+  rotate: false
+  xy: 76, 234
+  size: 16, 5
+  orig: 16, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_6_1_0.png
+  rotate: false
+  xy: 89, 88
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_6_2_0.png
+  rotate: false
+  xy: 30, 23
+  size: 12, 8
+  orig: 12, 8
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_6_3_0.png
+  rotate: false
+  xy: 112, 160
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_7_1_0.png
+  rotate: false
+  xy: 118, 78
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_7_3_0.png
+  rotate: false
+  xy: 40, 161
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_8_1_0.png
+  rotate: false
+  xy: 98, 32
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_8_2_0.png
+  rotate: false
+  xy: 16, 193
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_8_3_0.png
+  rotate: false
+  xy: 40, 190
+  size: 16, 6
+  orig: 16, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_9_1_0.png
+  rotate: false
+  xy: 80, 20
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_9_2_0.png
+  rotate: false
+  xy: 2, 155
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_ey_9_3_0.png
+  rotate: false
+  xy: 22, 231
+  size: 18, 6
+  orig: 18, 6
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_fc_1_1_0.png
+  rotate: false
+  xy: 2, 2
+  size: 8, 11
+  orig: 8, 11
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_fc_1_2_0.png
+  rotate: false
+  xy: 104, 168
+  size: 6, 10
+  orig: 6, 10
+  offset: 0, 0
+  index: -1
+hh_human_face_h_std_fc_1_3_0.png
+  rotate: false
+  xy: 94, 96
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1

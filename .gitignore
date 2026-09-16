@@ -1,0 +1,16 @@
+tools/
+runtime/
+downloads/
+Link-Do-Amigo.txt
+*.log
+*.pid
+
+# Copia auxiliar usada apenas durante a montagem deste pacote.
+app/coerce/
+
+# Metadados de compilacao que contem caminhos da maquina de origem.
+**/target/maven-status/
+**/.git/
+
+# Gerado a cada novo tunel externo.
+app/hotel-web/Nitro/configuration.external.json

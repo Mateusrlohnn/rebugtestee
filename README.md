@@ -51,6 +51,8 @@ O comando `:clickthrouse` continua controlando a colisão entre jogadores.
   21 placas de gramado formando laterais, áreas, meias-luas e círculo central.
   A bola Rebug fica no centro.
 - O campo é instalado por `database/campo-futebol.sql` na primeira abertura.
+- O inventário do `Jogador1` recebe 100 unidades de cada uma das 9 partes do
+  gramado (900 placas ao todo).
 - Atravessar jogadores continua desligado. Ao clicar numa casa ocupada por
   outro avatar, o personagem procura a casa livre alcançável mais próxima ao
   redor dele, em qualquer direção, em vez de travar.

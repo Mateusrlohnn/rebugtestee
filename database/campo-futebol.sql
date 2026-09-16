@@ -53,6 +53,37 @@ INSERT INTO `items` (`id`,`user_id`,`room_id`,`base_item`,`extra_data`,`x`,`y`,`
 (1019,3,3,3509,'0',7,21,0,4,'','0:0'),
 (1020,3,3,3524,'0',10,21,0,4,'','0:0');
 
+-- Entrega ao Jogador1 100 unidades de cada uma das nove partes do gramado.
+-- A faixa reservada torna a carga repetivel sem duplicar os itens.
+DELETE FROM `items` WHERE `id` BETWEEN 9000000 AND 9000899;
+INSERT INTO `items`
+(`id`,`user_id`,`room_id`,`base_item`,`extra_data`,`x`,`y`,`z`,`rot`,`wall_pos`,`limited_data`)
+SELECT
+    9000000 + (`partes`.`parte` * 100) + (`dezenas`.`n` * 10) + `unidades`.`n`,
+    3, 0, `partes`.`base_item`, '0', 0, 0, 0, 0, '', '0:0'
+FROM
+(
+    SELECT 0 AS `parte`, 3520 AS `base_item` UNION ALL
+    SELECT 1, 3524 UNION ALL
+    SELECT 2, 3511 UNION ALL
+    SELECT 3, 3513 UNION ALL
+    SELECT 4, 3504 UNION ALL
+    SELECT 5, 3498 UNION ALL
+    SELECT 6, 3517 UNION ALL
+    SELECT 7, 3509 UNION ALL
+    SELECT 8, 3502
+) AS `partes`
+CROSS JOIN
+(
+    SELECT 0 AS `n` UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
+    UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
+) AS `dezenas`
+CROSS JOIN
+(
+    SELECT 0 AS `n` UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
+    UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
+) AS `unidades`;
+
 UPDATE `rooms`
 SET `allow_walkthrough`='0', `processing_type`=3, `trade_state`='DISABLED'
 WHERE `id`=3;

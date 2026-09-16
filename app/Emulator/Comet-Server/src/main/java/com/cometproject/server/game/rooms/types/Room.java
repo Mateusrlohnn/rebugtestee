@@ -201,10 +201,10 @@ public class Room implements Attributable, IRoom {
 
         this.futnitroLastTurnAttemptAt = now;
         final int lossChance = switch (turn) {
-            case 1 -> 2;
-            case 2 -> 4;
-            case 3 -> 6;
-            case 4 -> 8;
+            case 1 -> 3;
+            case 2 -> 5;
+            case 3 -> 7;
+            case 4 -> 10;
             default -> 0;
         };
 

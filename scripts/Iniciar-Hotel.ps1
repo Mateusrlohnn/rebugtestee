@@ -61,18 +61,19 @@ $ticketSql = "UPDATE players SET auth_ticket='localplayer1' WHERE username='Joga
 & $mariaClient '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' '--database=habbo' "--execute=$ticketSql"
 
 if (-not (Get-ListeningPid 30000)) {
+    $runtimeLib = Join-Path $repoRoot 'app\lib'
     $ownJars = @(
-        (Join-Path $emulatorRoot 'Comet-Server\target\Comet-Server-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-API\target\Comet-API-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Server-Protocol\target\Comet-Server-Protocol-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Networking-Composers\target\Comet-Networking-Composers-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Storage-API\target\Comet-Storage-API-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Game-Items\target\Comet-Game-Items-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Storage-MySQL\target\Comet-Storage-MySQL-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Common\target\Comet-Common-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Networking-API\target\Comet-Networking-API-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'Comet-Game-Rooms\target\Comet-Game-Rooms-2.11.1-TEST1.jar'),
-        (Join-Path $emulatorRoot 'modules\Comet-Game-Groups-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Server-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-API-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Server-Protocol-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Networking-Composers-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Storage-API-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Game-Items-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Storage-MySQL-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Common-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Networking-API-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Game-Rooms-2.11.1-TEST1.jar'),
+        (Join-Path $runtimeLib 'Comet-Game-Groups-2.11.1-TEST1.jar'),
         (Join-Path $repoRoot 'app\coerce-runtime\Coerce-API-1.0-SNAPSHOT.jar'),
         (Join-Path $repoRoot 'app\coerce-runtime\Coerce-Commons-1.0-SNAPSHOT.jar'),
         (Join-Path $repoRoot 'app\coerce-runtime\Coerce-Messaging-Client-1.0-SNAPSHOT.jar')

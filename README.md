@@ -34,7 +34,7 @@ Nos quartos de futebol configurados, use `:futnitro 3`.
 - Andar reto não sorteia roubo.
 - O roubo só pode ser sorteado quando o dono muda a direção perto da bola e o
   adversário também está em movimento, disputando a mesma bola.
-- As chances são 2% (45 graus), 4% (90 graus), 6% (135 graus) e 8% (180 graus).
+- As chances são 3% (45 graus), 5% (90 graus), 7% (135 graus) e 10% (180 graus).
 - Existe um intervalo de 1 segundo entre tentativas para evitar troca dupla no
   mesmo instante.
 - Quando o jogador para de andar, perde a prioridade. A próxima jogada começa

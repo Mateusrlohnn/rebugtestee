@@ -57,7 +57,7 @@ if (-not (Get-ListeningPid 3307)) {
     }
 }
 
-$ticketSql = "UPDATE players SET auth_ticket='localplayer1' WHERE username='Jogador1';"
+$ticketSql = "UPDATE players SET auth_ticket='localplayer1' WHERE username='Jogador1'; UPDATE players SET auth_ticket='localplayer2' WHERE username='Jogador2'; UPDATE players SET auth_ticket='localplayer3' WHERE username='Jogador3';"
 & $mariaClient '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' '--database=habbo' "--execute=$ticketSql"
 
 $fieldSql = Join-Path $repoRoot 'database\campo-futebol.sql'

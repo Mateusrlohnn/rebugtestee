@@ -4,6 +4,7 @@
 INSERT INTO `furniture`
 (`id`,`item_name`,`public_name`,`type`,`width`,`length`,`stack_height`,`can_stack`,`can_sit`,`can_lay`,`is_walkable`,`sprite_id`,`allow_recycle`,`allow_trade`,`allow_marketplace_sell`,`allow_gift`,`allow_inventory_stack`,`interaction_type`,`interaction_modes_count`,`vending_ids`,`effect_id`,`is_arrow`,`foot_figure`,`stack_multiplier`,`subscriber`,`variable_heights`,`flat_id`,`revision`,`description`,`specialtype`,`canlayon`,`requires_rights`,`song_id`,`colors`,`deleteable`)
 VALUES
+(3501,'fball_fnc1','Alambrado pequeno','s',1,1,'1','1','0','0','0',3501,'1','1','0','1','1','default',1,'0',0,'0','0','0','0','0',5811,45554,'Limite do campo.',1,'0','1',0,NULL,1),
 (3498,'fball_ptch5','Gramado - circulo central','s',3,3,'0','1','0','0','1',3498,'1','1','0','1','1','default',1,'0',0,'0','0','0','0','0',5808,45554,'Circulo central do campo.',1,'0','1',0,NULL,1),
 (3502,'fball_ptch8','Gramado liso','s',3,3,'0','1','0','0','1',3502,'1','1','0','1','1','default',1,'0',0,'0','0','0','0','0',5812,45554,'Parte lisa do gramado.',1,'0','1',0,NULL,1),
 (3504,'fball_ptch4','Gramado - linha central','s',3,3,'0','1','0','0','1',3504,'1','1','0','1','1','default',1,'0',0,'0','0','0','0','0',5814,45554,'Linha central do campo.',1,'0','1',0,NULL,1),
@@ -73,6 +74,28 @@ FROM
     SELECT 7, 3509 UNION ALL
     SELECT 8, 3502
 ) AS `partes`
+CROSS JOIN
+(
+    SELECT 0 AS `n` UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
+    UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
+) AS `dezenas`
+CROSS JOIN
+(
+    SELECT 0 AS `n` UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
+    UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
+) AS `unidades`;
+
+-- Alambrado pequeno mostrado na referencia: 500 unidades para cercar o campo.
+DELETE FROM `items` WHERE `id` BETWEEN 9001000 AND 9001499;
+INSERT INTO `items`
+(`id`,`user_id`,`room_id`,`base_item`,`extra_data`,`x`,`y`,`z`,`rot`,`wall_pos`,`limited_data`)
+SELECT
+    9001000 + (`centenas`.`n` * 100) + (`dezenas`.`n` * 10) + `unidades`.`n`,
+    3, 0, 3501, '0', 0, 0, 0, 0, '', '0:0'
+FROM
+(
+    SELECT 0 AS `n` UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
+) AS `centenas`
 CROSS JOIN
 (
     SELECT 0 AS `n` UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4

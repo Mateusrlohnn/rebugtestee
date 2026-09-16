@@ -153,7 +153,7 @@ FLUSH PRIVILEGES;
 
     Invoke-MariaSqlFile $mariaClient (Join-Path $repoRoot 'database\habbo.sql')
 
-    $ticketSql = "UPDATE habbo.players SET auth_ticket='localplayer1' WHERE username='Jogador1'; UPDATE habbo.players SET auth_ticket='localfriend' WHERE username='Amigo';"
+    $ticketSql = "UPDATE habbo.players SET auth_ticket='localplayer1' WHERE username='Jogador1'; UPDATE habbo.players SET auth_ticket='localfriend' WHERE username='Amigo'; UPDATE habbo.players SET auth_ticket='localplayer2' WHERE username='Jogador2'; UPDATE habbo.players SET auth_ticket='localplayer3' WHERE username='Jogador3';"
     & $mariaClient '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' "--execute=$ticketSql"
     if ($LASTEXITCODE -ne 0) { throw 'Nao foi possivel preparar as contas locais.' }
     Set-Content -LiteralPath $databaseMarker -Value 'ok' -Encoding ASCII

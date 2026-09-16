@@ -5342,6 +5342,14 @@ INSERT INTO `players` VALUES
 (3,'Jogador1','hd-209-10.lg-3058-64.ch-215-92.sh-3089-64','aa',57000,0,695,0,1,0,'localplayer1','M',1789411203,'14/09/2026',1789520779,'1','','','0.0.0.0','127.0.0.1','0',205,0,0,0,'000000',NULL,'0',0,0,'000000','',0,0,0,NULL,0,0,0,0,NULL,NULL,'');
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
 UNLOCK TABLES;
+INSERT INTO `players`
+(`id`,`username`,`figure`,`motto`,`credits`,`rank`,`auth_ticket`,`gender`,`reg_timestamp`,`reg_date`,`online`,`last_ip`,`reg_ip`)
+VALUES
+(4,'Jogador2','hr-110-61.hd-3094-30.lg-3058-64.ch-876-82-1408.sh-3089-64','Teste Nitro',50000,1,'localplayer2','M',1789594000,'16/09/2026','0','0.0.0.0','127.0.0.1'),
+(5,'Jogador3','hr-828-31.ch-255-82.sh-3089-64.hd-180-10.lg-3058-64','Teste Nitro',50000,1,'localplayer3','M',1789594000,'16/09/2026','0','0.0.0.0','127.0.0.1')
+ON DUPLICATE KEY UPDATE
+`username`=VALUES(`username`),`figure`=VALUES(`figure`),`motto`=VALUES(`motto`),
+`credits`=VALUES(`credits`),`rank`=VALUES(`rank`),`auth_ticket`=VALUES(`auth_ticket`);
 DROP TABLE IF EXISTS `players_points`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8mb4 */;
@@ -6912,4 +6920,3 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-

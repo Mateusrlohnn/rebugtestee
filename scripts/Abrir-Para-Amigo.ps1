@@ -86,23 +86,36 @@ try {
     $mariaExe = Get-ChildItem -LiteralPath (Join-Path $repoRoot 'tools\mariadb') -Recurse -File -Filter 'mariadb.exe' |
         Select-Object -First 1 -ExpandProperty FullName
     $friendTicket = 'friend-' + [Guid]::NewGuid().ToString('N')
-    $sql = "UPDATE players SET auth_ticket='$friendTicket' WHERE username='Amigo';"
+    $friend2Ticket = 'friend2-' + [Guid]::NewGuid().ToString('N')
+    $friend3Ticket = 'friend3-' + [Guid]::NewGuid().ToString('N')
+    $sql = "UPDATE players SET auth_ticket='$friendTicket' WHERE username='Amigo'; UPDATE players SET auth_ticket='$friend2Ticket' WHERE username='Jogador2'; UPDATE players SET auth_ticket='$friend3Ticket' WHERE username='Jogador3';"
     & $mariaExe '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' '--database=habbo' "--execute=$sql"
     if ($LASTEXITCODE -ne 0) { throw 'Nao foi possivel preparar a conta Amigo.' }
 
     $friendLink = "$webUrl/?sso=$friendTicket"
+    $friend2Link = "$webUrl/?sso=$friend2Ticket"
+    $friend3Link = "$webUrl/?sso=$friend3Ticket"
     @(
-        'LINK TEMPORARIO DO AMIGO'
+        'LINKS TEMPORARIOS DOS AMIGOS'
         ''
+        'Amigo:'
         $friendLink
         ''
-        'Envie somente este link. Ele funciona enquanto o hotel estiver ligado.'
+        'Jogador2:'
+        $friend2Link
+        ''
+        'Jogador3:'
+        $friend3Link
+        ''
+        'Envie um link diferente para cada pessoa. Eles funcionam enquanto o hotel estiver ligado.'
     ) | Set-Content -LiteralPath $friendLinkFile -Encoding UTF8
 
     Write-Host ''
     Write-Host 'ACESSO EXTERNO ATIVO' -ForegroundColor Green
-    Write-Host 'Envie este link ao amigo:' -ForegroundColor Yellow
-    Write-Host $friendLink
+    Write-Host 'Envie um link diferente para cada pessoa:' -ForegroundColor Yellow
+    Write-Host "Amigo:    $friendLink"
+    Write-Host "Jogador2: $friend2Link"
+    Write-Host "Jogador3: $friend3Link"
 }
 catch {
     & (Join-Path $PSScriptRoot 'Fechar-Acesso-Externo.ps1') -Quiet

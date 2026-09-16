@@ -1,0 +1,91 @@
+{
+  "type": "furniture",
+  "name": "fball_fnc1",
+  "logicType": "furniture_basic",
+  "visualizationType": "furniture_static",
+  "dimensions": { "x": 1, "y": 1, "z": 1 },
+  "directions": [0, 90, 180, 270],
+  "assets": {
+    "fball_fnc1_64_a_0_0": { "x": 24, "y": 52 },
+    "fball_fnc1_64_a_2_0": { "x": 32, "y": 52 },
+    "fball_fnc1_64_a_4_0": { "x": 32, "y": 42 },
+    "fball_fnc1_64_a_6_0": { "x": 24, "y": 42 },
+    "fball_fnc1_icon_a": { "x": 16, "y": 25 }
+  },
+  "logic": {
+    "model": {
+      "dimensions": { "x": 1, "y": 1, "z": 1 },
+      "directions": [0, 90, 180, 270]
+    }
+  },
+  "visualizations": [
+    { "angle": 360, "layerCount": 1, "size": 1 },
+    {
+      "angle": 45,
+      "layerCount": 1,
+      "size": 64,
+      "directions": { "0": {}, "2": {}, "4": {}, "6": {} },
+      "animations": {
+        "0": {
+          "layers": {
+            "0": {
+              "frameSequences": {
+                "0": { "frames": { "0": { "id": 0 } } }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "spritesheet": {
+    "frames": {
+      "fball_fnc1_fball_fnc1_64_a_0_0": {
+        "frame": { "x": 0, "y": 0, "w": 58, "h": 65 },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": { "x": 0, "y": 0, "w": 58, "h": 65 },
+        "sourceSize": { "w": 58, "h": 65 },
+        "pivot": { "x": 0.5, "y": 0.5 }
+      },
+      "fball_fnc1_fball_fnc1_64_a_2_0": {
+        "frame": { "x": 0, "y": 65, "w": 58, "h": 65 },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": { "x": 0, "y": 0, "w": 58, "h": 65 },
+        "sourceSize": { "w": 58, "h": 65 },
+        "pivot": { "x": 0.5, "y": 0.5 }
+      },
+      "fball_fnc1_fball_fnc1_64_a_4_0": {
+        "frame": { "x": 0, "y": 130, "w": 58, "h": 59 },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": { "x": 0, "y": 0, "w": 58, "h": 59 },
+        "sourceSize": { "w": 58, "h": 59 },
+        "pivot": { "x": 0.5, "y": 0.5 }
+      },
+      "fball_fnc1_fball_fnc1_64_a_6_0": {
+        "frame": { "x": 0, "y": 189, "w": 58, "h": 59 },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": { "x": 0, "y": 0, "w": 58, "h": 59 },
+        "sourceSize": { "w": 58, "h": 59 },
+        "pivot": { "x": 0.5, "y": 0.5 }
+      },
+      "fball_fnc1_fball_fnc1_icon_a": {
+        "frame": { "x": 0, "y": 248, "w": 29, "h": 30 },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": { "x": 0, "y": 0, "w": 29, "h": 30 },
+        "sourceSize": { "w": 29, "h": 30 },
+        "pivot": { "x": 0.5, "y": 0.5 }
+      }
+    },
+    "meta": {
+      "image": "fball_fnc1.png",
+      "format": "RGBA8888",
+      "size": { "w": 58, "h": 278 },
+      "scale": 1
+    }
+  }
+}

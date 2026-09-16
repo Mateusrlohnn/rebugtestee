@@ -19,8 +19,8 @@ Para desligar tudo, use `Fechar-Hotel.cmd`.
 
 1. Abra o hotel normalmente.
 2. Dê dois cliques em `3-Abrir-Para-Amigo.cmd`.
-3. Envie ao amigo somente o endereço mostrado e salvo em
-   `Link-Do-Amigo.txt`.
+3. O arquivo `Link-Do-Amigo.txt` passa a mostrar três links diferentes, para
+   as contas `Amigo`, `Jogador2` e `Jogador3`. Envie um link para cada pessoa.
 4. O endereço é temporário e só funciona enquanto seu computador estiver
    ligado e o hotel estiver aberto.
 
@@ -53,6 +53,8 @@ O comando `:clickthrouse` continua controlando a colisão entre jogadores.
 - O campo é instalado por `database/campo-futebol.sql` na primeira abertura.
 - O inventário do `Jogador1` recebe 100 unidades de cada uma das 9 partes do
   gramado (900 placas ao todo).
+- O inventário também recebe 500 unidades do `Alambrado pequeno`, usado para
+  cercar o campo.
 - Atravessar jogadores continua desligado. Ao clicar numa casa ocupada por
   outro avatar, o personagem procura a casa livre alcançável mais próxima ao
   redor dele, em qualquer direção, em vez de travar.

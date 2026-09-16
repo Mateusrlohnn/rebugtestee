@@ -37,13 +37,23 @@ Nos quartos de futebol configurados, use `:futnitro 3`.
 - As chances são 3% (45 graus), 5% (90 graus), 7% (135 graus) e 10% (180 graus).
 - Uma bica confirmada do adversário também tem 2% de chance de roubar o Nitro,
   independentemente da direção do avatar.
-- Existe um intervalo de 1 segundo entre tentativas para evitar troca dupla no
-  mesmo instante.
+- Mudança de direção e bica possuem intervalos separados de 1 segundo. Assim,
+  uma virada do dono não cancela a tentativa da bica do adversário.
 - Quando o jogador para de andar, perde a prioridade. A próxima jogada começa
   sem um dono fixo.
 - A física e a animação da bola continuam sendo as originais da bola Rebug.
 
 O comando `:clickthrouse` continua controlando a colisão entre jogadores.
+
+## Campo e movimentação
+
+- O quarto `aaa` do `Jogador1` recebe automaticamente somente o campo completo:
+  21 placas de gramado formando laterais, áreas, meias-luas e círculo central.
+  A bola Rebug fica no centro.
+- O campo é instalado por `database/campo-futebol.sql` na primeira abertura.
+- Atravessar jogadores continua desligado. Ao clicar numa casa ocupada por
+  outro avatar, o personagem procura a casa livre alcançável mais próxima ao
+  redor dele, em qualquer direção, em vez de travar.
 
 ## Conteúdo
 
@@ -51,6 +61,7 @@ O comando `:clickthrouse` continua controlando a colisão entre jogadores.
 - `app/hotel-web`: Nitro antigo e seus recursos.
 - `app/lib`: bibliotecas usadas pelo emulador.
 - `database/habbo.sql`: banco inicial com quartos, contas de teste e bolas.
+- `database/campo-futebol.sql`: móveis e montagem do campo do quarto `aaa`.
 - `scripts`: instalação e inicialização portáteis.
 
 As dependências grandes são baixadas na primeira instalação e ficam nas pastas

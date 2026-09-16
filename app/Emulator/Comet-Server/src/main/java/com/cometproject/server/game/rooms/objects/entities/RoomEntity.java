@@ -228,6 +228,22 @@ public abstract class RoomEntity extends RoomFloorObject implements AvatarEntity
             y = tile.getRedirect().getY();
         }
 
+        // Quando o clique cai sobre outro avatar, o destino exato esta
+        // ocupado. Em vez de cancelar a caminhada, escolhemos o quadrado livre
+        // e alcancavel mais proximo ao redor dele. Isso mantem a colisao entre
+        // jogadores e funciona vindo de qualquer direcao.
+        if (playerEntity != null && !this.getRoom().getData().getAllowWalkthrough() &&
+                this.getRoom().getEntities().positionHasEntity(new Position(x, y))) {
+            final Position approachPosition = this.findClosestFreeApproachPosition(x, y);
+
+            if (approachPosition == null) {
+                return;
+            }
+
+            x = approachPosition.getX();
+            y = approachPosition.getY();
+        }
+
         //this.walking = true;
         this.previousSteps = 0;
 
@@ -243,6 +259,46 @@ public abstract class RoomEntity extends RoomFloorObject implements AvatarEntity
         }
 
 
+    }
+
+    private Position findClosestFreeApproachPosition(int targetX, int targetY) {
+        final Position currentPosition = this.getPosition();
+        Position bestPosition = null;
+        int bestPathLength = Integer.MAX_VALUE;
+
+        for (int offsetX = -1; offsetX <= 1; offsetX++) {
+            for (int offsetY = -1; offsetY <= 1; offsetY++) {
+                if (offsetX == 0 && offsetY == 0) {
+                    continue;
+                }
+
+                final Position candidate = new Position(targetX + offsetX, targetY + offsetY);
+                final RoomTile candidateTile = this.getRoom().getMapping().getTile(candidate);
+
+                if (candidateTile == null || this.getRoom().getEntities().positionHasEntity(candidate)) {
+                    continue;
+                }
+
+                if (currentPosition.getX() == candidate.getX() && currentPosition.getY() == candidate.getY()) {
+                    return candidate;
+                }
+
+                final List<Square> path = EntityPathfinder.getInstance().makePath(
+                        this,
+                        candidate,
+                        this.getRoom().getData().getRoomDiagonalType().getKey(),
+                        true,
+                        false
+                );
+
+                if (path != null && !path.isEmpty() && path.size() < bestPathLength) {
+                    bestPosition = candidate;
+                    bestPathLength = path.size();
+                }
+            }
+        }
+
+        return bestPosition;
     }
 
     public void moveToAgain(int x, int y) {

@@ -60,6 +60,19 @@ if (-not (Get-ListeningPid 3307)) {
 $ticketSql = "UPDATE players SET auth_ticket='localplayer1' WHERE username='Jogador1';"
 & $mariaClient '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' '--database=habbo' "--execute=$ticketSql"
 
+$fieldSql = Join-Path $repoRoot 'database\campo-futebol.sql'
+$fieldMarker = & $mariaClient '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' '--database=habbo' '--batch' '--skip-column-names' '--execute=SELECT COUNT(*) FROM items WHERE id=1000 AND room_id=3;'
+
+if ((Test-Path -LiteralPath $fieldSql) -and (($fieldMarker | Select-Object -First 1).Trim() -eq '0')) {
+    $fieldSqlForMaria = $fieldSql.Replace('\', '/')
+    & $mariaClient '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' '--database=habbo' "--execute=source $fieldSqlForMaria"
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host 'Nao foi possivel montar o campo de futebol.' -ForegroundColor Red
+        exit 1
+    }
+}
+
 if (-not (Get-ListeningPid 30000)) {
     $runtimeLib = Join-Path $repoRoot 'app\lib'
     $ownJars = @(

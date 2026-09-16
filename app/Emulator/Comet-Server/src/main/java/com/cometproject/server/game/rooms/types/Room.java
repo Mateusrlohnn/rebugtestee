@@ -94,6 +94,7 @@ public class Room implements Attributable, IRoom {
     private AtomicInteger eventIdGeneratorUsers;
     private volatile Integer futnitroPriorityEntityId;
     private volatile long futnitroLastTurnAttemptAt;
+    private volatile long futnitroLastKickAttemptAt;
 
     public Room(IRoomData data) {
         this.data = data;
@@ -152,9 +153,9 @@ public class Room implements Attributable, IRoom {
         // reinicia o caminho, nao gera fala e nao concede invulnerabilidade.
         // O intervalo curto abaixo serve apenas para impedir duas trocas no
         // mesmo instante.
-        this.futnitroLastTurnAttemptAt = entityId == null
-                ? 0L
-                : System.currentTimeMillis();
+        final long attemptStart = entityId == null ? 0L : System.currentTimeMillis();
+        this.futnitroLastTurnAttemptAt = attemptStart;
+        this.futnitroLastKickAttemptAt = attemptStart;
     }
 
     public void processFutnitroMovement(RoomEntity challenger) {
@@ -200,12 +201,14 @@ public class Room implements Attributable, IRoom {
 
         final long now = System.currentTimeMillis();
 
-        if (now - this.futnitroLastTurnAttemptAt < FUTNITRO_ATTEMPT_INTERVAL_MS) {
+        if (now - this.futnitroLastKickAttemptAt < FUTNITRO_ATTEMPT_INTERVAL_MS) {
             return false;
         }
 
         // Uma bica confirmada gera uma unica tentativa, sem depender do angulo.
-        this.futnitroLastTurnAttemptAt = now;
+        // Ela possui intervalo proprio para nao ser anulada por uma virada do
+        // dono processada no mesmo instante.
+        this.futnitroLastKickAttemptAt = now;
 
         if (ThreadLocalRandom.current().nextInt(100) >= FUTNITRO_KICK_STEAL_CHANCE) {
             return false;

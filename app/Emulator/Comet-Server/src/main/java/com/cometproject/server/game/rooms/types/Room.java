@@ -50,6 +50,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Room implements Attributable, IRoom {
     private static final int FUTNITRO_MOVEMENT_DISTANCE = 1;
+    private static final int FUTNITRO_KICK_STEAL_CHANCE = 2;
     private static final long FUTNITRO_ATTEMPT_INTERVAL_MS = 1_000L;
 
     public final Logger log;
@@ -177,12 +178,41 @@ public class Room implements Attributable, IRoom {
 
         final long now = System.currentTimeMillis();
 
-        // O desafiante andando reto, em diagonal ou bikando nao sorteia o
-        // roubo sozinho. A unica janela percentual e a mudanca de direcao do
-        // dono do Nitro.
+        // Apenas caminhar reto ou em diagonal nao sorteia roubo. A bica e
+        // tratada separadamente quando a bola confirma o toque; aqui cuidamos
+        // apenas da mudanca de direcao do dono do Nitro.
         if (challenger.getId() == ownerId) {
             this.processFutnitroOwnerDirectionChange(owner, now);
         }
+    }
+
+    public boolean tryFutnitroKickSteal(RoomEntity challenger) {
+        if (this.data.getRoomProcessType() != RoomProcessingType.PRESSURE ||
+                !(challenger instanceof PlayerEntity)) {
+            return false;
+        }
+
+        final Integer ownerId = this.futnitroPriorityEntityId;
+
+        if (ownerId == null || challenger.getId() == ownerId) {
+            return false;
+        }
+
+        final long now = System.currentTimeMillis();
+
+        if (now - this.futnitroLastTurnAttemptAt < FUTNITRO_ATTEMPT_INTERVAL_MS) {
+            return false;
+        }
+
+        // Uma bica confirmada gera uma unica tentativa, sem depender do angulo.
+        this.futnitroLastTurnAttemptAt = now;
+
+        if (ThreadLocalRandom.current().nextInt(100) >= FUTNITRO_KICK_STEAL_CHANCE) {
+            return false;
+        }
+
+        this.setFutnitroPriorityEntityId(challenger.getId());
+        return true;
     }
 
     private void processFutnitroOwnerDirectionChange(RoomEntity owner, long now) {

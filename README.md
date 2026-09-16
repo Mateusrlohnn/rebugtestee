@@ -35,6 +35,8 @@ Nos quartos de futebol configurados, use `:futnitro 3`.
 - O roubo só pode ser sorteado quando o dono muda a direção perto da bola e o
   adversário também está em movimento, disputando a mesma bola.
 - As chances são 3% (45 graus), 5% (90 graus), 7% (135 graus) e 10% (180 graus).
+- Uma bica confirmada do adversário também tem 2% de chance de roubar o Nitro,
+  independentemente da direção do avatar.
 - Existe um intervalo de 1 segundo entre tentativas para evitar troca dupla no
   mesmo instante.
 - Quando o jogador para de andar, perde a prioridade. A próxima jogada começa

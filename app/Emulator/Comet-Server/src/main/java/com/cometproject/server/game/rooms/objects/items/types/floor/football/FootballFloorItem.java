@@ -129,10 +129,16 @@ public class FootballFloorItem extends RoomItemFloor {
             return ownerTouch;
         }
 
+        final PendingTouch strongestChallenger = this.strongestTouch(challengers);
+
+        if (this.getRoom().tryFutnitroKickSteal(strongestChallenger.entity)) {
+            return strongestChallenger;
+        }
+
         // A troca de prioridade e calculada pelos passos e angulos do avatar no
-        // quarto. Aqui apenas aplicamos essa prioridade sem alterar a fisica da
-        // bola Rebug.
-        return ownerTouch != null ? ownerTouch : this.strongestTouch(challengers);
+        // quarto, com uma pequena chance extra quando o desafiante realmente
+        // bica a bola. A fisica da bola Rebug permanece inalterada.
+        return ownerTouch != null ? ownerTouch : strongestChallenger;
     }
 
     private PendingTouch strongestTouch(List<PendingTouch> touches) {

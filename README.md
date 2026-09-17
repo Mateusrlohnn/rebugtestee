@@ -30,17 +30,16 @@ Use `Fechar-Acesso-Externo.cmd` para encerrar os túneis.
 
 Nos quartos de futebol configurados, use `:futnitro 3`.
 
-- O primeiro jogador que toca na bola recebe a prioridade daquele movimento.
-- Andar reto não sorteia roubo.
-- O roubo só pode ser sorteado quando o dono muda a direção perto da bola e o
-  adversário também está em movimento, disputando a mesma bola.
-- As chances são 3% (45 graus), 5% (90 graus), 7% (135 graus) e 10% (180 graus).
-- Uma bica confirmada do adversário também tem 2% de chance de roubar o Nitro,
-  independentemente da direção do avatar.
-- Mudança de direção e bica possuem intervalos separados de 1 segundo. Assim,
-  uma virada do dono não cancela a tentativa da bica do adversário.
-- Quando o jogador para de andar, perde a prioridade. A próxima jogada começa
-  sem um dono fixo.
+- O modo 3 reproduz a disputa do Rebug antigo, sem porcentagens artificiais.
+- Enquanto o personagem continua andando, seu mesmo evento de caminhada é
+  mantido; novos cliques recalculam a rota, mas não criam uma prioridade nova.
+- Quando os dois jogadores alcançam a bola no mesmo ciclo, o último contato
+  válido daquele ciclo assume a bica e a condução.
+- Diagonais, mudança de direção, retorno após bater na parede, bloqueios e
+  *miss clicks* influenciam o roubo porque alteram a rota e a ordem real dos
+  contatos, como aparece nos vídeos antigos.
+- Não existe dono permanente, proteção de um segundo nem sorteio separado para
+  mudança de direção ou bica.
 - A física e a animação da bola continuam sendo as originais da bola Rebug.
 
 O comando `:clickthrouse` continua controlando a colisão entre jogadores.

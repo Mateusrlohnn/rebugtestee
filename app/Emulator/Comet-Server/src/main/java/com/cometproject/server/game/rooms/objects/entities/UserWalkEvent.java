@@ -215,8 +215,6 @@ public class UserWalkEvent {
         }
 
         this.liveEntity.addToTile(tile);
-        room.processFutnitroMovement(this.liveEntity);
-
         final List<RoomItemFloor> postItems = room.getItems().getItemsOnSquare(nextX, nextY);
 
         for (final RoomItemFloor item : postItems) {
@@ -280,11 +278,6 @@ public class UserWalkEvent {
         this.liveEntity.walking = false;
         this.isWalking = false;
         this.liveEntity.processingPath.clear();
-
-        final Integer nitroOwnerId = room.getFutnitroPriorityEntityId();
-        if (nitroOwnerId != null && nitroOwnerId == this.liveEntity.getId()) {
-            room.setFutnitroPriorityEntityId(null);
-        }
 
         //  room.entityWalk(this.nextXY, this.liveEntity, false);
         // room.entityWalk(this.liveEntity.xy, this.liveEntity, true);

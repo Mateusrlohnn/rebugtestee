@@ -2,7 +2,6 @@ package com.cometproject.server.game.rooms.types.components;
 
 import com.cometproject.api.config.CometSettings;
 import com.cometproject.api.game.quests.QuestType;
-import com.cometproject.api.game.rooms.RoomProcessingType;
 import com.cometproject.api.game.rooms.entities.RoomEntityStatus;
 import com.cometproject.api.game.utilities.Position;
 import com.cometproject.server.boot.Comet;
@@ -31,7 +30,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
@@ -53,30 +51,11 @@ public class AlternativeProcessComponent extends AbstractRoomProcess {
 
 
     private void ProcessWalks() {
-        final List<UserWalkEvent> events = new ArrayList<>(room.userEvents.values());
-
-        if (room.getData().getRoomProcessType() == RoomProcessingType.PRESSURE) {
-            final Integer priorityEntityId = room.getFutnitroPriorityEntityId();
-
-            if (priorityEntityId != null) {
-                // Com os jogadores sem atravessar uns aos outros, quem e
-                // processado primeiro ocupa o quadrado da bola. O dono do Nitro
-                // precisa, portanto, ser processado primeiro; quando o roubo
-                // acontece, FootballFloorItem troca este id imediatamente.
-                events.sort((left, right) -> {
-                    final boolean leftHasPriority = left.getLiveEntity().getId() == priorityEntityId;
-                    final boolean rightHasPriority = right.getLiveEntity().getId() == priorityEntityId;
-
-                    if (leftHasPriority == rightHasPriority) {
-                        return Integer.compare(left.eventId, right.eventId);
-                    }
-
-                    return leftHasPriority ? -1 : 1;
-                });
-            }
-        }
-
-        for (final UserWalkEvent event : events) {
+        // O Nitro Rebug original nao promovia o dono da bola para o inicio da
+        // fila. A prioridade vinha do evento de caminhada que permanecia vivo
+        // enquanto o jogador continuava clicando. Mudancas de rota e bloqueios
+        // alteravam naturalmente quem tocava a bola por ultimo no mesmo ciclo.
+        for (final UserWalkEvent event : room.userEvents.values()) {
             room.parseEvent(event);
         }
     }

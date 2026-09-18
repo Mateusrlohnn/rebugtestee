@@ -73,6 +73,18 @@ if ((Test-Path -LiteralPath $fieldSql) -and (($fieldMarker | Select-Object -Firs
     }
 }
 
+$queueSql = Join-Path $repoRoot 'database\queue.sql'
+
+if (Test-Path -LiteralPath $queueSql) {
+    $queueSqlForMaria = $queueSql.Replace('\', '/')
+    & $mariaClient '--protocol=tcp' '--host=127.0.0.1' '--port=3307' '--user=root' '--password=root_local_2026' '--database=habbo' "--execute=source $queueSqlForMaria"
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host 'Nao foi possivel preparar a fila ranqueada.' -ForegroundColor Red
+        exit 1
+    }
+}
+
 if (-not (Get-ListeningPid 30000)) {
     $runtimeLib = Join-Path $repoRoot 'app\lib'
     $ownJars = @(

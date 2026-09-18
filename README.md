@@ -45,6 +45,23 @@ Nos quartos de futebol configurados, use `:futnitro 3`.
 
 O comando `:clickthrouse` continua controlando a colisão entre jogadores.
 
+## Fila ranqueada (em construção)
+
+Fila 4x4 por quarto, com elo global estilo League of Legends. O plano completo
+está em `docs/queue-plano.md`.
+
+- `:queue` mostra quem está na fila do quarto, com elo e tempo de espera.
+- `:queue entrar` / `:queue sair` entra ou sai da fila. Sair do quarto também
+  tira o jogador da fila.
+- `:queue elo` mostra seu elo e seu histórico.
+- `:queue ranking` mostra os 10 melhores do hotel.
+- Com 8 jogadores, a partida é encontrada e os 2 melhores do ranking viram
+  capitães. Por enquanto só há o anúncio; draft e partida vêm nas próximas
+  etapas.
+
+A tabela `queue_ranking` e a permissão do comando são criadas por
+`database/queue.sql`, executado a cada abertura do hotel.
+
 ## Campo e movimentação
 
 - O quarto `aaa` do `Jogador1` recebe automaticamente somente o campo completo:

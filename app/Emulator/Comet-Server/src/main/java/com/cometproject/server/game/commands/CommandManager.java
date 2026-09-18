@@ -51,7 +51,6 @@ import com.cometproject.server.logging.LogManager;
 import com.cometproject.server.logging.entries.CommandLogEntry;
 import com.cometproject.server.modules.ModuleManager;
 import com.cometproject.server.network.messages.outgoing.messenger.InstantChatMessageComposer;
-import com.cometproject.server.network.messages.outgoing.user.pin.EmailVerificationWindowMessageComposer;
 import com.cometproject.server.network.sessions.Session;
 import com.google.common.collect.Lists;
 import org.apache.logging.log4j.Logger;
@@ -205,6 +204,7 @@ public class CommandManager implements Initialisable {
         this.addCommand("clickthrouse", new NoclickAvatarCommand());
         this.addCommand("futnitro", new FutnitroCommand());
         this.addCommand("nitro", new FutnitroCommand());
+        this.addCommand("queue", new QueueCommand());
 
 
         // Gimmick commands
@@ -325,7 +325,7 @@ public class CommandManager implements Initialisable {
         this.addCommand(Locale.get("command.viewinventory.name"), new ViewInventoryCommand());
         this.addCommand(Locale.get("command.eventvote.name"), new EventVoteCommand());
         this.addCommand(Locale.get("command.giverank.name"), new GiveRankCommand());
-        this.addCommand(Locale.getOrDefault("command.furnifix.name", "furnifix"), new FurniFixCommand());
+        this.addCommand(Locale.getOrDefault("command.furnifix.name", "furnifix"), new NewFurniFixCommand());
         this.addCommand(Locale.getOrDefault("command.welcome.name", "welcome"), new WelcomeCommand());
         this.addCommand(Locale.getOrDefault("command.whisperalert.name", "wha"), new WhisperAlertCommand());
         //this.addCommand(Locale.getOrDefault("command.married.name", "marry"), new MarriedCommand());
@@ -430,12 +430,6 @@ public class CommandManager implements Initialisable {
                 return true;
             }
 
-            if(client.getPlayer().getPermissions().getRank().modTool() && !client.getPlayer().getSettings().isPinSuccess()) {
-                client.getPlayer().sendBubble("pincode", Locale.getOrDefault("pin.code.required", "Debes verificar tu PIN antes de realizar cualquier acción."));
-                client.send(new EmailVerificationWindowMessageComposer(1,1));
-                return false;
-            }
-
             final String[] params = getParams(message.split(" "));
 
             if (chatCommand == null) {
@@ -510,7 +504,6 @@ public class CommandManager implements Initialisable {
 
         for (final String key : keyList) {
             this.commands.put(":" + key, command);
-            this.commands.put(";" + key, command);
         }
     }
 

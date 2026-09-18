@@ -27,6 +27,7 @@ import com.cometproject.server.game.players.PlayerManager;
 import com.cometproject.server.game.players.data.PlayerData;
 import com.cometproject.server.game.players.types.Player;
 import com.cometproject.server.game.rooms.RoomManager;
+import com.cometproject.server.game.ranked.RankedQueueManager;
 import com.cometproject.server.game.rooms.RoomQueue;
 import com.cometproject.server.game.rooms.objects.entities.PlayerEntityAccess;
 import com.cometproject.server.game.rooms.objects.entities.RoomEntity;
@@ -436,6 +437,8 @@ public class PlayerEntity extends RoomEntity implements PlayerEntityAccess, Attr
         } catch (Exception ignored) {
 
         }
+
+        RankedQueueManager.getInstance().onPlayerLeaveRoom(this);
 
         for (final BotEntity entity : this.getRoom().getEntities().getBotEntities()) {
             if (entity.getAI().onPlayerLeave(this)) break;

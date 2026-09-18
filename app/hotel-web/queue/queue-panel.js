@@ -12,26 +12,30 @@
 
     var PANEL_HEADER = 7700;
     var ACTION_HEADER = 7701;
+    var AVATAR_URL = 'https://www.habbo.com/habbo-imaging/avatarimage';
 
     var TIERS = [
-        { id: 'bronze', name: 'Bronze', color: '#b0703f', dark: '#6e3f1c' },
-        { id: 'silver', name: 'Prata', color: '#a9b4be', dark: '#5f6b75' },
-        { id: 'gold', name: 'Ouro', color: '#e0ac24', dark: '#8a6408' },
-        { id: 'platinum', name: 'Platina', color: '#3fb0a6', dark: '#1d6a63' },
-        { id: 'emerald', name: 'Esmeralda', color: '#22a95e', dark: '#0f6334' },
-        { id: 'diamond', name: 'Diamante', color: '#5b7fe0', dark: '#2a4596' },
-        { id: 'master', name: 'Mestre', color: '#a052cc', dark: '#5c2380' },
-        { id: 'grandmaster', name: 'Grão-Mestre', color: '#d13b43', dark: '#7d161c' },
-        { id: 'challenger', name: 'Desafiante', color: '#f2c94c', dark: '#2b6cb0' }
+        { id: 'bronze', name: 'Bronze', light: '#e2a476', mid: '#a0643a', dark: '#4a2a14', gem: '#d98c5f' },
+        { id: 'silver', name: 'Prata', light: '#e6edf2', mid: '#98a6b1', dark: '#3d4852', gem: '#c7d3dc' },
+        { id: 'gold', name: 'Ouro', light: '#fbe08a', mid: '#d0a032', dark: '#5e430b', gem: '#f5c84c' },
+        { id: 'platinum', name: 'Platina', light: '#a6f0e2', mid: '#3aa89a', dark: '#0e4a44', gem: '#58d6c3' },
+        { id: 'emerald', name: 'Esmeralda', light: '#8df5b2', mid: '#1f9e58', dark: '#08432a', gem: '#2fe07e' },
+        { id: 'diamond', name: 'Diamante', light: '#c9d8ff', mid: '#6384e0', dark: '#1d2f6e', gem: '#9fc2ff' },
+        { id: 'master', name: 'Mestre', light: '#e7b8ff', mid: '#9b4fcf', dark: '#3b1454', gem: '#d38bff' },
+        { id: 'grandmaster', name: 'Grão-Mestre', light: '#ffb3b3', mid: '#c83838', dark: '#4f0d0d', gem: '#ff6060' },
+        { id: 'challenger', name: 'Desafiante', light: '#fff2b8', mid: '#e8b830', dark: '#1a3d78', gem: '#7fd8ff' }
     ];
 
     var socket = null;
     var root = null;
+    var badgeElement = null;
+    var crestCount = 0;
     var view = {
         tab: 'profile',
         state: null,
         stateAt: 0,
-        ranking: null
+        ranking: null,
+        rankingPlayer: null
     };
 
     /* ---------- Conexão ---------- */
@@ -122,6 +126,36 @@
         if (isOpen()) {
             render();
         }
+
+        updateBadge();
+    }
+
+    /* ---------- Selo na tela enquanto está na fila ---------- */
+
+    function updateBadge() {
+        ensureRoot();
+
+        var state = view.state;
+        var visible = !isOpen() && state && (state.me.inQueue || state.match);
+
+        badgeElement.hidden = !visible;
+
+        if (!visible) {
+            return;
+        }
+
+        if (state.match) {
+            badgeElement.className = 'rq-badge-float is-match';
+            badgeElement.innerHTML = logo() +
+                '<span class="rq-badge-text"><b>Partida encontrada!</b><small>Clique para ver os jogadores</small></span>';
+        } else {
+            badgeElement.className = 'rq-badge-float';
+            badgeElement.innerHTML = logo() +
+                '<span class="rq-badge-text"><b>Procurando partida <span data-wait="' + state.me.waitSeconds + '"></span></b>' +
+                '<small>' + state.queue.size + '/' + state.queue.max + ' na fila · clique para abrir</small></span>';
+        }
+
+        tickTimers();
     }
 
     /* ---------- Janela ---------- */
@@ -137,27 +171,54 @@
         root.innerHTML =
             '<div class="rq-window" role="dialog" aria-label="Fila ranqueada">' +
             '  <div class="rq-header">' +
-            '    <span class="rq-title">Fila Ranqueada 4x4</span>' +
-            '    <button class="rq-close" type="button" aria-label="Fechar">✕</button>' +
-            '  </div>' +
-            '  <div class="rq-tabs" role="tablist">' +
-            tabButton('profile', 'Meu perfil') +
+            logo() +
+            '    <div>' +
+            '      <div class="rq-title">Ranqueada</div>' +
+            '      <div class="rq-subtitle">Futebol 4x4</div>' +
+            '    </div>' +
+            '    <nav class="rq-tabs" role="tablist">' +
+            tabButton('profile', 'Perfil') +
             tabButton('queue', 'Fila') +
             tabButton('ranking', 'Ranking') +
             tabButton('docs', 'Como funciona') +
+            '    </nav>' +
+            '    <button class="rq-close" type="button" aria-label="Fechar">✕</button>' +
             '  </div>' +
             '  <div class="rq-content"></div>' +
+            '  <div class="rq-footer"></div>' +
             '</div>';
 
         document.body.appendChild(root);
 
+        badgeElement = document.createElement('button');
+        badgeElement.type = 'button';
+        badgeElement.hidden = true;
+        badgeElement.addEventListener('click', function () {
+            sendAction('open');
+        });
+        document.body.appendChild(badgeElement);
+
         root.querySelector('.rq-close').addEventListener('click', hide);
         root.addEventListener('click', onClick);
+        root.addEventListener('mousedown', function (event) {
+            if (event.target === root) {
+                hide();
+            }
+        });
         makeDraggable(root.querySelector('.rq-window'), root.querySelector('.rq-header'));
 
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape' && isOpen()) {
                 hide();
+            }
+        });
+
+        root.addEventListener('keydown', function (event) {
+            var player = event.target.closest('[data-player]');
+
+            if (player && (event.key === 'Enter' || event.key === ' ')) {
+                event.preventDefault();
+                openRankingPlayer(Number(player.getAttribute('data-player')));
             }
         });
 
@@ -182,6 +243,8 @@
                 sendAction('ranking');
             }
         }
+
+        updateBadge();
     }
 
     function hide() {
@@ -191,6 +254,7 @@
 
         root.hidden = true;
         sendAction('close');
+        updateBadge();
     }
 
     function onClick(event) {
@@ -198,6 +262,7 @@
 
         if (tab) {
             view.tab = tab.getAttribute('data-tab');
+            view.rankingPlayer = null;
 
             if (view.tab === 'ranking') {
                 sendAction('ranking');
@@ -207,11 +272,29 @@
             return;
         }
 
+        var player = event.target.closest('[data-player]');
+
+        if (player) {
+            openRankingPlayer(Number(player.getAttribute('data-player')));
+            return;
+        }
+
+        if (event.target.closest('[data-ranking-back]')) {
+            openRankingPlayer(null);
+            return;
+        }
+
         var action = event.target.closest('[data-action]');
 
         if (action) {
             sendAction(action.getAttribute('data-action'));
         }
+    }
+
+    function openRankingPlayer(position) {
+        view.rankingPlayer = position;
+        render();
+        root.querySelector('.rq-content').scrollTop = 0;
     }
 
     function makeDraggable(windowElement, handle) {
@@ -251,9 +334,11 @@
         });
 
         var content = root.querySelector('.rq-content');
+        var footer = root.querySelector('.rq-footer');
 
         if (!view.state) {
             content.innerHTML = '<div class="rq-empty">Carregando...</div>';
+            footer.innerHTML = '';
             return;
         }
 
@@ -267,37 +352,68 @@
             content.innerHTML = renderProfile();
         }
 
+        footer.innerHTML = renderFooter();
         tickTimers();
     }
 
-    function renderProfile() {
+    function renderFooter() {
         var me = view.state.me;
-        var tier = tierOf(me.tier);
-        var hasDivisions = me.division !== '';
-        var progress = Math.max(0, Math.min(100, me.leaguePoints));
+        var queue = view.state.queue;
 
-        return renderMatch() +
-            '<div class="rq-card">' +
-            '  <div class="rq-profile">' +
-            badge(me.tier, me.division, 96) +
-            '    <div class="rq-profile-info">' +
-            '      <div class="rq-name">' + escapeHtml(me.username) + '</div>' +
-            '      <div class="rq-elo" style="color:' + tier.dark + '">' + escapeHtml(eloText(me)) + '</div>' +
+        if (me.inQueue) {
+            return '<div class="rq-footer-info">' +
+                '  <div class="rq-footer-label">Procurando partida · ' + queue.size + '/' + queue.max + '</div>' +
+                '  <div class="rq-footer-value is-searching" data-wait="' + me.waitSeconds + '"></div>' +
+                '</div>' +
+                '<button class="rq-play is-cancel" type="button" data-action="leave">Sair da fila</button>';
+        }
+
+        return '<div class="rq-footer-info">' +
+            '  <div class="rq-footer-label">Fila ranqueada do hotel</div>' +
+            '  <div class="rq-footer-value">' + queue.size + '/' + queue.max + ' jogadores procurando</div>' +
+            '</div>' +
+            '<button class="rq-play" type="button" data-action="join">Encontrar partida</button>';
+    }
+
+    function renderProfile() {
+        return renderMatch() + renderPlayerProfile(view.state.me);
+    }
+
+    /* Foto, elo e estatísticas de um jogador. Usado no Perfil e ao clicar em alguém do ranking. */
+    function renderPlayerProfile(player) {
+        var tier = tierOf(player.tier);
+        var hasDivisions = player.division !== '';
+        var progress = Math.max(0, Math.min(100, player.leaguePoints));
+
+        return '<div class="rq-profile">' +
+            '  <div class="rq-hero">' +
+            '    <div class="rq-avatar-ring">' + avatarImage(player.figure, 'l', player.username) + '</div>' +
+            crest(player.tier, player.division, 92) +
+            '  </div>' +
+            '  <div class="rq-profile-info">' +
+            '    <div class="rq-name">' + escapeHtml(player.username) + '</div>' +
+            '    <div class="rq-rank-line">' +
+            '      <span class="rq-elo" style="color:' + tier.light + '">' + escapeHtml(tier.name + (hasDivisions ? ' ' + player.division : '')) + '</span>' +
+            '      <span class="rq-lp">' + player.leaguePoints + ' PDL</span>' +
+            '    </div>' +
             (hasDivisions
                 ? '<div class="rq-bar"><span style="width:' + progress + '%"></span></div>' +
-                  '<div class="rq-bar-label rq-muted">' + me.leaguePoints + ' / 100 PDL para subir de divisão</div>'
-                : '<div class="rq-bar-label rq-muted">' + me.leaguePoints + ' PDL</div>') +
+                  '<div class="rq-bar-label"><span>Progresso da divisão</span><span>' + player.leaguePoints + ' / 100 PDL</span></div>'
+                : '<div class="rq-bar-label"><span>Sem divisões · PDL sem limite</span><span>' + player.leaguePoints + ' PDL</span></div>') +
+            '    <div class="rq-stats">' +
+            stat(player.position ? '#' + player.position : '-', 'Ranking') +
+            stat(player.wins, 'Vitórias') +
+            stat(player.losses, 'Derrotas') +
+            stat(player.draws, 'Empates') +
+            stat(winRate(player) + '%', 'Aproveit.') +
             '    </div>' +
             '  </div>' +
-            '  <div class="rq-stats">' +
-            stat(me.position ? '#' + me.position : '-', 'No ranking') +
-            stat(me.wins, 'Vitórias') +
-            stat(me.losses, 'Derrotas') +
-            stat(me.draws, 'Empates') +
-            stat(me.winRate + '%', 'Aproveitamento') +
-            '  </div>' +
-            '</div>' +
-            '<div class="rq-card">' + renderQueueBar() + '</div>';
+            '</div>';
+    }
+
+    function winRate(player) {
+        var games = player.wins + player.losses + player.draws;
+        return games === 0 ? 0 : Math.round(player.wins * 100 / games);
     }
 
     function renderMatch() {
@@ -307,59 +423,48 @@
             return '';
         }
 
-        var players = match.players.map(function (player) {
-            return slot(player, player.captain ? 'Capitão' : null);
+        var cards = match.players.map(function (player) {
+            var classes = 'rq-card' + (player.me ? ' is-me' : '') + (player.captain ? ' is-captain' : '');
+
+            return '<div class="' + classes + '">' +
+                (player.captain ? '<span class="rq-tag">Capitão</span>' : '') +
+                avatarImage(player.figure, 'm', player.username, 'rq-card-head', true) +
+                '<div class="rq-card-name">' + escapeHtml(player.username) + (player.me ? ' (você)' : '') + '</div>' +
+                '<div class="rq-card-elo">' + crest(player.tier, player.division, 18) + escapeHtml(eloText(player)) + '</div>' +
+                '</div>';
         }).join('');
 
-        return '<div class="rq-card rq-match">' +
-            '  <h3>Partida encontrada!</h3>' +
-            '  <p class="rq-muted" style="margin:0 0 10px">Os 8 jogadores abaixo formam a partida. Os dois capitães têm o melhor elo ' +
-            'e montam os times. Combinem entre vocês um quarto para jogar.</p>' +
-            '  <div class="rq-slots">' + players + '</div>' +
-            '  <div style="margin-top:10px;text-align:right">' +
-            '    <button class="rq-button is-plain" type="button" data-action="dismiss">Ok, entendi</button>' +
-            '  </div>' +
-            '</div>';
-    }
-
-    function renderQueueBar() {
-        var me = view.state.me;
-        var queue = view.state.queue;
-
-        if (me.inQueue) {
-            return '<div class="rq-queue-bar">' +
-                '  <div class="rq-queue-status">' +
-                '    <b>Você está na fila</b><br>' +
-                '    <span class="rq-muted">Esperando há <span data-wait="' + me.waitSeconds + '"></span> · ' +
-                queue.size + '/' + queue.max + ' jogadores</span>' +
-                '  </div>' +
-                '  <button class="rq-button is-leave" type="button" data-action="leave">Sair da fila</button>' +
-                '</div>';
-        }
-
-        return '<div class="rq-queue-bar">' +
-            '  <div class="rq-queue-status">' +
-            '    <b>Você não está na fila</b><br>' +
-            '    <span class="rq-muted">' + queue.size + '/' + queue.max + ' jogadores esperando no hotel</span>' +
-            '  </div>' +
-            '  <button class="rq-button" type="button" data-action="join">Entrar na fila</button>' +
+        return '<div class="rq-match">' +
+            '  <div class="rq-match-title">Partida encontrada</div>' +
+            '  <p class="rq-match-text">Estes são os 8 jogadores da partida. Os dois capitães têm o melhor elo e montam os times. ' +
+            'Combinem entre vocês um quarto para jogar.</p>' +
+            '  <div class="rq-grid">' + cards + '</div>' +
+            '  <div style="margin-top:16px"><button class="rq-ghost" type="button" data-action="dismiss">Ok, entendi</button></div>' +
             '</div>';
     }
 
     function renderQueue() {
+        var me = view.state.me;
         var queue = view.state.queue;
-        var slots = queue.players.map(function (player) {
-            return slot(player, null, player.waitSeconds);
-        });
+        var pips = '';
 
-        for (var i = queue.players.length; i < queue.max; i++) {
-            slots.push('<div class="rq-slot is-empty">Vaga livre</div>');
+        for (var i = 0; i < queue.max; i++) {
+            pips += '<span class="rq-pip' + (i < queue.size ? ' is-filled' : '') + '"></span>';
         }
 
-        return '<div class="rq-card">' + renderQueueBar() + '</div>' +
-            '<div class="rq-card">' +
-            '  <h3>Fila única do hotel · ' + queue.size + '/' + queue.max + '</h3>' +
-            '  <div class="rq-slots">' + slots.join('') + '</div>' +
+        return '<div class="rq-queue">' +
+            '  <div class="rq-orb' + (me.inQueue ? ' is-searching' : '') + '">' +
+            orb() +
+            '    <div class="rq-orb-center">' +
+            (me.inQueue
+                ? '<div class="rq-orb-time" data-wait="' + me.waitSeconds + '"></div><div class="rq-orb-label">Procurando partida</div>'
+                : '<div class="rq-orb-time">' + queue.size + '/' + queue.max + '</div><div class="rq-orb-label">Na fila agora</div>') +
+            '    </div>' +
+            '  </div>' +
+            '  <div class="rq-pips" aria-label="' + queue.size + ' de ' + queue.max + ' jogadores">' + pips + '</div>' +
+            '  <div class="rq-muted">' + queue.size + ' de ' + queue.max + ' jogadores na fila</div>' +
+            '  <p class="rq-queue-note">Quem está na fila fica em segredo. Você só descobre os outros jogadores quando a partida ' +
+            'for encontrada.</p>' +
             '</div>';
     }
 
@@ -369,86 +474,97 @@
         }
 
         if (!view.ranking.length) {
-            return '<div class="rq-card rq-empty">Ninguém entrou na fila ainda. Seja o primeiro!</div>';
+            return '<div class="rq-empty">Ninguém entrou na fila ainda. Seja o primeiro!</div>';
+        }
+
+        var selected = findRankingPlayer(view.rankingPlayer);
+
+        if (selected) {
+            return '<button class="rq-back" type="button" data-ranking-back>‹ Voltar ao ranking</button>' +
+                renderPlayerProfile(selected);
         }
 
         var rows = view.ranking.map(function (player) {
-            return '<tr class="' + (player.me ? 'is-me' : '') + '">' +
+            var classes = (player.me ? 'is-me ' : '') + (player.position <= 3 ? 'is-top' : '');
+
+            return '<tr class="' + classes + '" data-player="' + player.position + '" tabindex="0" ' +
+                'title="Ver estatísticas de ' + escapeHtml(player.username) + '">' +
                 '<td class="rq-pos">' + player.position + '</td>' +
-                '<td><div class="rq-player-cell">' + badge(player.tier, player.division, 30) +
+                '<td><div class="rq-player-cell">' + avatarImage(player.figure, 's', player.username, '', true) +
                 '<span>' + escapeHtml(player.username) + '</span></div></td>' +
-                '<td>' + escapeHtml(eloText(player)) + '</td>' +
+                '<td><div class="rq-elo-cell">' + crest(player.tier, player.division, 30) +
+                '<span>' + escapeHtml(eloText(player)) + '</span></div></td>' +
                 '<td class="rq-num">' + player.wins + 'V ' + player.losses + 'D ' + player.draws + 'E</td>' +
                 '</tr>';
         }).join('');
 
-        return '<div class="rq-card" style="padding:0;overflow:hidden">' +
-            '<table class="rq-table">' +
+        return '<table class="rq-table">' +
             '<thead><tr><th class="rq-pos">#</th><th>Jogador</th><th>Elo</th><th class="rq-num">Partidas</th></tr></thead>' +
             '<tbody>' + rows + '</tbody>' +
-            '</table></div>';
+            '</table>';
+    }
+
+    function findRankingPlayer(position) {
+        if (!position || !view.ranking) {
+            return null;
+        }
+
+        for (var i = 0; i < view.ranking.length; i++) {
+            if (view.ranking[i].position === position) {
+                return view.ranking[i];
+            }
+        }
+
+        return null;
     }
 
     function renderDocs() {
         var tiers = TIERS.map(function (tier) {
-            return '<div class="rq-tier-item">' + badge(tier.id, tier.id === 'master' || tier.id === 'grandmaster' || tier.id === 'challenger' ? '' : 'IV', 52) +
-                tier.name + '</div>';
+            var apex = tier.id === 'master' || tier.id === 'grandmaster' || tier.id === 'challenger';
+            return '<div class="rq-tier-item" style="color:' + tier.light + '">' + crest(tier.id, apex ? '' : 'IV', 58) + tier.name + '</div>';
         }).join('');
 
         return '<div class="rq-docs">' +
-            '<div class="rq-card">' +
-            '  <h3>O que é</h3>' +
-            '  <p style="margin:0">Partidas ranqueadas de futebol 4x4: goleiro, zagueiro, meio-campo e atacante em cada time. ' +
-            'Existe uma fila só para o hotel inteiro, e você entra nela de qualquer quarto.</p>' +
-            '</div>' +
-            '<div class="rq-card">' +
-            '  <h3>Como jogar</h3>' +
-            '  <ul>' +
-            '    <li>Digite <b>:queue</b> em qualquer quarto para abrir este painel.</li>' +
-            '    <li>Clique em <b>Entrar na fila</b>. Você pode fechar o painel e continuar andando pelo hotel.</li>' +
-            '    <li>Quando a fila chega a 8 jogadores, a partida é encontrada e o painel abre sozinho para os 8.</li>' +
-            '    <li>Os 2 jogadores com melhor elo viram <b>capitães</b> e montam os times.</li>' +
-            '    <li>Ninguém é levado para outro quarto: vocês combinam onde jogar.</li>' +
-            '    <li>Para desistir, clique em <b>Sair da fila</b>. Desconectar do hotel também tira você da fila.</li>' +
-            '  </ul>' +
-            '</div>' +
-            '<div class="rq-card">' +
-            '  <h3>Elos</h3>' +
-            '  <p style="margin:0">Todo jogador começa no <b>Bronze IV</b> com 0 PDL. Qualquer elo pode jogar com qualquer elo.</p>' +
+            '<h3 class="rq-section-title">O que é</h3>' +
+            '<div class="rq-box"><p>Partidas ranqueadas de futebol 4x4: goleiro, zagueiro, meio-campo e atacante em cada time. ' +
+            'Existe uma fila só para o hotel inteiro, e você entra nela de qualquer quarto.</p></div>' +
+            '<h3 class="rq-section-title">Como jogar</h3>' +
+            '<div class="rq-box"><ul>' +
+            '  <li>Digite <b>:queue</b> em qualquer quarto para abrir este painel.</li>' +
+            '  <li>Clique em <b>Encontrar partida</b>. Pode fechar o painel e andar pelo hotel: um selo no topo da tela mostra que você está na fila e reabre o painel com um clique.</li>' +
+            '  <li>Ninguém vê quem está na fila, só quantos jogadores estão esperando.</li>' +
+            '  <li>Quando a fila chega a 8 jogadores, a partida é encontrada e o painel abre sozinho para os 8.</li>' +
+            '  <li>Os 2 jogadores com melhor elo viram <b>capitães</b> e montam os times.</li>' +
+            '  <li>Ninguém é levado para outro quarto: vocês combinam onde jogar.</li>' +
+            '  <li>Para desistir, clique em <b>Sair da fila</b>. Se você sair do hotel e não voltar em 2 minutos, também sai da fila.</li>' +
+            '</ul></div>' +
+            '<h3 class="rq-section-title">Elos</h3>' +
+            '<div class="rq-box">' +
+            '  <p>Todo jogador começa no <b>Bronze IV</b> com 0 PDL. Qualquer elo pode jogar com qualquer elo.</p>' +
             '  <div class="rq-tiers">' + tiers + '</div>' +
             '  <ul>' +
-            '    <li>Do Bronze ao Diamante há 4 divisões, da IV (mais baixa) até a I.</li>' +
-            '    <li>Cada divisão tem 100 PDL (Pontos de Liga). Ao chegar a 100, você sobe de divisão.</li>' +
-            '    <li>Mestre, Grão-Mestre e Desafiante não têm divisões. Grão-Mestre e Desafiante são os melhores Mestres do hotel.</li>' +
+            '    <li>Do Bronze ao Diamante há 4 divisões, da IV (mais baixa) até a I, com 100 PDL (Pontos de Liga) cada.</li>' +
+            '    <li><b>Subir:</b> chegou a 100 PDL, sobe na hora para a próxima divisão, e o que passar de 100 vai junto. ' +
+            'Ex.: Bronze IV com 90 ganha 25 e vira Bronze III com 15.</li>' +
+            '    <li><b>Cair:</b> ficou com PDL negativo, desce para a divisão anterior, descontando de 100. ' +
+            'Ex.: Bronze III com 5 perde 20 e vira Bronze IV com 85. Bronze IV com 0 não cai mais.</li>' +
             '  </ul>' +
             '</div>' +
-            '<div class="rq-card">' +
-            '  <h3>Ganhando e perdendo PDL</h3>' +
-            '  <ul>' +
-            '    <li>Vitória soma PDL, derrota tira.</li>' +
-            '    <li>Um MMR escondido define quanto: vencer jogadores mais fortes vale mais.</li>' +
-            '    <li>Empate não muda o PDL de ninguém.</li>' +
-            '    <li>Sair do quarto durante a partida conta como derrota para quem saiu.</li>' +
-            '  </ul>' +
-            '</div>' +
-            '</div>';
-    }
-
-    function slot(player, tag, waitSeconds) {
-        var meta = escapeHtml(eloText(player));
-
-        if (waitSeconds !== undefined) {
-            meta += ' · <span data-wait="' + waitSeconds + '"></span>';
-        }
-
-        return '<div class="rq-slot' + (player.me ? ' is-me' : '') + '">' +
-            badge(player.tier, player.division, 34) +
-            '<div class="rq-slot-info">' +
-            '  <div class="rq-slot-name">' + escapeHtml(player.username) +
-            (player.me ? ' <span class="rq-muted">(você)</span>' : '') +
-            (tag ? '<span class="rq-captain">' + tag + '</span>' : '') + '</div>' +
-            '  <div class="rq-slot-meta">' + meta + '</div>' +
-            '</div>' +
+            '<h3 class="rq-section-title">Mestre, Grão-Mestre e Desafiante</h3>' +
+            '<div class="rq-box"><ul>' +
+            '  <li><b>Mestre:</b> quem passa de 100 PDL no Diamante I. Daqui pra cima não há divisões nem limite de PDL. ' +
+            'Ficou negativo, volta para o Diamante I.</li>' +
+            '  <li><b>Grão-Mestre:</b> as 10 vagas logo abaixo dos Desafiantes. Passou os pontos do último Grão-Mestre, você entra ' +
+            'na hora e ele volta para Mestre.</li>' +
+            '  <li><b>Desafiante:</b> o topo absoluto do hotel. As 3 vagas vão para os maiores pontuadores e são atualizadas todo dia à meia-noite.</li>' +
+            '</ul></div>' +
+            '<h3 class="rq-section-title">Ganhando e perdendo PDL</h3>' +
+            '<div class="rq-box"><ul>' +
+            '  <li>Vitória soma PDL, derrota tira: entre 10 e 30 por partida.</li>' +
+            '  <li>Um MMR escondido define quanto: vencer um time mais forte vale mais, e perder para um mais fraco custa mais.</li>' +
+            '  <li>Empate não muda o PDL de ninguém.</li>' +
+            '  <li>Sair do quarto durante a partida conta como derrota para quem saiu.</li>' +
+            '</ul></div>' +
             '</div>';
     }
 
@@ -456,17 +572,56 @@
         return '<div class="rq-stat"><b>' + value + '</b><span>' + label + '</span></div>';
     }
 
-    /* Emblema de elo desenhado em SVG: escudo na cor do elo, com a divisão no centro. */
-    function badge(tierId, division, size) {
-        var tier = tierOf(tierId);
-        var label = division || '★';
+    /* Foto do jogador pelo gerador de avatares público do Habbo, a partir do visual (figure). */
+    function avatarImage(figure, size, username, className, headOnly) {
+        if (!figure) {
+            return '';
+        }
 
-        return '<svg class="rq-badge" width="' + size + '" height="' + size + '" viewBox="0 0 64 64" aria-hidden="true">' +
-            '<path d="M32 3 L57 12 V32 C57 47 46 56 32 61 C18 56 7 47 7 32 V12 Z" fill="' + tier.dark + '"/>' +
-            '<path d="M32 8 L52 15.5 V32 C52 44 43.5 51.5 32 55.5 C20.5 51.5 12 44 12 32 V15.5 Z" fill="' + tier.color + '"/>' +
-            '<path d="M32 8 L52 15.5 V24 C44 20 20 20 12 24 V15.5 Z" fill="#fff" opacity="0.25"/>' +
-            '<text x="32" y="' + (division ? 40 : 42) + '" text-anchor="middle" font-family="Verdana, sans-serif" font-weight="700" ' +
-            'font-size="' + (division ? 18 : 22) + '" fill="#fff" stroke="' + tier.dark + '" stroke-width="1.2" paint-order="stroke">' + label + '</text>' +
+        var url = AVATAR_URL + '?figure=' + encodeURIComponent(figure) + '&size=' + size +
+            '&direction=2&head_direction=3&gesture=sml' + (headOnly ? '&headonly=1' : '');
+
+        return '<img' + (className ? ' class="' + className + '"' : '') + ' src="' + url + '" alt="' + escapeHtml(username) + '" loading="lazy">';
+    }
+
+    /* Emblema de elo: brasão hexagonal metálico na cor do elo, com a divisão por cima. */
+    function crest(tierId, division, size) {
+        var tier = tierOf(tierId);
+        var id = 'rqc' + (++crestCount);
+        var label = division || '';
+
+        return '<svg class="rq-crest" width="' + size + '" height="' + size + '" viewBox="0 0 100 100" aria-hidden="true">' +
+            '<defs>' +
+            '  <linearGradient id="' + id + 'm" x1="0" y1="0" x2="0" y2="1">' +
+            '    <stop offset="0" stop-color="' + tier.light + '"/><stop offset="0.5" stop-color="' + tier.mid + '"/><stop offset="1" stop-color="' + tier.dark + '"/>' +
+            '  </linearGradient>' +
+            '  <radialGradient id="' + id + 'g" cx="0.5" cy="0.4" r="0.6">' +
+            '    <stop offset="0" stop-color="#fff"/><stop offset="0.35" stop-color="' + tier.gem + '"/><stop offset="1" stop-color="' + tier.dark + '"/>' +
+            '  </radialGradient>' +
+            '</defs>' +
+            '<path d="M50 4 L62 16 L88 20 L80 44 L92 58 L70 70 L62 94 L50 84 L38 94 L30 70 L8 58 L20 44 L12 20 L38 16 Z" fill="url(#' + id + 'm)" stroke="#010a13" stroke-width="2"/>' +
+            '<path d="M50 20 L72 32 L72 58 L50 72 L28 58 L28 32 Z" fill="#010a13" opacity="0.55"/>' +
+            '<path d="M50 26 L66 35 L66 55 L50 65 L34 55 L34 35 Z" fill="url(#' + id + 'g)" stroke="' + tier.light + '" stroke-width="1.5"/>' +
+            (label
+                ? '<text x="50" y="92" text-anchor="middle" font-family="Cinzel, serif" font-weight="700" font-size="17" fill="#f0e6d2" ' +
+                  'stroke="#010a13" stroke-width="3" paint-order="stroke">' + label + '</text>'
+                : '<path d="M50 38 L53 46 L61 46 L55 51 L57 59 L50 54 L43 59 L45 51 L39 46 L47 46 Z" fill="#fff" opacity="0.9"/>') +
+            '</svg>';
+    }
+
+    /* Anel da fila, com arco que gira enquanto procura partida. */
+    function orb() {
+        return '<svg width="230" height="230" viewBox="0 0 230 230" aria-hidden="true">' +
+            '<defs>' +
+            '  <linearGradient id="rqOrbGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8aa6e"/><stop offset="1" stop-color="#463714"/></linearGradient>' +
+            '  <linearGradient id="rqOrbBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cdfafa"/><stop offset="1" stop-color="#0ac8b9" stop-opacity="0"/></linearGradient>' +
+            '  <radialGradient id="rqOrbCore" cx="0.5" cy="0.45" r="0.55"><stop offset="0" stop-color="#0a323c"/><stop offset="1" stop-color="#010a13"/></radialGradient>' +
+            '</defs>' +
+            '<circle cx="115" cy="115" r="108" fill="none" stroke="url(#rqOrbGold)" stroke-width="2"/>' +
+            '<circle cx="115" cy="115" r="98" fill="url(#rqOrbCore)" stroke="#463714" stroke-width="1"/>' +
+            '<circle cx="115" cy="115" r="88" fill="none" stroke="#1e2328" stroke-width="6"/>' +
+            '<g class="rq-orb-spin"><circle cx="115" cy="115" r="88" fill="none" stroke="url(#rqOrbBlue)" stroke-width="6" ' +
+            'stroke-linecap="round" stroke-dasharray="180 373"/></g>' +
             '</svg>';
     }
 
@@ -480,18 +635,28 @@
         return TIERS[0];
     }
 
+    function logo() {
+        return '<svg class="rq-logo" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">' +
+            '<path d="M20 2 L36 11 V29 L20 38 L4 29 V11 Z" fill="#010a13" stroke="#c8aa6e" stroke-width="2"/>' +
+            '<circle cx="20" cy="20" r="8" fill="none" stroke="#0ac8b9" stroke-width="2"/>' +
+            '<path d="M20 12 L22 18 L28 20 L22 22 L20 28 L18 22 L12 20 L18 18 Z" fill="#f0e6d2"/>' +
+            '</svg>';
+    }
+
     function eloText(player) {
         return player.tierName + (player.division ? ' ' + player.division : '') + ' · ' + player.leaguePoints + ' PDL';
     }
 
     function tickTimers() {
-        if (!isOpen()) {
+        var target = isOpen() ? root : badgeElement;
+
+        if (!target || target.hidden) {
             return;
         }
 
         var elapsed = Math.floor((Date.now() - view.stateAt) / 1000);
 
-        root.querySelectorAll('[data-wait]').forEach(function (element) {
+        target.querySelectorAll('[data-wait]').forEach(function (element) {
             element.textContent = formatWait(Number(element.getAttribute('data-wait')) + elapsed);
         });
     }
@@ -507,5 +672,4 @@
             return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
         });
     }
-
 })();

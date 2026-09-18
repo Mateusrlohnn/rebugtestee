@@ -11,10 +11,14 @@ import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * One ranked queue for the whole hotel, shown to players through the :queue panel.
@@ -23,6 +27,7 @@ public class RankedQueueManager {
     public static final int TEAM_SIZE = 4;
     public static final int MATCH_SIZE = TEAM_SIZE * 2;
     private static final int RANKING_SIZE = 50;
+    private static final int RECONNECT_GRACE_SECONDS = 120;
 
     private static final RankedQueueManager instance = new RankedQueueManager();
 
@@ -33,6 +38,16 @@ public class RankedQueueManager {
 
     // Last match found for each player, until they dismiss it.
     private final Map<Integer, RankedMatch> matches = new ConcurrentHashMap<>();
+
+    // Queued players who dropped and still have time to come back.
+    private final Map<Integer, Long> disconnected = new ConcurrentHashMap<>();
+
+    private final ScheduledExecutorService reconnectTimer = Executors.newSingleThreadScheduledExecutor();
+
+    private RankedQueueManager() {
+        // Starts the daily Challenger update together with the queue.
+        RankedLadder.getInstance();
+    }
 
     public static RankedQueueManager getInstance() {
         return instance;
@@ -78,12 +93,47 @@ public class RankedQueueManager {
         }
     }
 
+    /**
+     * Sends the queue status on login, so a player who reloaded the page sees they are still in the queue.
+     */
+    public void onPlayerLogin(Session session) {
+        final int playerId = session.getPlayer().getId();
+
+        this.disconnected.remove(playerId);
+
+        if (this.queue.get(playerId) != null) {
+            // Back in time: the player counts again and may complete a match.
+            this.tryStartMatch();
+            this.broadcastState();
+        } else if (this.matches.containsKey(playerId)) {
+            this.sendState(session, false);
+        }
+    }
+
+    /**
+     * Keeps the player's place for a while, so reloading the page or a short drop does not lose it. Meanwhile they
+     * are not counted and cannot be picked for a match.
+     */
     public void onPlayerDisconnect(int playerId) {
         this.watchers.remove(playerId);
 
-        if (this.queue.remove(playerId)) {
-            this.broadcastState();
+        if (this.queue.get(playerId) == null) {
+            return;
         }
+
+        final long disconnectedAt = System.currentTimeMillis();
+        this.disconnected.put(playerId, disconnectedAt);
+        this.broadcastState();
+
+        this.reconnectTimer.schedule(() -> {
+            if (this.disconnected.remove(playerId, disconnectedAt) && this.queue.remove(playerId)) {
+                this.broadcastState();
+            }
+        }, RECONNECT_GRACE_SECONDS, TimeUnit.SECONDS);
+    }
+
+    private boolean isOnline(RankedQueue.Entry entry) {
+        return !this.disconnected.containsKey(entry.getPlayerId());
     }
 
     private void join(Session session) {
@@ -95,14 +145,16 @@ public class RankedQueueManager {
         }
 
         this.matches.remove(profile.getPlayerId());
+        this.tryStartMatch();
+        this.broadcastState();
+    }
 
-        final List<RankedQueue.Entry> players = this.queue.pollMatch(MATCH_SIZE);
+    private void tryStartMatch() {
+        final List<RankedQueue.Entry> players = this.queue.pollMatch(MATCH_SIZE, this::isOnline);
 
         if (players != null) {
             this.startMatch(players);
         }
-
-        this.broadcastState();
     }
 
     private void startMatch(List<RankedQueue.Entry> players) {
@@ -130,11 +182,20 @@ public class RankedQueueManager {
         }
     }
 
+    /**
+     * Updates everyone with the panel open, plus everyone in the queue so their on-screen badge stays current.
+     */
     private void broadcastState() {
-        for (final int playerId : this.watchers) {
+        final Set<Integer> receivers = new HashSet<>(this.watchers);
+
+        for (final RankedQueue.Entry entry : this.queue.getEntries()) {
+            receivers.add(entry.getPlayerId());
+        }
+
+        for (final int playerId : receivers) {
             final Session session = NetworkManager.getInstance().getSessions().getByPlayerId(playerId);
 
-            if (session == null) {
+            if (session == null || session.getPlayer() == null) {
                 this.watchers.remove(playerId);
                 continue;
             }
@@ -160,19 +221,10 @@ public class RankedQueueManager {
         me.addProperty("inQueue", ownEntry != null);
         me.addProperty("waitSeconds", ownEntry == null ? 0 : (now - ownEntry.getJoinedAt()) / 1000);
 
-        final JsonArray queuePlayers = new JsonArray();
-
-        for (final RankedQueue.Entry entry : this.queue.getEntries()) {
-            final JsonObject player = this.writeProfile(entry.getProfile());
-            player.addProperty("waitSeconds", (now - entry.getJoinedAt()) / 1000);
-            player.addProperty("me", entry.getPlayerId() == playerId);
-            queuePlayers.add(player);
-        }
-
+        // Only the count is sent: who is waiting in the queue stays hidden.
         final JsonObject queue = new JsonObject();
-        queue.addProperty("size", queuePlayers.size());
+        queue.addProperty("size", this.queue.count(this::isOnline));
         queue.addProperty("max", MATCH_SIZE);
-        queue.add("players", queuePlayers);
 
         final JsonObject state = new JsonObject();
         state.addProperty("type", "state");
@@ -227,6 +279,7 @@ public class RankedQueueManager {
     private JsonObject writeProfile(RankedProfile profile) {
         final JsonObject data = new JsonObject();
         data.addProperty("username", profile.getUsername());
+        data.addProperty("figure", profile.getFigure());
         data.addProperty("tier", profile.getTier().name().toLowerCase());
         data.addProperty("tierName", profile.getTier().getDisplayName());
         data.addProperty("division", profile.getDivisionName());

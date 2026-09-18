@@ -19,6 +19,7 @@ public class RankedProfile {
 
     private final int playerId;
     private final String username;
+    private final String figure;
     private final RankedTier tier;
     private final int division;
     private final int leaguePoints;
@@ -27,9 +28,10 @@ public class RankedProfile {
     private final int losses;
     private final int draws;
 
-    public RankedProfile(int playerId, String username, RankedTier tier, int division, int leaguePoints, int mmr, int wins, int losses, int draws) {
+    public RankedProfile(int playerId, String username, String figure, RankedTier tier, int division, int leaguePoints, int mmr, int wins, int losses, int draws) {
         this.playerId = playerId;
         this.username = username;
+        this.figure = figure;
         this.tier = tier;
         this.division = tier.hasDivisions() ? Math.max(1, Math.min(LOWEST_DIVISION, division)) : 0;
         this.leaguePoints = leaguePoints;
@@ -66,6 +68,10 @@ public class RankedProfile {
 
     public String getUsername() {
         return this.username;
+    }
+
+    public String getFigure() {
+        return this.figure;
     }
 
     public RankedTier getTier() {

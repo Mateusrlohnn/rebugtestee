@@ -1,5 +1,6 @@
 package com.cometproject.server.storage.queries.ranked;
 
+import com.cometproject.server.game.ranked.LeagueRules;
 import com.cometproject.server.game.ranked.RankedProfile;
 import com.cometproject.server.game.ranked.RankedTier;
 import com.cometproject.server.storage.SqlHelper;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RankedDao {
-    private static final String PROFILE_COLUMNS = "p.id AS player_id, p.username, r.tier, r.division, r.league_points, r.mmr, r.wins, r.losses, r.draws";
+    private static final String PROFILE_COLUMNS = "p.id AS player_id, p.username, p.figure, r.tier, r.division, r.league_points, r.mmr, r.wins, r.losses, r.draws";
 
     /**
      * Loads the player's global ranked profile, creating it with the starting elo on first access.
@@ -118,10 +119,106 @@ public class RankedDao {
         return 0;
     }
 
+    public static void saveMatchResult(int playerId, LeagueRules.Standing standing, int mmr, int wins, int losses, int draws) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = SqlHelper.getConnection();
+
+            preparedStatement = SqlHelper.prepare("UPDATE queue_ranking SET tier = ?, division = ?, league_points = ?, mmr = ?, " +
+                    "wins = wins + ?, losses = losses + ?, draws = draws + ? WHERE player_id = ?", sqlConnection);
+            preparedStatement.setInt(1, standing.getTier().ordinal());
+            preparedStatement.setInt(2, standing.getDivision());
+            preparedStatement.setInt(3, standing.getLeaguePoints());
+            preparedStatement.setInt(4, mmr);
+            preparedStatement.setInt(5, wins);
+            preparedStatement.setInt(6, losses);
+            preparedStatement.setInt(7, draws);
+            preparedStatement.setInt(8, playerId);
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            SqlHelper.handleSqlException(e);
+        } finally {
+            SqlHelper.closeSilently(preparedStatement);
+            SqlHelper.closeSilently(sqlConnection);
+        }
+    }
+
+    /**
+     * Master, Grandmaster and Challenger players, best first.
+     */
+    public static List<ApexStanding> getApexStandings() {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        final List<ApexStanding> standings = new ArrayList<>();
+
+        try {
+            sqlConnection = SqlHelper.getConnection();
+
+            preparedStatement = SqlHelper.prepare("SELECT player_id, tier FROM queue_ranking WHERE tier >= ? " +
+                    "ORDER BY league_points DESC, mmr DESC, player_id ASC", sqlConnection);
+            preparedStatement.setInt(1, RankedTier.MASTER.ordinal());
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                standings.add(new ApexStanding(resultSet.getInt("player_id"), RankedTier.fromId(resultSet.getInt("tier"))));
+            }
+        } catch (SQLException e) {
+            SqlHelper.handleSqlException(e);
+        } finally {
+            SqlHelper.closeSilently(resultSet);
+            SqlHelper.closeSilently(preparedStatement);
+            SqlHelper.closeSilently(sqlConnection);
+        }
+
+        return standings;
+    }
+
+    public static void setApexTier(int playerId, RankedTier tier) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = SqlHelper.getConnection();
+
+            preparedStatement = SqlHelper.prepare("UPDATE queue_ranking SET tier = ?, division = 0 WHERE player_id = ?", sqlConnection);
+            preparedStatement.setInt(1, tier.ordinal());
+            preparedStatement.setInt(2, playerId);
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            SqlHelper.handleSqlException(e);
+        } finally {
+            SqlHelper.closeSilently(preparedStatement);
+            SqlHelper.closeSilently(sqlConnection);
+        }
+    }
+
+    public static class ApexStanding {
+        private final int playerId;
+        private final RankedTier tier;
+
+        public ApexStanding(int playerId, RankedTier tier) {
+            this.playerId = playerId;
+            this.tier = tier;
+        }
+
+        public int getPlayerId() {
+            return this.playerId;
+        }
+
+        public RankedTier getTier() {
+            return this.tier;
+        }
+    }
+
     private static RankedProfile readProfile(ResultSet resultSet) throws SQLException {
         return new RankedProfile(
                 resultSet.getInt("player_id"),
                 resultSet.getString("username"),
+                resultSet.getString("figure"),
                 RankedTier.fromId(resultSet.getInt("tier")),
                 resultSet.getInt("division"),
                 resultSet.getInt("league_points"),

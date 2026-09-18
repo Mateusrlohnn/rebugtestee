@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 
 /**
  * Players waiting for a ranked match anywhere in the hotel, in the order they joined.
@@ -36,15 +37,33 @@ public class RankedQueue {
         return new ArrayList<>(this.entries.values());
     }
 
-    /**
-     * Removes and returns the first players in the queue when there are enough for a match.
-     */
-    public synchronized List<Entry> pollMatch(int matchSize) {
-        if (this.entries.size() < matchSize) {
-            return null;
+    public synchronized int count(Predicate<Entry> filter) {
+        int count = 0;
+
+        for (final Entry entry : this.entries.values()) {
+            if (filter.test(entry)) {
+                count++;
+            }
         }
 
-        final List<Entry> match = new ArrayList<>(this.getEntries().subList(0, matchSize));
+        return count;
+    }
+
+    /**
+     * Removes and returns the first players accepted by the filter when there are enough of them for a match.
+     */
+    public synchronized List<Entry> pollMatch(int matchSize, Predicate<Entry> filter) {
+        final List<Entry> match = new ArrayList<>();
+
+        for (final Entry entry : this.entries.values()) {
+            if (match.size() < matchSize && filter.test(entry)) {
+                match.add(entry);
+            }
+        }
+
+        if (match.size() < matchSize) {
+            return null;
+        }
 
         for (final Entry entry : match) {
             this.entries.remove(entry.getPlayerId());

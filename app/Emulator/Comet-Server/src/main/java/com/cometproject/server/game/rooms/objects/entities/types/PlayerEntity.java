@@ -621,7 +621,10 @@ public class PlayerEntity extends RoomEntity implements PlayerEntityAccess, Attr
         }
 
         if (!this.getPlayer().getPermissions().getRank().floodBypass()) {
-            if (this.lastMessage.equals(message)) {
+            // Repeating a command (like :queue) is not spam, so only chat counts as a repeated message.
+            if (CommandManager.getInstance().isCommand(message)) {
+                this.lastMessageCounter = 0;
+            } else if (this.lastMessage.equals(message)) {
                 this.lastMessageCounter++;
 
                 if (this.lastMessageCounter >= 3) {

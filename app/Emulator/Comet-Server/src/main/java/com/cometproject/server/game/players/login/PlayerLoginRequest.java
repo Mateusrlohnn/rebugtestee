@@ -15,6 +15,7 @@ import com.cometproject.server.game.moderation.ModerationManager;
 import com.cometproject.server.game.moderation.types.BanType;
 import com.cometproject.server.game.players.PlayerManager;
 import com.cometproject.server.game.players.types.Player;
+import com.cometproject.server.game.ranked.RankedQueueManager;
 import com.cometproject.server.game.rooms.RoomManager;
 import com.cometproject.server.modules.ModuleManager;
 import com.cometproject.server.network.NetworkManager;
@@ -145,6 +146,8 @@ public class PlayerLoginRequest implements CometTask {
             }
 
             player.setOnline(true);
+
+            RankedQueueManager.getInstance().onPlayerLogin(client);
 
             PlayerDao.updatePlayerStatus(player, player.isOnline(), true);
 

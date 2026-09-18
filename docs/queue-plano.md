@@ -6,11 +6,13 @@ Branch: `feature/queue`.
 ## Decisões
 
 - **Formato:** 4x4 fixo. Posições: goleiro, zagueiro, meio-campo e atacante.
-- **Escopo da fila:** por quarto. O ranking é global (vale em qualquer quarto).
-- **Sem escolha de posição na fila.** Com 8 jogadores, os 2 com melhor ranking
-  global viram capitães (desempate: MMR, depois sorteio).
-- **Draft:** capitães escolhem alternado (A-B-B-A-A-B) e definem a posição de
-  cada escolhido. Todos acompanham ao vivo.
+- **Escopo da fila:** única para o hotel inteiro, secreta (só a contagem e as
+  posições em falta aparecem). O ranking é global.
+- **Posições na fila:** cada jogador escolhe primária e secundária no painel.
+  Matchmaker com janela de MMR crescente pelo tempo de espera, autofill a
+  partir de 46 s e proteção contra autofill repetido (ver README).
+- **Times:** montados automaticamente em serpente pelo MMR (Azul 1º, 4º, 5º e
+  8º; Vermelho 2º, 3º, 6º e 7º). Não há capitães nem draft manual.
 - **Partida:** conduzida pelo servidor. 2 tempos de 10 minutos, placar ao vivo,
   gol detectado automaticamente, registrando o autor (e gol contra). Termina
   sozinha quando o tempo acaba.
@@ -59,13 +61,25 @@ Branch: `feature/queue`.
   `NewFurniFixCommand`, sem verificação de PIN) antes de receber o `:queue`.
   Antes de recompilar qualquer outra classe, compare o bytecode dela com o jar
   (`javap -c -p`).
+- **Já alinhados ao jar** (o fonte divergia e foi corrigido):
+  - `PlayerLoginRequest`: marca o PIN como verificado no login, envia um segundo
+    `PingMessageComposer` depois do `CfhTopicsInit` e não abre a janela de
+    verificação de PIN para staff.
+  - `MessageHandler`: com `isDebugging`, registra cada pacote recebido
+    (`[header] Evento conteúdo`).
+  - Comet-API: `CometExternalSettings.baseAlertLink` (lido no boot pelo
+    `ConfigDao.getExternalConfig` e usado pelo `HotelAlertLinkCommand`) e
+    `IPlayer.INFINITE_BALANCE = String.valueOf(Integer.MAX_VALUE)`.
+  - Conferidos e iguais ao jar, fora as mudanças da fila: `Player`,
+    `PlayerEntity`, `CommandManager` e o resto da Comet-API (as únicas
+    diferenças são o modo `PRESSURE` e classes novas de `messaging`).
 
 ## Etapas
 
 1. Servidor: `:queue` + `QueueManager` + tabela `queue_ranking`, testado só com
    mensagens no chat.
 2. Mensagens próprias servidor/navegador + painel no `index.html` (fila ao vivo).
-3. Aceitar partida + capitães + draft pelo painel.
+3. Posições, matchmaking por MMR, autofill com proteção e times em serpente (feito).
 4. Partida: cronômetro 2x10, placar, gols com autor, encerramento automático.
 5. Elo/PDL + resumo da partida + ranking no painel.
 6. Traves no campo + README.

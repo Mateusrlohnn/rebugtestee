@@ -42,7 +42,6 @@ import com.cometproject.server.network.messages.outgoing.user.details.Availabili
 import com.cometproject.server.network.messages.outgoing.user.inventory.EffectsInventoryMessageComposer;
 import com.cometproject.server.network.messages.outgoing.user.inventory.UpdateInventoryMessageComposer;
 import com.cometproject.server.network.messages.outgoing.user.permissions.FuserightsMessageComposer;
-import com.cometproject.server.network.messages.outgoing.user.pin.EmailVerificationWindowMessageComposer;
 import com.cometproject.server.network.messages.outgoing.user.wardrobe.FigureSetIdsMessageComposer;
 import com.cometproject.server.network.sessions.Session;
 import com.cometproject.server.network.sessions.SessionManager;
@@ -128,6 +127,7 @@ public class PlayerLoginRequest implements CometTask {
                     return;
                 }
 
+                client.getPlayer().getSettings().setPinSucces();
                 client.getPlayer().getData().setIpAddress(ipAddress);
 
                 if (PlayerManager.getInstance().getPlayerCountByIpAddress(ipAddress) > CometSettings.maxConnectionsPerIpAddress) {
@@ -164,6 +164,7 @@ public class PlayerLoginRequest implements CometTask {
                     sendQueue(new MisteryBoxDataMessageComposer()).
                     sendQueue(new BuildersClubMembershipMessageComposer()).
                     sendQueue(new CfhTopicsInitMessageComposer()).
+                    sendQueue(new PingMessageComposer()).
                     sendQueue(new FavouriteRoomsMessageComposer(client.getPlayer().getNavigator().getFavouriteRooms())).
                     sendQueue(new CampaignCalendarDataMessageComposer(player.getGifts())).
                     sendQueue(new ClubStatusMessageComposer(client.getPlayer().getSubscription(), ClubStatusMessageComposer.RESPONSE_TYPE_LOGIN)).
@@ -173,9 +174,6 @@ public class PlayerLoginRequest implements CometTask {
             if (!player.getPermissions().getRank().modTool()) {
                 client.sendQueue(new HomeRoomMessageComposer(player.getSettings().getHomeRoom(), player.getSettings().getHomeRoom()));
             }
-
-            if (client.getPlayer().getPermissions().getRank().modTool())
-                client.sendQueue(new EmailVerificationWindowMessageComposer(1, 1));
 
             if (hasTradeBan)
                 client.sendQueue(new NotificationMessageComposer("trade_block", Locale.getOrDefault("user.got.tradeblocked", "Se ha detectado una actividad sospechosa en tu cuenta y tus tradeos han sido bloqueados.")));

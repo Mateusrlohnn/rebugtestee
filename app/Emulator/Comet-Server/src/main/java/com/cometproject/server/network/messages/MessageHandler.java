@@ -632,10 +632,6 @@ public class MessageHandler {
     public void handle(MessageEvent message, Session client) {
         final short header = message.getId();
 
-        if (Comet.isDebugging) {
-            //log.debug(message.toString());
-        }
-
         if (!Comet.isRunning)
             return;
 
@@ -643,6 +639,9 @@ public class MessageHandler {
             try {
                 final Event event = this.getMessages().get(header);
 
+                if (Comet.isDebugging) {
+                    log.debug("[" + header + "] " + event.getClass().getSimpleName() + " " + message.toString());
+                }
 
                 if (event != null) {
                     if (this.asyncEventExecution) {

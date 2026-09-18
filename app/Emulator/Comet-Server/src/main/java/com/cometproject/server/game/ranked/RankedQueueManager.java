@@ -10,7 +10,6 @@ import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -22,12 +21,16 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * One ranked queue for the whole hotel, shown to players through the :queue panel.
+ *
+ * Players pick a primary and a secondary position before joining. Every few seconds the {@link Matchmaker} tries to
+ * form a match from the online players; the teams are split by {@link TeamBalancer}.
  */
 public class RankedQueueManager {
-    public static final int TEAM_SIZE = 4;
-    public static final int MATCH_SIZE = TEAM_SIZE * 2;
+    public static final int MATCH_SIZE = Matchmaker.MATCH_SIZE;
     private static final int RANKING_SIZE = 50;
     private static final int RECONNECT_GRACE_SECONDS = 120;
+    private static final int MATCHMAKING_INTERVAL_SECONDS = 3;
+    private static final String POSITIONS_ACTION = "positions:";
 
     private static final RankedQueueManager instance = new RankedQueueManager();
 
@@ -42,11 +45,13 @@ public class RankedQueueManager {
     // Queued players who dropped and still have time to come back.
     private final Map<Integer, Long> disconnected = new ConcurrentHashMap<>();
 
-    private final ScheduledExecutorService reconnectTimer = Executors.newSingleThreadScheduledExecutor();
+    private final ScheduledExecutorService timer = Executors.newSingleThreadScheduledExecutor();
 
     private RankedQueueManager() {
         // Starts the daily Challenger update together with the queue.
         RankedLadder.getInstance();
+
+        this.timer.scheduleAtFixedRate(this::runMatchmaking, MATCHMAKING_INTERVAL_SECONDS, MATCHMAKING_INTERVAL_SECONDS, TimeUnit.SECONDS);
     }
 
     public static RankedQueueManager getInstance() {
@@ -59,6 +64,11 @@ public class RankedQueueManager {
         }
 
         final int playerId = session.getPlayer().getId();
+
+        if (action.startsWith(POSITIONS_ACTION)) {
+            this.choosePositions(session, action.substring(POSITIONS_ACTION.length()));
+            return;
+        }
 
         switch (action) {
             case "open":
@@ -103,7 +113,7 @@ public class RankedQueueManager {
 
         if (this.queue.get(playerId) != null) {
             // Back in time: the player counts again and may complete a match.
-            this.tryStartMatch();
+            this.runMatchmaking();
             this.broadcastState();
         } else if (this.matches.containsKey(playerId)) {
             this.sendState(session, false);
@@ -125,7 +135,7 @@ public class RankedQueueManager {
         this.disconnected.put(playerId, disconnectedAt);
         this.broadcastState();
 
-        this.reconnectTimer.schedule(() -> {
+        this.timer.schedule(() -> {
             if (this.disconnected.remove(playerId, disconnectedAt) && this.queue.remove(playerId)) {
                 this.broadcastState();
             }
@@ -136,41 +146,87 @@ public class RankedQueueManager {
         return !this.disconnected.containsKey(entry.getPlayerId());
     }
 
+    /**
+     * Saves the positions picked in the panel, as "GK,ZAG". They cannot change while the player is in the queue.
+     */
+    private void choosePositions(Session session, String codes) {
+        final int playerId = session.getPlayer().getId();
+        final String[] parts = codes.split(",");
+
+        final Position primary = parts.length == 2 ? Position.fromCode(parts[0]) : null;
+        final Position secondary = parts.length == 2 ? Position.fromCode(parts[1]) : null;
+
+        if (primary != null && secondary != null && primary != secondary && this.queue.get(playerId) == null
+                && RankedDao.getOrCreateProfile(playerId) != null) {
+            RankedDao.savePositions(playerId, primary, secondary);
+        }
+
+        this.sendState(session, false);
+    }
+
     private void join(Session session) {
         final RankedProfile profile = RankedDao.getOrCreateProfile(session.getPlayer().getId());
 
-        if (profile == null || !this.queue.add(profile)) {
+        if (profile == null || !profile.hasPositions() || !this.queue.add(profile)) {
             this.sendState(session, false);
             return;
         }
 
         this.matches.remove(profile.getPlayerId());
-        this.tryStartMatch();
+        this.runMatchmaking();
         this.broadcastState();
     }
 
-    private void tryStartMatch() {
-        final List<RankedQueue.Entry> players = this.queue.pollMatch(MATCH_SIZE, this::isOnline);
+    /**
+     * Forms every match the online players allow right now.
+     */
+    private synchronized void runMatchmaking() {
+        boolean formed = false;
 
-        if (players != null) {
-            this.startMatch(players);
+        while (true) {
+            final List<Matchmaker.Candidate> candidates = new ArrayList<>();
+
+            for (final RankedQueue.Entry entry : this.queue.getEntries(this::isOnline)) {
+                candidates.add(entry.toCandidate());
+            }
+
+            final Matchmaker.MatchPlan plan = Matchmaker.find(candidates, System.currentTimeMillis());
+
+            if (plan == null) {
+                break;
+            }
+
+            this.startMatch(plan);
+            formed = true;
+        }
+
+        if (formed) {
+            this.broadcastState();
         }
     }
 
-    private void startMatch(List<RankedQueue.Entry> players) {
+    private void startMatch(Matchmaker.MatchPlan plan) {
         final List<RankedProfile> profiles = new ArrayList<>();
+        final List<Integer> playerIds = new ArrayList<>();
 
-        for (final RankedQueue.Entry entry : players) {
+        for (final Matchmaker.Slot slot : plan.getSlots()) {
+            final RankedQueue.Entry entry = this.queue.get(slot.getCandidate().getPlayerId());
+
             profiles.add(entry.getProfile());
+            playerIds.add(entry.getPlayerId());
         }
 
-        // Shuffle first so players with an identical elo are ordered randomly; the sort is stable.
-        Collections.shuffle(profiles);
-        profiles.sort(RankedProfile.BEST_FIRST);
+        this.queue.removeAll(playerIds);
 
-        final RankedMatch match = new RankedMatch(profiles, System.currentTimeMillis());
+        final RankedMatch match = RankedMatch.create(plan, profiles, System.currentTimeMillis());
 
-        for (final RankedProfile profile : profiles) {
+        for (final RankedMatch.Player player : match.getPlayers()) {
+            final RankedProfile profile = player.getProfile();
+
+            if (player.isAutofilled()) {
+                RankedDao.setAutofillProtected(profile.getPlayerId(), AutofillProtection.afterMatchFormed(profile.isAutofillProtected(), true));
+            }
+
             this.matches.put(profile.getPlayerId(), match);
 
             final Session session = NetworkManager.getInstance().getSessions().getByPlayerId(profile.getPlayerId());
@@ -214,17 +270,21 @@ public class RankedQueueManager {
 
         final long now = System.currentTimeMillis();
         final RankedQueue.Entry ownEntry = this.queue.get(playerId);
+        final List<RankedQueue.Entry> online = this.queue.getEntries(this::isOnline);
 
         final JsonObject me = this.writeProfile(profile);
         me.addProperty("position", RankedDao.getPosition(profile));
-        me.addProperty("winRate", profile.getWinRate());
+        me.addProperty("primary", profile.getPrimary() == null ? null : profile.getPrimary().name());
+        me.addProperty("secondary", profile.getSecondary() == null ? null : profile.getSecondary().name());
+        me.addProperty("autofillProtected", profile.isAutofillProtected());
         me.addProperty("inQueue", ownEntry != null);
         me.addProperty("waitSeconds", ownEntry == null ? 0 : (now - ownEntry.getJoinedAt()) / 1000);
 
-        // Only the count is sent: who is waiting in the queue stays hidden.
+        // Only counts are sent: who is waiting in the queue stays hidden.
         final JsonObject queue = new JsonObject();
-        queue.addProperty("size", this.queue.count(this::isOnline));
+        queue.addProperty("size", online.size());
         queue.addProperty("max", MATCH_SIZE);
+        queue.add("fastPositions", this.writeFastPositions(online));
 
         final JsonObject state = new JsonObject();
         state.addProperty("type", "state");
@@ -234,6 +294,39 @@ public class RankedQueueManager {
         state.add("match", this.writeMatch(this.matches.get(playerId), playerId, now));
 
         session.send(new RankedPanelMessageComposer(state));
+    }
+
+    /**
+     * Positions fewest queued players picked as primary: choosing one of them finds a match faster.
+     */
+    private JsonArray writeFastPositions(List<RankedQueue.Entry> online) {
+        final int[] counts = new int[Position.values().length];
+
+        for (final RankedQueue.Entry entry : online) {
+            counts[entry.getProfile().getPrimary().ordinal()]++;
+        }
+
+        int fewest = Integer.MAX_VALUE;
+        int most = 0;
+
+        for (final int count : counts) {
+            fewest = Math.min(fewest, count);
+            most = Math.max(most, count);
+        }
+
+        final JsonArray fast = new JsonArray();
+
+        if (fewest == most) {
+            return fast;
+        }
+
+        for (final Position position : Position.values()) {
+            if (counts[position.ordinal()] == fewest) {
+                fast.add(position.name());
+            }
+        }
+
+        return fast;
     }
 
     private void sendRanking(Session session) {
@@ -264,10 +357,12 @@ public class RankedQueueManager {
         final JsonObject data = new JsonObject();
         final JsonArray players = new JsonArray();
 
-        for (final RankedProfile profile : match.getPlayers()) {
-            final JsonObject player = this.writeProfile(profile);
-            player.addProperty("captain", match.isCaptain(profile));
-            player.addProperty("me", profile.getPlayerId() == playerId);
+        for (final RankedMatch.Player matchPlayer : match.getPlayers()) {
+            final JsonObject player = this.writeProfile(matchPlayer.getProfile());
+            player.addProperty("team", matchPlayer.getTeam().name().toLowerCase());
+            player.addProperty("role", matchPlayer.getPosition().name());
+            player.addProperty("autofilled", matchPlayer.isAutofilled());
+            player.addProperty("me", matchPlayer.getProfile().getPlayerId() == playerId);
             players.add(player);
         }
 

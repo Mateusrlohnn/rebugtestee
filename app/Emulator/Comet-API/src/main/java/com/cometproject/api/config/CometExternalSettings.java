@@ -35,4 +35,9 @@ public class CometExternalSettings {
      * Used to send discord webhooks for staffs
      */
     public static boolean discordWebhooksEnabled = true;
+
+    /**
+     * Link used by the hotel alert link command (base_alert_link in server_external_configuration)
+     */
+    public static String baseAlertLink = "";
 }

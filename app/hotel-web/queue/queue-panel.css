@@ -175,7 +175,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    height: 76px;
+    min-height: 96px;
     padding: 0 24px;
     flex-shrink: 0;
     border-top: 1px solid var(--rq-line);
@@ -210,7 +210,7 @@
 /* Botão principal, no estilo "Encontrar partida" do LoL. */
 .rq-play {
     position: relative;
-    min-width: 230px;
+    min-width: 210px;
     height: 46px;
     padding: 0 28px;
     border: 2px solid transparent;
@@ -546,7 +546,7 @@
 
 .rq-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
@@ -563,10 +563,6 @@
 .rq-card.is-me {
     border-color: var(--rq-gold-2);
     box-shadow: 0 0 14px rgba(200, 170, 110, 0.3);
-}
-
-.rq-card.is-captain {
-    border-color: var(--rq-gold-1);
 }
 
 .rq-card-head {
@@ -594,13 +590,14 @@
     font-size: 11px;
 }
 
-.rq-tag {
+.rq-role-tag,
+.rq-autofill-tag {
     position: absolute;
     top: 6px;
-    left: 6px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
     padding: 1px 6px;
-    background: linear-gradient(180deg, var(--rq-gold-2), var(--rq-gold-1));
-    color: var(--rq-bg);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -910,4 +907,249 @@ tr.is-top .rq-pos {
 .rq-back:hover {
     border-color: var(--rq-gold-2);
     color: var(--rq-gold-3);
+}
+
+/* ---------- Posições ---------- */
+
+.rq-role-icon {
+    flex-shrink: 0;
+    display: block;
+}
+
+.rq-role-tag {
+    left: 6px;
+    background: rgba(1, 10, 19, 0.85);
+    border: 1px solid var(--rq-gold-1);
+    color: var(--rq-gold-3);
+}
+
+.rq-autofill-tag {
+    right: 6px;
+    background: linear-gradient(180deg, #e0a44a, #9c5f14);
+    color: #1a0e00;
+}
+
+.rq-picks {
+    display: flex;
+    gap: 14px;
+}
+
+.rq-pick-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rq-pick-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--rq-muted);
+}
+
+.rq-pick-row {
+    display: flex;
+    gap: 4px;
+}
+
+.rq-pick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 44px;
+    padding: 5px 0 3px;
+    border: 1px solid var(--rq-line);
+    background: rgba(1, 10, 19, 0.7);
+    color: var(--rq-text);
+    font: 700 10px var(--rq-body);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.rq-pick:hover {
+    border-color: var(--rq-gold-1);
+    color: var(--rq-gold-3);
+}
+
+.rq-pick[aria-pressed="true"] {
+    border-color: var(--rq-blue);
+    color: #cdfafa;
+    background: linear-gradient(180deg, rgba(10, 200, 185, 0.22), rgba(0, 90, 130, 0.25));
+    box-shadow: 0 0 10px rgba(10, 200, 185, 0.35);
+}
+
+.rq-play:disabled {
+    border-image: linear-gradient(180deg, #3c3c41, #1e2328) 1;
+    color: var(--rq-muted);
+    box-shadow: none;
+    filter: none;
+    cursor: not-allowed;
+}
+
+.rq-chosen,
+.rq-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.rq-role-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--rq-line);
+    background: rgba(1, 10, 19, 0.6);
+    color: var(--rq-gold-3);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.rq-role-chip small {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--rq-muted);
+}
+
+.rq-roles-title {
+    margin-top: 22px;
+}
+
+.rq-roles-empty {
+    margin: 0;
+}
+
+.rq-shield,
+.rq-autofill-notice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--rq-blue-dark);
+    background: rgba(10, 200, 185, 0.08);
+    text-align: left;
+}
+
+.rq-shield b,
+.rq-autofill-notice b {
+    display: block;
+    color: #cdfafa;
+}
+
+.rq-shield span,
+.rq-autofill-notice span {
+    font-size: 12px;
+}
+
+.rq-autofill-notice {
+    margin: 0 0 14px;
+    border-color: #9c5f14;
+    background: rgba(224, 164, 74, 0.1);
+}
+
+.rq-autofill-notice b {
+    color: #f3c77e;
+}
+
+.rq-fast {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 13px;
+}
+
+.rq-fast-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border: 1px solid var(--rq-blue-dark);
+    color: #cdfafa;
+    font-weight: 700;
+}
+
+/* ---------- Times da partida encontrada ---------- */
+
+.rq-teams {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    text-align: left;
+}
+
+.rq-team {
+    padding: 10px;
+    border: 1px solid var(--rq-line);
+    background: rgba(1, 10, 19, 0.45);
+}
+
+.rq-team-title {
+    margin-bottom: 8px;
+    font-family: var(--rq-display);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.rq-team.is-blue {
+    border-top: 2px solid #3a8dde;
+}
+
+.rq-team.is-blue .rq-team-title {
+    color: #7fb8f0;
+}
+
+.rq-team.is-red {
+    border-top: 2px solid #d9534f;
+}
+
+.rq-team.is-red .rq-team-title {
+    color: #f08c89;
+}
+
+.rq-card {
+    padding-top: 24px;
+}
+
+/* ---------- Tabela da busca por partida ---------- */
+
+.rq-window-table {
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.rq-window-table th,
+.rq-window-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid rgba(70, 55, 20, 0.45);
+    text-align: left;
+}
+
+.rq-window-table th {
+    color: var(--rq-muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+    .rq-picks {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .rq-teams {
+        grid-template-columns: 1fr;
+    }
 }

@@ -63,11 +63,36 @@ plano completo está em `docs/queue-plano.md`.
 - Com o painel fechado, um selo no topo da tela mostra que o jogador está na
   fila (ou que a partida foi encontrada) e reabre o painel com um clique.
 - Repetir `:queue` várias vezes seguidas não conta como flood no chat.
-- Com 8 jogadores, a partida é encontrada, o painel abre sozinho para os 8 e os
-  2 melhores do ranking viram capitães. Ninguém é teleportado: os jogadores
-  combinam onde jogar.
+- Quando a partida é encontrada, o painel abre sozinho para os 8 com os times e
+  a posição de cada um. Ninguém é teleportado: os jogadores combinam onde jogar.
 - O painel fica em `app/hotel-web/queue/` e usa a mesma conexão do Nitro: o
   servidor manda o pacote 7700 (JSON) e o painel responde com o 7701 (ação).
+
+### Posições e matchmaking
+
+- Antes de entrar, o jogador escolhe no painel a posição primária e a
+  secundária: GK (goleiro), ZAG (zagueiro), MID (meia) ou ATK (atacante). Cada
+  partida tem 2 de cada.
+- A cada 3 segundos o `Matchmaker` tenta montar uma partida a partir de quem
+  espera há mais tempo (o âncora). A espera do âncora abre a busca:
+
+  | Espera | MMR | Posições |
+  |---|---|---|
+  | 0 a 15 s | ±50 | só primária |
+  | 16 a 45 s | ±150 | primária ou secundária |
+  | 46 a 90 s | ±300 | + autofill de quem não está protegido |
+  | mais de 90 s | ±500 | + autofill de quem não está protegido |
+
+- Autofill escolhe quem tem o MMR mais próximo do âncora. Quem cai em autofill
+  ganha proteção (`autofill_protected`): na próxima partida só joga na primária
+  ou secundária. A proteção some ao terminar uma partida numa posição escolhida.
+- Os times saem em serpente pelo MMR: Azul fica com o 1º, 4º, 5º e 8º; Vermelho
+  com o 2º, 3º, 6º e 7º.
+- O MMR usa Elo: `E = 1 / (1 + 10^((MMR inimigo - MMR) / 400))` e
+  `novo = MMR + K * (resultado - E)`, com K 64 nas 10 primeiras partidas e 32
+  depois, contra a média do time adversário.
+- O painel mostra as posições em falta ("fila mais rápida como ..."), o aviso de
+  autofill e o escudo de proteção.
 
 ### Elos
 
@@ -84,8 +109,24 @@ plano completo está em `docs/queue-plano.md`.
 - O motor fica em `LeagueRules`, `RankedLadder` e `RankedScoring`. O resultado
   das partidas ainda não é registrado: isso vem com a partida automática.
 
-A tabela `queue_ranking` e a permissão do comando são criadas por
-`database/queue.sql`, executado a cada abertura do hotel.
+A tabela `queue_ranking` (com as posições e a proteção) e a permissão do comando
+são criadas por `database/queue.sql`, executado a cada abertura do hotel.
+
+### Testes
+
+Os testes ficam em `app/Emulator/Comet-Server/src/test/java`. O Maven do projeto
+não resolve as dependências, então eles rodam com o JDK de `tools/` e as
+bibliotecas de `app/lib` (depois de compilar as classes do servidor em `out/`):
+
+```bash
+JDK=$(ls -d tools/jdk17/*/bin)
+"$JDK/javac.exe" -encoding UTF-8 -cp "out;app/lib/*;app/coerce-runtime/*" -d test-out \
+  app/Emulator/Comet-Server/src/test/java/com/cometproject/server/game/ranked/*.java
+"$JDK/java.exe" -cp "test-out;out;app/lib/*;app/coerce-runtime/*" org.junit.runner.JUnitCore \
+  com.cometproject.server.game.ranked.MmrCalculatorTest com.cometproject.server.game.ranked.MatchmakerTest \
+  com.cometproject.server.game.ranked.AutofillProtectionTest com.cometproject.server.game.ranked.TeamBalancerTest \
+  com.cometproject.server.game.ranked.LeagueRulesTest
+```
 
 ## Campo e movimentação
 

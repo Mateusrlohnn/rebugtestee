@@ -26,6 +26,13 @@
         { id: 'challenger', name: 'Desafiante', light: '#fff2b8', mid: '#e8b830', dark: '#1a3d78', gem: '#7fd8ff' }
     ];
 
+    var POSITIONS = [
+        { id: 'GK', name: 'Goleiro' },
+        { id: 'ZAG', name: 'Zagueiro' },
+        { id: 'MID', name: 'Meia' },
+        { id: 'ATK', name: 'Atacante' }
+    ];
+
     var socket = null;
     var root = null;
     var badgeElement = null;
@@ -35,7 +42,8 @@
         state: null,
         stateAt: 0,
         ranking: null,
-        rankingPlayer: null
+        rankingPlayer: null,
+        pick: null
     };
 
     /* ---------- Conexão ---------- */
@@ -111,6 +119,11 @@
 
             view.state = message;
             view.stateAt = Date.now();
+
+            // The server confirmed the positions picked on screen.
+            if (view.pick && view.pick.primary === message.me.primary && view.pick.secondary === message.me.secondary) {
+                view.pick = null;
+            }
 
             if (message.match && !hadMatch) {
                 view.tab = 'profile';
@@ -272,6 +285,13 @@
             return;
         }
 
+        var pick = event.target.closest('[data-pick]');
+
+        if (pick) {
+            choosePosition(pick.getAttribute('data-pick'), pick.getAttribute('data-role'));
+            return;
+        }
+
         var player = event.target.closest('[data-player]');
 
         if (player) {
@@ -365,18 +385,80 @@
                 '  <div class="rq-footer-label">Procurando partida · ' + queue.size + '/' + queue.max + '</div>' +
                 '  <div class="rq-footer-value is-searching" data-wait="' + me.waitSeconds + '"></div>' +
                 '</div>' +
+                '<div class="rq-chosen">' + roleChip(me.primary, 'Primária') + roleChip(me.secondary, 'Secundária') + '</div>' +
                 '<button class="rq-play is-cancel" type="button" data-action="leave">Sair da fila</button>';
         }
 
+        var pick = currentPick();
+        var ready = me.primary && me.secondary;
+
         return '<div class="rq-footer-info">' +
             '  <div class="rq-footer-label">Fila ranqueada do hotel</div>' +
-            '  <div class="rq-footer-value">' + queue.size + '/' + queue.max + ' jogadores procurando</div>' +
+            '  <div class="rq-footer-value">' + queue.size + '/' + queue.max + ' procurando</div>' +
             '</div>' +
-            '<button class="rq-play" type="button" data-action="join">Encontrar partida</button>';
+            '<div class="rq-picks">' +
+            pickGroup('primary', 'Primária', pick.primary) +
+            pickGroup('secondary', 'Secundária', pick.secondary) +
+            '</div>' +
+            '<button class="rq-play" type="button" data-action="join"' + (ready ? '' : ' disabled title="Escolha suas duas posições"') + '>' +
+            'Encontrar partida</button>';
+    }
+
+    function pickGroup(kind, label, selected) {
+        var buttons = POSITIONS.map(function (position) {
+            return '<button class="rq-pick" type="button" data-pick="' + kind + '" data-role="' + position.id + '" ' +
+                'aria-pressed="' + (position.id === selected) + '" title="' + position.name + '">' +
+                roleIcon(position.id, 18) + '<span>' + position.id + '</span></button>';
+        }).join('');
+
+        return '<div class="rq-pick-group"><span class="rq-pick-label">' + label + '</span>' +
+            '<div class="rq-pick-row">' + buttons + '</div></div>';
+    }
+
+    /* Posições escolhidas na tela, antes de o servidor confirmar. */
+    function currentPick() {
+        if (view.pick) {
+            return { primary: view.pick.primary, secondary: view.pick.secondary };
+        }
+
+        return { primary: view.state.me.primary, secondary: view.state.me.secondary };
+    }
+
+    function choosePosition(kind, role) {
+        var pick = currentPick();
+        var other = kind === 'primary' ? 'secondary' : 'primary';
+
+        // Picking the other slot's position swaps the two.
+        if (pick[other] === role) {
+            pick[other] = pick[kind];
+        }
+
+        pick[kind] = role;
+        view.pick = pick;
+        render();
+
+        if (pick.primary && pick.secondary) {
+            sendAction('positions:' + pick.primary + ',' + pick.secondary);
+        }
     }
 
     function renderProfile() {
-        return renderMatch() + renderPlayerProfile(view.state.me);
+        return renderMatch() + renderPlayerProfile(view.state.me) + renderMyRoles();
+    }
+
+    function renderMyRoles() {
+        var me = view.state.me;
+
+        var roles = me.primary
+            ? '<div class="rq-roles">' + roleChip(me.primary, 'Primária') + roleChip(me.secondary, 'Secundária') + '</div>'
+            : '<p class="rq-muted rq-roles-empty">Escolha sua posição primária e secundária no rodapé para entrar na fila.</p>';
+
+        var shield = me.autofillProtected
+            ? '<div class="rq-shield">' + shieldIcon() +
+              '<div><b>Proteção de autofill ativa</b><span>Na próxima partida você joga na sua posição primária ou secundária.</span></div></div>'
+            : '';
+
+        return '<h3 class="rq-section-title rq-roles-title">Minhas posições</h3>' + roles + shield;
     }
 
     /* Foto, elo e estatísticas de um jogador. Usado no Perfil e ao clicar em alguém do ranking. */
@@ -423,24 +505,40 @@
             return '';
         }
 
-        var cards = match.players.map(function (player) {
-            var classes = 'rq-card' + (player.me ? ' is-me' : '') + (player.captain ? ' is-captain' : '');
+        var mine = match.players.filter(function (player) { return player.me; })[0];
 
-            return '<div class="' + classes + '">' +
-                (player.captain ? '<span class="rq-tag">Capitão</span>' : '') +
+        var autofillNotice = mine && mine.autofilled
+            ? '<div class="rq-autofill-notice">' + shieldIcon() + '<div><b>Autofill: você joga de ' + roleName(mine.role) + '.</b>' +
+              '<span>Faltou gente nessa posição. Na próxima partida, sua posição primária ou secundária está garantida.</span></div></div>'
+            : '';
+
+        return '<div class="rq-match">' +
+            '  <div class="rq-match-title">Partida encontrada</div>' +
+            '  <p class="rq-match-text">Times montados pelo MMR, em serpente. Combinem entre vocês um quarto para jogar.</p>' +
+            autofillNotice +
+            '  <div class="rq-teams">' + renderTeam(match, 'blue', 'Time Azul') + renderTeam(match, 'red', 'Time Vermelho') + '</div>' +
+            '  <div style="margin-top:16px"><button class="rq-ghost" type="button" data-action="dismiss">Ok, entendi</button></div>' +
+            '</div>';
+    }
+
+    function renderTeam(match, team, title) {
+        var order = POSITIONS.map(function (position) { return position.id; });
+        var players = match.players
+            .filter(function (player) { return player.team === team; })
+            .sort(function (a, b) { return order.indexOf(a.role) - order.indexOf(b.role); });
+
+        var cards = players.map(function (player) {
+            return '<div class="rq-card' + (player.me ? ' is-me' : '') + '">' +
+                '<span class="rq-role-tag">' + roleIcon(player.role, 12) + player.role + '</span>' +
+                (player.autofilled ? '<span class="rq-autofill-tag">Autofill</span>' : '') +
                 avatarImage(player.figure, 'm', player.username, 'rq-card-head', true) +
                 '<div class="rq-card-name">' + escapeHtml(player.username) + (player.me ? ' (você)' : '') + '</div>' +
                 '<div class="rq-card-elo">' + crest(player.tier, player.division, 18) + escapeHtml(eloText(player)) + '</div>' +
                 '</div>';
         }).join('');
 
-        return '<div class="rq-match">' +
-            '  <div class="rq-match-title">Partida encontrada</div>' +
-            '  <p class="rq-match-text">Estes são os 8 jogadores da partida. Os dois capitães têm o melhor elo e montam os times. ' +
-            'Combinem entre vocês um quarto para jogar.</p>' +
-            '  <div class="rq-grid">' + cards + '</div>' +
-            '  <div style="margin-top:16px"><button class="rq-ghost" type="button" data-action="dismiss">Ok, entendi</button></div>' +
-            '</div>';
+        return '<div class="rq-team is-' + team + '"><div class="rq-team-title">' + title + '</div>' +
+            '<div class="rq-grid">' + cards + '</div></div>';
     }
 
     function renderQueue() {
@@ -463,9 +561,24 @@
             '  </div>' +
             '  <div class="rq-pips" aria-label="' + queue.size + ' de ' + queue.max + ' jogadores">' + pips + '</div>' +
             '  <div class="rq-muted">' + queue.size + ' de ' + queue.max + ' jogadores na fila</div>' +
+            renderFastPositions(queue) +
             '  <p class="rq-queue-note">Quem está na fila fica em segredo. Você só descobre os outros jogadores quando a partida ' +
             'for encontrada.</p>' +
             '</div>';
+    }
+
+    function renderFastPositions(queue) {
+        if (!queue.fastPositions || !queue.fastPositions.length) {
+            return queue.size === 0
+                ? '<div class="rq-fast">Fila vazia: qualquer posição ajuda a começar.</div>'
+                : '';
+        }
+
+        var chips = queue.fastPositions.map(function (role) {
+            return '<span class="rq-fast-chip">' + roleIcon(role, 14) + roleName(role) + '</span>';
+        }).join('');
+
+        return '<div class="rq-fast"><span>Fila mais rápida como</span>' + chips + '</div>';
     }
 
     function renderRanking() {
@@ -531,13 +644,37 @@
             '<h3 class="rq-section-title">Como jogar</h3>' +
             '<div class="rq-box"><ul>' +
             '  <li>Digite <b>:queue</b> em qualquer quarto para abrir este painel.</li>' +
+            '  <li>No rodapé, escolha sua posição <b>primária</b> e <b>secundária</b>: Goleiro (GK), Zagueiro (ZAG), Meia (MID) ou Atacante (ATK).</li>' +
             '  <li>Clique em <b>Encontrar partida</b>. Pode fechar o painel e andar pelo hotel: um selo no topo da tela mostra que você está na fila e reabre o painel com um clique.</li>' +
-            '  <li>Ninguém vê quem está na fila, só quantos jogadores estão esperando.</li>' +
-            '  <li>Quando a fila chega a 8 jogadores, a partida é encontrada e o painel abre sozinho para os 8.</li>' +
-            '  <li>Os 2 jogadores com melhor elo viram <b>capitães</b> e montam os times.</li>' +
+            '  <li>Ninguém vê quem está na fila, só quantos jogadores estão esperando e quais posições estão em falta.</li>' +
+            '  <li>Cada partida tem 8 jogadores: 2 de cada posição. Quando ela é encontrada, o painel abre sozinho para os 8.</li>' +
             '  <li>Ninguém é levado para outro quarto: vocês combinam onde jogar.</li>' +
             '  <li>Para desistir, clique em <b>Sair da fila</b>. Se você sair do hotel e não voltar em 2 minutos, também sai da fila.</li>' +
             '</ul></div>' +
+            '<h3 class="rq-section-title">Busca por partida</h3>' +
+            '<div class="rq-box">' +
+            '  <p>Quanto mais tempo a busca demora, mais ela se abre. O MMR é um número escondido que mede seu nível.</p>' +
+            '  <table class="rq-window-table">' +
+            '    <thead><tr><th>Espera</th><th>Diferença de MMR</th><th>Posições</th></tr></thead>' +
+            '    <tbody>' +
+            '      <tr><td>0 a 15 s</td><td>±50</td><td>Só a primária</td></tr>' +
+            '      <tr><td>16 a 45 s</td><td>±150</td><td>Primária ou secundária</td></tr>' +
+            '      <tr><td>46 a 90 s</td><td>±300</td><td>+ autofill se faltar alguém</td></tr>' +
+            '      <tr><td>Mais de 90 s</td><td>±500</td><td>+ autofill se faltar alguém</td></tr>' +
+            '    </tbody>' +
+            '  </table>' +
+            '  <p class="rq-muted">O tempo que vale é o de quem está esperando há mais tempo na busca.</p>' +
+            '</div>' +
+            '<h3 class="rq-section-title">Autofill e proteção</h3>' +
+            '<div class="rq-box"><ul>' +
+            '  <li><b>Autofill:</b> depois de 46 s, se faltar uma posição, alguém pode ser escalado fora das suas escolhas. ' +
+            'O escolhido é quem tem o MMR mais próximo da partida.</li>' +
+            '  <li><b>Proteção:</b> quem cai em autofill ganha um escudo. Na próxima partida, joga obrigatoriamente na primária ou secundária.</li>' +
+            '  <li>O escudo some depois que você termina uma partida em uma das suas posições.</li>' +
+            '</ul></div>' +
+            '<h3 class="rq-section-title">Times</h3>' +
+            '<div class="rq-box"><p>Os 8 jogadores são ordenados pelo MMR e divididos em serpente: o Time Azul fica com o 1º, 4º, 5º e 8º, ' +
+            'o Time Vermelho com o 2º, 3º, 6º e 7º. Assim a força dos dois times fica parecida.</p></div>' +
             '<h3 class="rq-section-title">Elos</h3>' +
             '<div class="rq-box">' +
             '  <p>Todo jogador começa no <b>Bronze IV</b> com 0 PDL. Qualquer elo pode jogar com qualquer elo.</p>' +
@@ -561,7 +698,8 @@
             '<h3 class="rq-section-title">Ganhando e perdendo PDL</h3>' +
             '<div class="rq-box"><ul>' +
             '  <li>Vitória soma PDL, derrota tira: entre 10 e 30 por partida.</li>' +
-            '  <li>Um MMR escondido define quanto: vencer um time mais forte vale mais, e perder para um mais fraco custa mais.</li>' +
+            '  <li>O MMR escondido define quanto: vencer um time mais forte vale mais, e perder para um mais fraco custa mais.</li>' +
+            '  <li>Nas suas 10 primeiras partidas o MMR muda o dobro, para achar seu nível mais rápido.</li>' +
             '  <li>Empate não muda o PDL de ninguém.</li>' +
             '  <li>Sair do quarto durante a partida conta como derrota para quem saiu.</li>' +
             '</ul></div>' +
@@ -622,6 +760,48 @@
             '<circle cx="115" cy="115" r="88" fill="none" stroke="#1e2328" stroke-width="6"/>' +
             '<g class="rq-orb-spin"><circle cx="115" cy="115" r="88" fill="none" stroke="url(#rqOrbBlue)" stroke-width="6" ' +
             'stroke-linecap="round" stroke-dasharray="180 373"/></g>' +
+            '</svg>';
+    }
+
+    function roleName(role) {
+        for (var i = 0; i < POSITIONS.length; i++) {
+            if (POSITIONS[i].id === role) {
+                return POSITIONS[i].name;
+            }
+        }
+
+        return role;
+    }
+
+    function roleChip(role, label) {
+        if (!role) {
+            return '';
+        }
+
+        return '<span class="rq-role-chip"><small>' + label + '</small>' + roleIcon(role, 16) + role + ' · ' + roleName(role) + '</span>';
+    }
+
+    /* Ícone de cada posição: trave (GK), escudo (ZAG), setas cruzadas (MID) e bola com seta (ATK). */
+    function roleIcon(role, size) {
+        var paths = {
+            GK: '<path d="M3 20V6h18v14" fill="none" stroke="currentColor" stroke-width="2"/>' +
+                '<path d="M7 6v14M11 6v14M15 6v14M19 6v14M3 10h18M3 14h18" stroke="currentColor" stroke-width="0.8" opacity="0.55"/>',
+            ZAG: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="2"/>' +
+                '<path d="M12 7v10" stroke="currentColor" stroke-width="2"/>',
+            MID: '<path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="2"/>' +
+                '<path d="M17 9l3 3-3 3M7 9l-3 3 3 3M9 7l3-3 3 3M9 17l3 3 3-3" fill="none" stroke="currentColor" stroke-width="2"/>',
+            ATK: '<circle cx="9" cy="15" r="5" fill="none" stroke="currentColor" stroke-width="2"/>' +
+                '<path d="M13 11l7-7M14 4h6v6" fill="none" stroke="currentColor" stroke-width="2"/>'
+        };
+
+        return '<svg class="rq-role-icon" width="' + size + '" height="' + size + '" viewBox="0 0 24 24" aria-hidden="true">' +
+            (paths[role] || '') + '</svg>';
+    }
+
+    function shieldIcon() {
+        return '<svg class="rq-shield-icon" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">' +
+            '<path d="M12 2l8 3v6c0 5.5-3.6 9.2-8 11-4.4-1.8-8-5.5-8-11V5z" fill="#0a323c" stroke="#0ac8b9" stroke-width="1.5"/>' +
+            '<path d="M8 12l3 3 5-6" fill="none" stroke="#cdfafa" stroke-width="2"/>' +
             '</svg>';
     }
 

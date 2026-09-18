@@ -1,19 +1,8 @@
 package com.cometproject.server.game.ranked;
 
-import java.util.Comparator;
-
 public class RankedProfile {
     public static final int DEFAULT_MMR = 1000;
     public static final int LOWEST_DIVISION = 4;
-
-    /**
-     * Best player first: higher tier, better division (I before IV), more PDL, then higher MMR.
-     */
-    public static final Comparator<RankedProfile> BEST_FIRST = Comparator
-            .comparingInt((RankedProfile profile) -> profile.getTier().ordinal()).reversed()
-            .thenComparingInt(RankedProfile::getDivision)
-            .thenComparing(Comparator.comparingInt(RankedProfile::getLeaguePoints).reversed())
-            .thenComparing(Comparator.comparingInt(RankedProfile::getMmr).reversed());
 
     private static final String[] DIVISION_NAMES = {"", "I", "II", "III", "IV"};
 
@@ -27,8 +16,12 @@ public class RankedProfile {
     private final int wins;
     private final int losses;
     private final int draws;
+    private final Position primary;
+    private final Position secondary;
+    private final boolean autofillProtected;
 
-    public RankedProfile(int playerId, String username, String figure, RankedTier tier, int division, int leaguePoints, int mmr, int wins, int losses, int draws) {
+    public RankedProfile(int playerId, String username, String figure, RankedTier tier, int division, int leaguePoints, int mmr,
+                         int wins, int losses, int draws, Position primary, Position secondary, boolean autofillProtected) {
         this.playerId = playerId;
         this.username = username;
         this.figure = figure;
@@ -39,6 +32,29 @@ public class RankedProfile {
         this.wins = wins;
         this.losses = losses;
         this.draws = draws;
+        this.primary = primary;
+        this.secondary = secondary;
+        this.autofillProtected = autofillProtected;
+    }
+
+    public boolean hasPositions() {
+        return this.primary != null && this.secondary != null;
+    }
+
+    public int getMatchesPlayed() {
+        return this.wins + this.losses + this.draws;
+    }
+
+    public Position getPrimary() {
+        return this.primary;
+    }
+
+    public Position getSecondary() {
+        return this.secondary;
+    }
+
+    public boolean isAutofillProtected() {
+        return this.autofillProtected;
     }
 
     public String getEloDisplay() {

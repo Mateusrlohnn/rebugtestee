@@ -1,6 +1,7 @@
 package com.cometproject.server.storage.queries.ranked;
 
 import com.cometproject.server.game.ranked.LeagueRules;
+import com.cometproject.server.game.ranked.Position;
 import com.cometproject.server.game.ranked.RankedProfile;
 import com.cometproject.server.game.ranked.RankedTier;
 import com.cometproject.server.storage.SqlHelper;
@@ -13,7 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RankedDao {
-    private static final String PROFILE_COLUMNS = "p.id AS player_id, p.username, p.figure, r.tier, r.division, r.league_points, r.mmr, r.wins, r.losses, r.draws";
+    private static final String PROFILE_COLUMNS = "p.id AS player_id, p.username, p.figure, r.tier, r.division, r.league_points, r.mmr, r.wins, r.losses, r.draws, " +
+            "r.primary_position, r.secondary_position, r.autofill_protected";
 
     /**
      * Loads the player's global ranked profile, creating it with the starting elo on first access.
@@ -177,6 +179,45 @@ public class RankedDao {
         return standings;
     }
 
+    public static void savePositions(int playerId, Position primary, Position secondary) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = SqlHelper.getConnection();
+
+            preparedStatement = SqlHelper.prepare("UPDATE queue_ranking SET primary_position = ?, secondary_position = ? WHERE player_id = ?", sqlConnection);
+            preparedStatement.setString(1, primary.name());
+            preparedStatement.setString(2, secondary.name());
+            preparedStatement.setInt(3, playerId);
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            SqlHelper.handleSqlException(e);
+        } finally {
+            SqlHelper.closeSilently(preparedStatement);
+            SqlHelper.closeSilently(sqlConnection);
+        }
+    }
+
+    public static void setAutofillProtected(int playerId, boolean autofillProtected) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            sqlConnection = SqlHelper.getConnection();
+
+            preparedStatement = SqlHelper.prepare("UPDATE queue_ranking SET autofill_protected = ? WHERE player_id = ?", sqlConnection);
+            preparedStatement.setBoolean(1, autofillProtected);
+            preparedStatement.setInt(2, playerId);
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            SqlHelper.handleSqlException(e);
+        } finally {
+            SqlHelper.closeSilently(preparedStatement);
+            SqlHelper.closeSilently(sqlConnection);
+        }
+    }
+
     public static void setApexTier(int playerId, RankedTier tier) {
         Connection sqlConnection = null;
         PreparedStatement preparedStatement = null;
@@ -225,6 +266,9 @@ public class RankedDao {
                 resultSet.getInt("mmr"),
                 resultSet.getInt("wins"),
                 resultSet.getInt("losses"),
-                resultSet.getInt("draws"));
+                resultSet.getInt("draws"),
+                Position.fromCode(resultSet.getString("primary_position")),
+                Position.fromCode(resultSet.getString("secondary_position")),
+                resultSet.getBoolean("autofill_protected"));
     }
 }

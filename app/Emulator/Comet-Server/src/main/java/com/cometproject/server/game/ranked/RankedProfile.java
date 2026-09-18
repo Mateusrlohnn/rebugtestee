@@ -47,6 +47,15 @@ public class RankedProfile {
         return this.tier.getDisplayName() + " - " + this.leaguePoints + " PDL";
     }
 
+    public String getDivisionName() {
+        return DIVISION_NAMES[this.division];
+    }
+
+    public int getWinRate() {
+        final int games = this.wins + this.losses + this.draws;
+        return games == 0 ? 0 : Math.round(this.wins * 100f / games);
+    }
+
     public String getRecordDisplay() {
         return this.wins + "V " + this.losses + "D " + this.draws + "E";
     }

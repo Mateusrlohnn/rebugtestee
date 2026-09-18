@@ -62,7 +62,7 @@ public class RankedDao {
             sqlConnection = SqlHelper.getConnection();
 
             preparedStatement = SqlHelper.prepare("SELECT " + PROFILE_COLUMNS + " FROM queue_ranking r INNER JOIN players p ON p.id = r.player_id " +
-                    "ORDER BY r.tier DESC, r.division ASC, r.league_points DESC, r.mmr DESC LIMIT ?", sqlConnection);
+                    "ORDER BY r.tier DESC, r.division ASC, r.league_points DESC, r.mmr DESC, r.player_id ASC LIMIT ?", sqlConnection);
             preparedStatement.setInt(1, limit);
             resultSet = preparedStatement.executeQuery();
 
@@ -78,6 +78,44 @@ public class RankedDao {
         }
 
         return profiles;
+    }
+
+    /**
+     * Position of the profile in the global ranking, starting at 1. Ties are ordered like getTopProfiles.
+     */
+    public static int getPosition(RankedProfile profile) {
+        Connection sqlConnection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            sqlConnection = SqlHelper.getConnection();
+
+            preparedStatement = SqlHelper.prepare("SELECT COUNT(*) FROM queue_ranking WHERE tier > ? OR (tier = ? AND (division < ? " +
+                    "OR (division = ? AND (league_points > ? OR (league_points = ? AND (mmr > ? OR (mmr = ? AND player_id < ?)))))))", sqlConnection);
+            preparedStatement.setInt(1, profile.getTier().ordinal());
+            preparedStatement.setInt(2, profile.getTier().ordinal());
+            preparedStatement.setInt(3, profile.getDivision());
+            preparedStatement.setInt(4, profile.getDivision());
+            preparedStatement.setInt(5, profile.getLeaguePoints());
+            preparedStatement.setInt(6, profile.getLeaguePoints());
+            preparedStatement.setInt(7, profile.getMmr());
+            preparedStatement.setInt(8, profile.getMmr());
+            preparedStatement.setInt(9, profile.getPlayerId());
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return resultSet.getInt(1) + 1;
+            }
+        } catch (SQLException e) {
+            SqlHelper.handleSqlException(e);
+        } finally {
+            SqlHelper.closeSilently(resultSet);
+            SqlHelper.closeSilently(preparedStatement);
+            SqlHelper.closeSilently(sqlConnection);
+        }
+
+        return 0;
     }
 
     private static RankedProfile readProfile(ResultSet resultSet) throws SQLException {

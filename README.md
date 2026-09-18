@@ -47,17 +47,18 @@ O comando `:clickthrouse` continua controlando a colisão entre jogadores.
 
 ## Fila ranqueada (em construção)
 
-Fila 4x4 por quarto, com elo global estilo League of Legends. O plano completo
-está em `docs/queue-plano.md`.
+Fila 4x4 única para o hotel inteiro, com elo global estilo League of Legends. O
+plano completo está em `docs/queue-plano.md`.
 
-- `:queue` mostra quem está na fila do quarto, com elo e tempo de espera.
-- `:queue entrar` / `:queue sair` entra ou sai da fila. Sair do quarto também
-  tira o jogador da fila.
-- `:queue elo` mostra seu elo e seu histórico.
-- `:queue ranking` mostra os 10 melhores do hotel.
-- Com 8 jogadores, a partida é encontrada e os 2 melhores do ranking viram
-  capitães. Por enquanto só há o anúncio; draft e partida vêm nas próximas
-  etapas.
+- `:queue` é o único comando. Ele abre um painel por cima do jogo com as abas
+  **Meu perfil**, **Fila**, **Ranking** e **Como funciona**.
+- Entrar e sair da fila é feito pelos botões do painel, de qualquer quarto.
+  Trocar de quarto não tira ninguém da fila; desconectar do hotel tira.
+- Com 8 jogadores, a partida é encontrada, o painel abre sozinho para os 8 e os
+  2 melhores do ranking viram capitães. Ninguém é teleportado: os jogadores
+  combinam onde jogar.
+- O painel fica em `app/hotel-web/queue/` e usa a mesma conexão do Nitro: o
+  servidor manda o pacote 7700 (JSON) e o painel responde com o 7701 (ação).
 
 A tabela `queue_ranking` e a permissão do comando são criadas por
 `database/queue.sql`, executado a cada abertura do hotel.

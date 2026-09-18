@@ -6,22 +6,17 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Players waiting for a ranked match in one room, in the order they joined.
+ * Players waiting for a ranked match anywhere in the hotel, in the order they joined.
  */
 public class RankedQueue {
-    private final int roomId;
     private final Map<Integer, Entry> entries = new LinkedHashMap<>();
 
-    public RankedQueue(int roomId) {
-        this.roomId = roomId;
-    }
-
-    public synchronized boolean add(int playerId, String username) {
-        if (this.entries.containsKey(playerId)) {
+    public synchronized boolean add(RankedProfile profile) {
+        if (this.entries.containsKey(profile.getPlayerId())) {
             return false;
         }
 
-        this.entries.put(playerId, new Entry(playerId, username, System.currentTimeMillis()));
+        this.entries.put(profile.getPlayerId(), new Entry(profile, System.currentTimeMillis()));
         return true;
     }
 
@@ -29,8 +24,8 @@ public class RankedQueue {
         return this.entries.remove(playerId) != null;
     }
 
-    public synchronized boolean contains(int playerId) {
-        return this.entries.containsKey(playerId);
+    public synchronized Entry get(int playerId) {
+        return this.entries.get(playerId);
     }
 
     public synchronized int size() {
@@ -58,27 +53,21 @@ public class RankedQueue {
         return match;
     }
 
-    public int getRoomId() {
-        return this.roomId;
-    }
-
     public static class Entry {
-        private final int playerId;
-        private final String username;
+        private final RankedProfile profile;
         private final long joinedAt;
 
-        public Entry(int playerId, String username, long joinedAt) {
-            this.playerId = playerId;
-            this.username = username;
+        public Entry(RankedProfile profile, long joinedAt) {
+            this.profile = profile;
             this.joinedAt = joinedAt;
         }
 
         public int getPlayerId() {
-            return this.playerId;
+            return this.profile.getPlayerId();
         }
 
-        public String getUsername() {
-            return this.username;
+        public RankedProfile getProfile() {
+            return this.profile;
         }
 
         public long getJoinedAt() {

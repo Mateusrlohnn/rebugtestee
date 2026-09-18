@@ -26,6 +26,7 @@ import com.cometproject.server.game.players.PlayerManager;
 import com.cometproject.server.game.players.components.*;
 import com.cometproject.server.game.players.data.PlayerData;
 import com.cometproject.server.game.quests.QuestManager;
+import com.cometproject.server.game.ranked.RankedQueueManager;
 import com.cometproject.server.game.rooms.RoomManager;
 import com.cometproject.server.game.rooms.objects.entities.types.PlayerEntity;
 import com.cometproject.server.game.rooms.types.Room;
@@ -235,6 +236,8 @@ public class Player extends Observable implements IPlayer {
                 this.getSession().getLogger().error("Error while disposing entity when player disconnects", e);
             }
         }
+
+        RankedQueueManager.getInstance().onPlayerDisconnect(this.getId());
 
         if (this.getSettings() != null) {
             PlayerDao.saveBubbleId(this.getSettings().getBubbleId(), this.getId());

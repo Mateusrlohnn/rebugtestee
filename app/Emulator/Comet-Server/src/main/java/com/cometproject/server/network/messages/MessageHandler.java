@@ -45,6 +45,7 @@ import com.cometproject.server.network.messages.incoming.landing.*;
 import com.cometproject.server.network.messages.incoming.messenger.*;
 import com.cometproject.server.network.messages.incoming.misc.JavascriptCallbackMessageEvent;
 import com.cometproject.server.network.messages.incoming.misc.PongMessageEvent;
+import com.cometproject.server.network.messages.incoming.ranked.RankedPanelMessageEvent;
 import com.cometproject.server.network.messages.incoming.moderation.*;
 import com.cometproject.server.network.messages.incoming.moderation.tickets.ModToolCloseIssueMessageEvent;
 import com.cometproject.server.network.messages.incoming.moderation.tickets.ModToolPickTicketMessageEvent;
@@ -250,6 +251,7 @@ public class MessageHandler {
         this.getMessages().put(Events.EventLogMessageEvent, new EventLogMessageEvent());
         this.getMessages().put(Events.JavascriptCallbackMessageEvent, new JavascriptCallbackMessageEvent());
         this.getMessages().put(Events.PongEvent, new PongMessageEvent());
+        this.getMessages().put(RankedPanelMessageEvent.HEADER, new RankedPanelMessageEvent());
     }
 
     public void registerCrafting() {

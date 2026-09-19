@@ -165,7 +165,7 @@
             badgeElement.className = 'rq-badge-float';
             badgeElement.innerHTML = logo() +
                 '<span class="rq-badge-text"><b>Procurando partida <span data-wait="' + state.me.waitSeconds + '"></span></b>' +
-                '<small>' + state.queue.size + '/' + state.queue.max + ' na fila · clique para abrir</small></span>';
+                '<small>' + bandText(state.queue) + ' · clique para abrir</small></span>';
         }
 
         tickTimers();
@@ -382,7 +382,7 @@
 
         if (me.inQueue) {
             return '<div class="rq-footer-info">' +
-                '  <div class="rq-footer-label">Procurando partida · ' + queue.size + '/' + queue.max + '</div>' +
+                '  <div class="rq-footer-label">Procurando · ' + queue.size + '/' + queue.max + ' na faixa</div>' +
                 '  <div class="rq-footer-value is-searching" data-wait="' + me.waitSeconds + '"></div>' +
                 '</div>' +
                 '<div class="rq-chosen">' + roleChip(me.primary, 'Primária') + roleChip(me.secondary, 'Secundária') + '</div>' +
@@ -393,8 +393,8 @@
         var ready = me.primary && me.secondary;
 
         return '<div class="rq-footer-info">' +
-            '  <div class="rq-footer-label">Fila ranqueada do hotel</div>' +
-            '  <div class="rq-footer-value">' + queue.size + '/' + queue.max + ' procurando</div>' +
+            '  <div class="rq-footer-label">Buscando no hotel</div>' +
+            '  <div class="rq-footer-value">' + queue.hotelSize + (queue.hotelSize === 1 ? ' jogador' : ' jogadores') + '</div>' +
             '</div>' +
             '<div class="rq-picks">' +
             pickGroup('primary', 'Primária', pick.primary) +
@@ -556,21 +556,29 @@
             '    <div class="rq-orb-center">' +
             (me.inQueue
                 ? '<div class="rq-orb-time" data-wait="' + me.waitSeconds + '"></div><div class="rq-orb-label">Procurando partida</div>'
-                : '<div class="rq-orb-time">' + queue.size + '/' + queue.max + '</div><div class="rq-orb-label">Na fila agora</div>') +
+                : '<div class="rq-orb-time">' + Math.min(queue.size, queue.max) + '/' + queue.max + '</div><div class="rq-orb-label">Na sua faixa</div>') +
             '    </div>' +
             '  </div>' +
-            '  <div class="rq-pips" aria-label="' + queue.size + ' de ' + queue.max + ' jogadores">' + pips + '</div>' +
-            '  <div class="rq-muted">' + queue.size + ' de ' + queue.max + ' jogadores na fila</div>' +
+            '  <div class="rq-pips" aria-label="' + bandText(queue) + '">' + pips + '</div>' +
+            '  <div class="rq-muted">' + bandText(queue) + ' de MMR</div>' +
             renderFastPositions(queue) +
-            '  <p class="rq-queue-note">Quem está na fila fica em segredo. Você só descobre os outros jogadores quando a partida ' +
-            'for encontrada.</p>' +
+            '  <div class="rq-hotel-line"><span><b>' + queue.hotelSize + '</b> buscando no hotel</span>' +
+            '<span><b>' + queue.recentMatches + '</b> ' + (queue.recentMatches === 1 ? 'partida formada' : 'partidas formadas') +
+            ' nos últimos 10 min</span></div>' +
+            '  <p class="rq-queue-note">Várias partidas são montadas ao mesmo tempo no hotel, cada uma com jogadores de MMR parecido. ' +
+            'Quem está na fila fica em segredo: você só descobre os outros jogadores quando a sua partida for encontrada.</p>' +
             '</div>';
+    }
+
+    /* Quantos jogadores compatíveis com você (pela sua janela de MMR) estão buscando partida. */
+    function bandText(queue) {
+        return queue.size + '/' + queue.max + ' na sua faixa';
     }
 
     function renderFastPositions(queue) {
         if (!queue.fastPositions || !queue.fastPositions.length) {
             return queue.size === 0
-                ? '<div class="rq-fast">Fila vazia: qualquer posição ajuda a começar.</div>'
+                ? '<div class="rq-fast">Ninguém na sua faixa ainda: qualquer posição ajuda a começar.</div>'
                 : '';
         }
 
@@ -578,7 +586,7 @@
             return '<span class="rq-fast-chip">' + roleIcon(role, 14) + roleName(role) + '</span>';
         }).join('');
 
-        return '<div class="rq-fast"><span>Fila mais rápida como</span>' + chips + '</div>';
+        return '<div class="rq-fast"><span>Na sua faixa, mais rápido como</span>' + chips + '</div>';
     }
 
     function renderRanking() {
@@ -648,6 +656,8 @@
             '  <li>Clique em <b>Encontrar partida</b>. Pode fechar o painel e andar pelo hotel: um selo no topo da tela mostra que você está na fila e reabre o painel com um clique.</li>' +
             '  <li>Ninguém vê quem está na fila, só quantos jogadores estão esperando e quais posições estão em falta.</li>' +
             '  <li>Cada partida tem 8 jogadores: 2 de cada posição. Quando ela é encontrada, o painel abre sozinho para os 8.</li>' +
+            '  <li>A busca é do hotel inteiro, de qualquer quarto, e várias partidas são montadas ao mesmo tempo: cada uma junta ' +
+            'jogadores com MMR parecido. O ranking é um só para todos.</li>' +
             '  <li>Ninguém é levado para outro quarto: vocês combinam onde jogar.</li>' +
             '  <li>Para desistir, clique em <b>Sair da fila</b>. Se você sair do hotel e não voltar em 2 minutos, também sai da fila.</li>' +
             '</ul></div>' +

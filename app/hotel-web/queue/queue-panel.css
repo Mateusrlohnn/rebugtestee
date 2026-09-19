@@ -1153,3 +1153,24 @@ tr.is-top .rq-pos {
         grid-template-columns: 1fr;
     }
 }
+
+/* ---------- Buscas acontecendo no hotel ao mesmo tempo ---------- */
+
+.rq-hotel-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 18px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-top: 1px solid var(--rq-line);
+    border-bottom: 1px solid var(--rq-line);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.rq-hotel-line b {
+    color: var(--rq-gold-3);
+    font-family: var(--rq-display);
+    font-size: 14px;
+}

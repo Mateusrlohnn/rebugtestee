@@ -90,8 +90,13 @@ plano completo está em `docs/queue-plano.md`.
 - O MMR usa Elo: `E = 1 / (1 + 10^((MMR inimigo - MMR) / 400))` e
   `novo = MMR + K * (resultado - E)`, com K 64 nas 10 primeiras partidas e 32
   depois, contra a média do time adversário.
-- O painel mostra as posições em falta ("fila mais rápida como ..."), o aviso de
-  autofill e o escudo de proteção.
+- Várias buscas correm ao mesmo tempo: a cada ciclo o servidor forma todas as
+  partidas possíveis, cada uma com jogadores de MMR parecido, de qualquer
+  quarto. Um jogador sem par na faixa dele não trava as outras partidas.
+- O painel mostra a busca de cada jogador: quantos estão **na sua faixa** (pela
+  sua janela de MMR atual), as posições em falta nela, e à parte quantos estão
+  buscando no hotel e quantas partidas foram formadas nos últimos 10 minutos.
+  Também mostra o aviso de autofill e o escudo de proteção.
 
 ### Elos
 

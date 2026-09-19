@@ -261,6 +261,65 @@ public class MatchmakerTest {
         assertNull(this.find());
     }
 
+    /**
+     * Same loop as RankedQueueManager.runMatchmaking: keeps forming matches until none fits.
+     */
+    private List<Matchmaker.MatchPlan> formAllMatches() {
+        final List<Matchmaker.MatchPlan> plans = new ArrayList<>();
+        Matchmaker.MatchPlan plan;
+
+        while ((plan = this.find()) != null) {
+            plans.add(plan);
+
+            for (final Matchmaker.Slot slot : plan.getSlots()) {
+                this.queue.remove(slot.getCandidate());
+            }
+        }
+
+        return plans;
+    }
+
+    @Test
+    public void manyMatchesFormAtTheSameTimeFromOneQueue() {
+        this.addFullLineup(1000, 5);
+        this.addFullLineup(1000, 5);
+        this.addFullLineup(1000, 5);
+
+        assertEquals(3, this.formAllMatches().size());
+        assertTrue(this.queue.isEmpty());
+    }
+
+    @Test
+    public void differentEloBandsFormSeparateMatchesInParallel() {
+        this.addFullLineup(800, 5);
+        this.addFullLineup(1600, 5);
+
+        final List<Matchmaker.MatchPlan> plans = this.formAllMatches();
+
+        assertEquals(2, plans.size());
+
+        for (final Matchmaker.MatchPlan plan : plans) {
+            final int mmr = plan.getSlots().get(0).getCandidate().getMmr();
+
+            for (final Matchmaker.Slot slot : plan.getSlots()) {
+                assertEquals("each match keeps players from a single band", mmr, slot.getCandidate().getMmr());
+            }
+        }
+    }
+
+    @Test
+    public void aStuckPlayerDoesNotBlockOtherMatches() {
+        // Waiting longest, but no one else is within +-500 of this MMR.
+        this.add(3000, GK, ZAG, false, 600);
+        this.addFullLineup(1000, 5);
+
+        final List<Matchmaker.MatchPlan> plans = this.formAllMatches();
+
+        assertEquals(1, plans.size());
+        assertEquals(1, this.queue.size());
+        assertEquals(3000, this.queue.get(0).getMmr());
+    }
+
     private void addLineupWithoutGoalkeepers(boolean autofillProtected, int waitedSeconds) {
         this.add(1000, ZAG, MID, autofillProtected, waitedSeconds);
         this.add(1000, ZAG, MID, autofillProtected, waitedSeconds);

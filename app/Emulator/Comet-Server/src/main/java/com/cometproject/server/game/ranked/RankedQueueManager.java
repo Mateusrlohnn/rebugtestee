@@ -10,20 +10,23 @@ import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * One ranked queue for the whole hotel, shown to players through the :queue panel.
+ * Ranked queue shared by the whole hotel, shown to players through the :queue panel.
  *
- * Players pick a primary and a secondary position before joining. Every few seconds the {@link Matchmaker} tries to
- * form a match from the online players; the teams are split by {@link TeamBalancer}.
+ * Players pick a primary and a secondary position before joining. Every few seconds the {@link Matchmaker} forms as
+ * many matches as the online players allow, each from its own MMR band, so several searches run at the same time in
+ * any room and feed one ranking. The teams are split by {@link TeamBalancer}.
  */
 public class RankedQueueManager {
     public static final int MATCH_SIZE = Matchmaker.MATCH_SIZE;
@@ -31,6 +34,7 @@ public class RankedQueueManager {
     private static final int RECONNECT_GRACE_SECONDS = 120;
     private static final int MATCHMAKING_INTERVAL_SECONDS = 3;
     private static final String POSITIONS_ACTION = "positions:";
+    private static final long RECENT_MATCHES_MILLIS = TimeUnit.MINUTES.toMillis(10);
 
     private static final RankedQueueManager instance = new RankedQueueManager();
 
@@ -44,6 +48,12 @@ public class RankedQueueManager {
 
     // Queued players who dropped and still have time to come back.
     private final Map<Integer, Long> disconnected = new ConcurrentHashMap<>();
+
+    // When recent matches were found, to show how many searches finish in parallel.
+    private final Deque<Long> recentMatches = new ConcurrentLinkedDeque<>();
+
+    // Search window of every queued player at the last check, to notice when one widens.
+    private List<Integer> lastMargins = new ArrayList<>();
 
     private final ScheduledExecutorService timer = Executors.newSingleThreadScheduledExecutor();
 
@@ -200,7 +210,16 @@ public class RankedQueueManager {
             formed = true;
         }
 
-        if (formed) {
+        // Search windows widen with waiting time, so the "in your band" counts change even without new players.
+        final List<Integer> margins = new ArrayList<>();
+        final long now = System.currentTimeMillis();
+
+        for (final RankedQueue.Entry entry : this.queue.getEntries(this::isOnline)) {
+            margins.add(SearchWindow.forWait((now - entry.getJoinedAt()) / 1000).getMmrMargin());
+        }
+
+        if (formed || !margins.equals(this.lastMargins)) {
+            this.lastMargins = margins;
             this.broadcastState();
         }
     }
@@ -219,6 +238,7 @@ public class RankedQueueManager {
         this.queue.removeAll(playerIds);
 
         final RankedMatch match = RankedMatch.create(plan, profiles, System.currentTimeMillis());
+        this.recentMatches.addLast(match.getFoundAt());
 
         for (final RankedMatch.Player player : match.getPlayers()) {
             final RankedProfile profile = player.getProfile();
@@ -272,19 +292,32 @@ public class RankedQueueManager {
         final RankedQueue.Entry ownEntry = this.queue.get(playerId);
         final List<RankedQueue.Entry> online = this.queue.getEntries(this::isOnline);
 
+        // The player's own search: who fits their current MMR window. Several of these run at once in the hotel.
+        final long waitSeconds = ownEntry == null ? 0 : (now - ownEntry.getJoinedAt()) / 1000;
+        final int margin = SearchWindow.forWait(waitSeconds).getMmrMargin();
+        final List<RankedQueue.Entry> band = new ArrayList<>();
+
+        for (final RankedQueue.Entry entry : online) {
+            if (Math.abs(entry.getProfile().getMmr() - profile.getMmr()) <= margin) {
+                band.add(entry);
+            }
+        }
+
         final JsonObject me = this.writeProfile(profile);
         me.addProperty("position", RankedDao.getPosition(profile));
         me.addProperty("primary", profile.getPrimary() == null ? null : profile.getPrimary().name());
         me.addProperty("secondary", profile.getSecondary() == null ? null : profile.getSecondary().name());
         me.addProperty("autofillProtected", profile.isAutofillProtected());
         me.addProperty("inQueue", ownEntry != null);
-        me.addProperty("waitSeconds", ownEntry == null ? 0 : (now - ownEntry.getJoinedAt()) / 1000);
+        me.addProperty("waitSeconds", waitSeconds);
 
         // Only counts are sent: who is waiting in the queue stays hidden.
         final JsonObject queue = new JsonObject();
-        queue.addProperty("size", online.size());
+        queue.addProperty("size", band.size());
         queue.addProperty("max", MATCH_SIZE);
-        queue.add("fastPositions", this.writeFastPositions(online));
+        queue.addProperty("hotelSize", online.size());
+        queue.addProperty("recentMatches", this.countRecentMatches(now));
+        queue.add("fastPositions", this.writeFastPositions(band));
 
         final JsonObject state = new JsonObject();
         state.addProperty("type", "state");
@@ -294,6 +327,14 @@ public class RankedQueueManager {
         state.add("match", this.writeMatch(this.matches.get(playerId), playerId, now));
 
         session.send(new RankedPanelMessageComposer(state));
+    }
+
+    private int countRecentMatches(long now) {
+        while (!this.recentMatches.isEmpty() && now - this.recentMatches.peekFirst() > RECENT_MATCHES_MILLIS) {
+            this.recentMatches.pollFirst();
+        }
+
+        return this.recentMatches.size();
     }
 
     /**

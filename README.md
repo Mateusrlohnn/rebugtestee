@@ -44,6 +44,89 @@ Nos quartos de futebol configurados, use `:futnitro 3`.
 
 O comando `:clickthrouse` continua controlando a colisão entre jogadores.
 
+## Fila ranqueada (em construção)
+
+Fila 4x4 única para o hotel inteiro, com elo global estilo League of Legends. O
+plano completo está em `docs/queue-plano.md`.
+
+- `:queue` é o único comando. Ele abre um painel escuro no estilo do cliente do
+  League of Legends, com a foto do jogador e as abas **Perfil**, **Fila**,
+  **Ranking** e **Como funciona**.
+- A fila é secreta: o painel mostra só quantos jogadores estão esperando, nunca
+  quem são. Os nomes aparecem apenas quando a partida é encontrada.
+- As fotos vêm do gerador público de avatares do Habbo
+  (`habbo.com/habbo-imaging`), a partir do visual do jogador.
+- Entrar e sair da fila é feito pelos botões do painel, de qualquer quarto.
+  Trocar de quarto não tira ninguém da fila. Quem sai do hotel (ou atualiza a
+  página) tem 2 minutos para voltar sem perder o lugar.
+- Com o painel fechado, um selo no topo da tela mostra que o jogador está na
+  fila (ou que a partida foi encontrada) e reabre o painel com um clique.
+- Repetir `:queue` várias vezes seguidas não conta como flood no chat.
+- Quando a partida é encontrada, o painel abre sozinho para os 8 com os times e
+  a posição de cada um. Ninguém é teleportado: os jogadores combinam onde jogar.
+- O painel fica em `app/hotel-web/queue/` e usa a mesma conexão do Nitro: o
+  servidor manda o pacote 7700 (JSON) e o painel responde com o 7701 (ação).
+
+### Posições e matchmaking
+
+- Antes de entrar, o jogador escolhe no painel a posição primária e a
+  secundária: GK (goleiro), ZAG (zagueiro), MID (meia) ou ATK (atacante). Cada
+  partida tem 2 de cada.
+- A cada 3 segundos o `Matchmaker` tenta montar uma partida a partir de quem
+  espera há mais tempo (o âncora). A espera do âncora abre a busca:
+
+  | Espera | MMR | Posições |
+  |---|---|---|
+  | 0 a 15 s | ±50 | só primária |
+  | 16 a 45 s | ±150 | primária ou secundária |
+  | 46 a 90 s | ±300 | + autofill de quem não está protegido |
+  | mais de 90 s | ±500 | + autofill de quem não está protegido |
+
+- Autofill escolhe quem tem o MMR mais próximo do âncora. Quem cai em autofill
+  ganha proteção (`autofill_protected`): na próxima partida só joga na primária
+  ou secundária. A proteção some ao terminar uma partida numa posição escolhida.
+- Os times saem em serpente pelo MMR: Azul fica com o 1º, 4º, 5º e 8º; Vermelho
+  com o 2º, 3º, 6º e 7º.
+- O MMR usa Elo: `E = 1 / (1 + 10^((MMR inimigo - MMR) / 400))` e
+  `novo = MMR + K * (resultado - E)`, com K 64 nas 10 primeiras partidas e 32
+  depois, contra a média do time adversário.
+- O painel mostra as posições em falta ("fila mais rápida como ..."), o aviso de
+  autofill e o escudo de proteção.
+
+### Elos
+
+- Bronze IV até Diamante I, 100 PDL por divisão. Chegou a 100, sobe na hora e
+  a sobra vai junto; ficou negativo, cai para a divisão anterior descontando de
+  100. Bronze IV com 0 é o piso.
+- Diamante I com 100 PDL vira Mestre (sem teto de PDL; negativo volta ao
+  Diamante I).
+- Grão-Mestre: 10 vagas logo abaixo dos Desafiantes, recalculadas depois de
+  cada partida. Desafiante: 3 vagas para os maiores PDL, recalculadas todo dia
+  à meia-noite (horário de Brasília).
+- Cada partida vale de 10 a 30 PDL, conforme o MMR escondido dos dois times.
+  Empate não muda nada.
+- O motor fica em `LeagueRules`, `RankedLadder` e `RankedScoring`. O resultado
+  das partidas ainda não é registrado: isso vem com a partida automática.
+
+A tabela `queue_ranking` (com as posições e a proteção) e a permissão do comando
+são criadas por `database/queue.sql`, executado a cada abertura do hotel.
+
+### Testes
+
+Os testes ficam em `app/Emulator/Comet-Server/src/test/java`. O Maven do projeto
+não resolve as dependências, então eles rodam com o JDK de `tools/` e as
+bibliotecas de `app/lib` (depois de compilar as classes do servidor em `out/`):
+
+```bash
+JDK=$(ls -d tools/jdk17/*/bin)
+"$JDK/javac.exe" -encoding UTF-8 -cp "out;app/lib/*;app/coerce-runtime/*" -d test-out \
+  app/Emulator/Comet-Server/src/test/java/com/cometproject/server/game/ranked/*.java
+"$JDK/java.exe" -cp "test-out;out;app/lib/*;app/coerce-runtime/*" org.junit.runner.JUnitCore \
+  com.cometproject.server.game.ranked.MmrCalculatorTest com.cometproject.server.game.ranked.MatchmakerTest \
+  com.cometproject.server.game.ranked.AutofillProtectionTest com.cometproject.server.game.ranked.TeamBalancerTest \
+  com.cometproject.server.game.ranked.LeagueRulesTest
+```
+
 ## Campo e movimentação
 
 - O quarto `aaa` do `Jogador1` recebe automaticamente somente o campo completo:

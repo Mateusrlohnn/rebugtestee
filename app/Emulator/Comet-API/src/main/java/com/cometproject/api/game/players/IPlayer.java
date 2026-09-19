@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 public interface IPlayer {
-    String INFINITE_BALANCE = "999999999";
+    String INFINITE_BALANCE = String.valueOf(Integer.MAX_VALUE);
 
     void dispose();
 

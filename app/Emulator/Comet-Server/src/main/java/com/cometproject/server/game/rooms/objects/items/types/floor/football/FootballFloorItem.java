@@ -50,12 +50,13 @@ public class FootballFloorItem extends RoomItemFloor {
         final PendingTouch touch = new PendingTouch(
                 entity,
                 lastStep,
-                normalizeRotation(entity.getBodyRotation()),
-                normalizeRotation(entity.getPreviousBodyRotation()),
                 new BallonFootBall(this, entity, lastStep)
         );
 
         synchronized (this.contestLock) {
+            // Um novo toque do mesmo jogador tambem precisa ocupar o fim da
+            // fila, exatamente como ocorria quando o pusher era sobrescrito.
+            this.pendingTouches.remove(entity.getId());
             this.pendingTouches.put(entity.getId(), touch);
 
             if (!this.contestScheduled) {
@@ -81,7 +82,10 @@ public class FootballFloorItem extends RoomItemFloor {
                 return;
             }
 
-            winner = this.chooseWinner(touches);
+            // No Rebug, todos os movimentos do ciclo eram processados antes da
+            // bica agendada. Cada entrada sobrescrevia o pusher da anterior;
+            // portanto, o ultimo contato valido era quem assumia a bola.
+            winner = touches.get(touches.size() - 1);
         }
 
         if (winner == null || winner.entity.getRoom() != this.getRoom()) {
@@ -97,120 +101,14 @@ public class FootballFloorItem extends RoomItemFloor {
         );
     }
 
-    private PendingTouch chooseWinner(List<PendingTouch> touches) {
-        final Integer nitroOwnerEntityId = this.getRoom().getFutnitroPriorityEntityId();
-        RoomEntity owner = nitroOwnerEntityId == null
-                ? null
-                : this.getRoom().getEntities().getEntity(nitroOwnerEntityId);
-
-        if (owner == null) {
-            this.clearNitroOwner();
-            owner = null;
-        }
-
-        if (owner == null) {
-            final PendingTouch firstOwner = this.strongestTouch(touches);
-            this.acquireNitro(firstOwner.entity);
-            return firstOwner;
-        }
-
-        PendingTouch ownerTouch = null;
-        final List<PendingTouch> challengers = new ArrayList<>();
-
-        for (final PendingTouch touch : touches) {
-            if (touch.entity.getId() == owner.getId()) {
-                ownerTouch = touch;
-            } else {
-                challengers.add(touch);
-            }
-        }
-
-        if (challengers.isEmpty()) {
-            return ownerTouch;
-        }
-
-        final PendingTouch strongestChallenger = this.strongestTouch(challengers);
-
-        if (this.getRoom().tryFutnitroKickSteal(strongestChallenger.entity)) {
-            return strongestChallenger;
-        }
-
-        // A troca de prioridade e calculada pelos passos e angulos do avatar no
-        // quarto, com uma pequena chance extra quando o desafiante realmente
-        // bica a bola. A fisica da bola Rebug permanece inalterada.
-        return ownerTouch != null ? ownerTouch : strongestChallenger;
-    }
-
-    private PendingTouch strongestTouch(List<PendingTouch> touches) {
-        PendingTouch strongest = touches.get(0);
-        int strongestPoints = this.previewAttackPoints(strongest);
-
-        for (int i = 1; i < touches.size(); i++) {
-            final PendingTouch candidate = touches.get(i);
-            final int candidatePoints = this.previewAttackPoints(candidate);
-
-            if (candidatePoints > strongestPoints ||
-                    (candidatePoints == strongestPoints && candidate.entity.getId() < strongest.entity.getId())) {
-                strongest = candidate;
-                strongestPoints = candidatePoints;
-            }
-        }
-
-        return strongest;
-    }
-
-    private int previewAttackPoints(PendingTouch touch) {
-        return this.baseAttackPoints(touch, turnDifference(touch.previousRotation, touch.rotation));
-    }
-
-    private int baseAttackPoints(PendingTouch touch, int turn) {
-        if (turn == 4) {
-            return 8;
-        }
-
-        int points = (touch.rotation % 2 != 0) ? 32 : 18;
-
-        switch (turn) {
-            case 1 -> points += 8;
-            case 2 -> points += 18;
-            case 3 -> points += 12;
-            default -> {
-            }
-        }
-
-        return points;
-    }
-
-    private void acquireNitro(RoomEntity entity) {
-        this.getRoom().setFutnitroPriorityEntityId(entity.getId());
-    }
-
-    private void clearNitroOwner() {
-        this.getRoom().setFutnitroPriorityEntityId(null);
-    }
-
-    private static int normalizeRotation(int rotation) {
-        return Math.floorMod(rotation, 8);
-    }
-
-    private static int turnDifference(int previousRotation, int rotation) {
-        final int difference = Math.abs(normalizeRotation(rotation) - normalizeRotation(previousRotation));
-        return Math.min(difference, 8 - difference);
-    }
-
     private static final class PendingTouch {
         private final RoomEntity entity;
         private final boolean lastStep;
-        private final int rotation;
-        private final int previousRotation;
         private final BallonFootBall kickTask;
 
-        private PendingTouch(RoomEntity entity, boolean lastStep, int rotation, int previousRotation,
-                             BallonFootBall kickTask) {
+        private PendingTouch(RoomEntity entity, boolean lastStep, BallonFootBall kickTask) {
             this.entity = entity;
             this.lastStep = lastStep;
-            this.rotation = rotation;
-            this.previousRotation = previousRotation;
             this.kickTask = kickTask;
         }
     }

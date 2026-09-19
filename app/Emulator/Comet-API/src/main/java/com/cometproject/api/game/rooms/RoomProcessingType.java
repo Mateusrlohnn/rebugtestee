@@ -6,7 +6,7 @@ public enum RoomProcessingType {
     DEFAULT(0, "padrao", "Nitro padrão (ordem de entrada)"),
     CLICK(1, "futebol", "Nitro Futebol por prioridade de clique."),
     RANDOM(2, "aleatorio", "Nitro aleatório."),
-    PRESSURE(3, "pressao", "Nitro Rebug com pressão, ângulos e proteção contra roubos repetidos."),
+    PRESSURE(3, "rebug", "Nitro Rebug original por disputa de movimento no mesmo ciclo."),
     ;
 
     private final String description;

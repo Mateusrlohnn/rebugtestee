@@ -23,7 +23,6 @@ import com.cometproject.server.game.rooms.objects.entities.types.PlayerEntity;
 import com.cometproject.server.game.rooms.objects.entities.types.data.PlayerBotData;
 import com.cometproject.server.game.rooms.objects.items.RoomItemFloor;
 import com.cometproject.server.game.rooms.objects.items.RoomItemWall;
-import com.cometproject.server.game.rooms.objects.items.types.floor.football.FootballFloorItem;
 import com.cometproject.server.game.rooms.objects.items.types.floor.wired.triggers.WiredTriggerAtGivenTime;
 import com.cometproject.server.game.rooms.objects.items.types.floor.wired.triggers.WiredTriggerAtGivenTimeLong;
 import com.cometproject.server.game.rooms.types.components.*;
@@ -44,15 +43,10 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class Room implements Attributable, IRoom {
-    private static final int FUTNITRO_MOVEMENT_DISTANCE = 1;
-    private static final int FUTNITRO_KICK_STEAL_CHANCE = 2;
-    private static final long FUTNITRO_ATTEMPT_INTERVAL_MS = 1_000L;
-
     public final Logger log;
 
     private final IRoomData data;
@@ -92,10 +86,6 @@ public class Room implements Attributable, IRoom {
     public Map<Integer, UserWalkEvent> userEvents;
 
     private AtomicInteger eventIdGeneratorUsers;
-    private volatile Integer futnitroPriorityEntityId;
-    private volatile long futnitroLastTurnAttemptAt;
-    private volatile long futnitroLastKickAttemptAt;
-
     public Room(IRoomData data) {
         this.data = data;
         this.log = LogManager.getLogger("Room \"" + this.getData().getName() + "\"");
@@ -137,170 +127,6 @@ public class Room implements Attributable, IRoom {
                 this.userEvents.remove(evt.eventId, evt);
             }
         }
-    }
-
-    public Integer getFutnitroPriorityEntityId() {
-        return this.futnitroPriorityEntityId;
-    }
-
-    public void setFutnitroPriorityEntityId(Integer entityId) {
-        if (Objects.equals(this.futnitroPriorityEntityId, entityId)) {
-            return;
-        }
-
-        this.futnitroPriorityEntityId = entityId;
-        // A prioridade acompanha somente o movimento atual. Uma troca nao
-        // reinicia o caminho, nao gera fala e nao concede invulnerabilidade.
-        // O intervalo curto abaixo serve apenas para impedir duas trocas no
-        // mesmo instante.
-        final long attemptStart = entityId == null ? 0L : System.currentTimeMillis();
-        this.futnitroLastTurnAttemptAt = attemptStart;
-        this.futnitroLastKickAttemptAt = attemptStart;
-    }
-
-    public void processFutnitroMovement(RoomEntity challenger) {
-        if (this.data.getRoomProcessType() != RoomProcessingType.PRESSURE ||
-                !(challenger instanceof PlayerEntity) || this.items == null || this.entities == null) {
-            return;
-        }
-
-        final Integer ownerId = this.futnitroPriorityEntityId;
-
-        if (ownerId == null) {
-            return;
-        }
-
-        final RoomEntity owner = this.entities.getEntity(ownerId);
-
-        if (owner == null) {
-            this.setFutnitroPriorityEntityId(null);
-            return;
-        }
-
-        final long now = System.currentTimeMillis();
-
-        // Apenas caminhar reto ou em diagonal nao sorteia roubo. A bica e
-        // tratada separadamente quando a bola confirma o toque; aqui cuidamos
-        // apenas da mudanca de direcao do dono do Nitro.
-        if (challenger.getId() == ownerId) {
-            this.processFutnitroOwnerDirectionChange(owner, now);
-        }
-    }
-
-    public boolean tryFutnitroKickSteal(RoomEntity challenger) {
-        if (this.data.getRoomProcessType() != RoomProcessingType.PRESSURE ||
-                !(challenger instanceof PlayerEntity)) {
-            return false;
-        }
-
-        final Integer ownerId = this.futnitroPriorityEntityId;
-
-        if (ownerId == null || challenger.getId() == ownerId) {
-            return false;
-        }
-
-        final long now = System.currentTimeMillis();
-
-        if (now - this.futnitroLastKickAttemptAt < FUTNITRO_ATTEMPT_INTERVAL_MS) {
-            return false;
-        }
-
-        // Uma bica confirmada gera uma unica tentativa, sem depender do angulo.
-        // Ela possui intervalo proprio para nao ser anulada por uma virada do
-        // dono processada no mesmo instante.
-        this.futnitroLastKickAttemptAt = now;
-
-        if (ThreadLocalRandom.current().nextInt(100) >= FUTNITRO_KICK_STEAL_CHANCE) {
-            return false;
-        }
-
-        this.setFutnitroPriorityEntityId(challenger.getId());
-        return true;
-    }
-
-    private void processFutnitroOwnerDirectionChange(RoomEntity owner, long now) {
-        final int turn = this.futnitroTurnDifference(owner);
-
-        if (now - this.futnitroLastTurnAttemptAt < FUTNITRO_ATTEMPT_INTERVAL_MS ||
-                turn == 0 || !this.isNearFootball(owner)) {
-            return;
-        }
-
-        final PlayerEntity challenger = this.findFutnitroChallenger(owner);
-
-        if (challenger == null) {
-            return;
-        }
-
-        this.futnitroLastTurnAttemptAt = now;
-        final int lossChance = switch (turn) {
-            case 1 -> 3;
-            case 2 -> 5;
-            case 3 -> 7;
-            case 4 -> 10;
-            default -> 0;
-        };
-
-        if (ThreadLocalRandom.current().nextInt(100) < lossChance) {
-            this.setFutnitroPriorityEntityId(challenger.getId());
-        }
-    }
-
-    private PlayerEntity findFutnitroChallenger(RoomEntity owner) {
-        PlayerEntity nearest = null;
-        int nearestDistance = Integer.MAX_VALUE;
-
-        for (final FootballFloorItem ball : this.items.getByClass(FootballFloorItem.class)) {
-            final int ownerDistance = Math.max(
-                    Math.abs(owner.getPosition().getX() - ball.getPosition().getX()),
-                    Math.abs(owner.getPosition().getY() - ball.getPosition().getY())
-            );
-
-            if (ownerDistance > FUTNITRO_MOVEMENT_DISTANCE) {
-                continue;
-            }
-
-            for (final PlayerEntity player : this.entities.getPlayerEntities()) {
-                if (player.getId() == this.futnitroPriorityEntityId || !player.hasActiveClickWalk()) {
-                    continue;
-                }
-
-                final int distance = Math.max(
-                        Math.abs(player.getPosition().getX() - ball.getPosition().getX()),
-                        Math.abs(player.getPosition().getY() - ball.getPosition().getY())
-                );
-
-                if (distance <= FUTNITRO_MOVEMENT_DISTANCE &&
-                        (distance < nearestDistance ||
-                                (distance == nearestDistance &&
-                                        (nearest == null || player.getId() < nearest.getId())))) {
-                    nearest = player;
-                    nearestDistance = distance;
-                }
-            }
-        }
-
-        return nearest;
-    }
-
-    private boolean isNearFootball(RoomEntity entity) {
-        for (final FootballFloorItem ball : this.items.getByClass(FootballFloorItem.class)) {
-            final int deltaX = Math.abs(entity.getPosition().getX() - ball.getPosition().getX());
-            final int deltaY = Math.abs(entity.getPosition().getY() - ball.getPosition().getY());
-
-            if (Math.max(deltaX, deltaY) <= FUTNITRO_MOVEMENT_DISTANCE) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private int futnitroTurnDifference(RoomEntity entity) {
-        final int rotation = Math.floorMod(entity.getBodyRotation(), 8);
-        final int previousRotation = Math.floorMod(entity.getPreviousBodyRotation(), 8);
-        final int rawDifference = Math.abs(rotation - previousRotation);
-        return Math.min(rawDifference, 8 - rawDifference);
     }
 
     public Room load() {
